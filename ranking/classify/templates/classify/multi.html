@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--jQuery搜尋列CSS套用-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"> {% load static %}
+    <title>分類的頁面</title>
+</head>
+
+<body>
+    {% comment %}
+    <ul>
+        {% for object in cate %} {% if object is cate.1 %}
+        <h2><a href="http://127.0.0.1:8000/classify/tea">{{object}}</a></h2>
+        {% elif c %}
+        <h2>NONE</h2>
+        {% endif %} {% endfor %}
+
+    </ul>{% endcomment %}
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3">
+                <a href="http://127.0.0.1:8000/classify/hot" target="_blank">
+                    <img src="{% static 'polls/img/hot.png' %}" alt="Nature">
+                    <h3>招牌類</h3>
+                </a>
+
+            </div>
+
+            <div class="col-sm-3">
+                <a href="http://127.0.0.1:8000/classify/tea" target="_blank">
+                    <img src="{% static 'polls/img/tea_s.png' %}" alt="Nature">
+                    <h3>茶類</h3>
+                </a>
+
+            </div>
+            <div class="col-sm-3">
+
+
+
+                <h2>鮮奶類</h2>
+
+            </div>
+            <div class="col-sm-3">
+
+                <h2>口感類</h2>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
