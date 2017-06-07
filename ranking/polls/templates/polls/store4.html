@@ -1,0 +1,1899 @@
+<!--一芳水果茶-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>飲料霸 - 一芳水果茶</title>
+    <!-- Bootstrap -->
+    <!-- 最新編譯和最佳化的 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--jQuery搜尋列CSS套用-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+    <!-- 連接自己做的CSS-->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/style.css' %}" />
+    <!--<link rel="stylesheet" href="CSS/style.css" />-->
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/stylish-portfolio.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/font-awesome/css/font-awesome.min.css' %}">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="http://127.0.0.1:8000/polls/" id="mybrand">飲料霸</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-2 ">
+                        <ul class="nav navbar-nav navbar-right">
+                            <!--<li><a href="#search">搜尋</a></li>-->
+                            <!--<li><a href="#hot">熱銷飲料</a></li>-->
+                            <li><a href="#new">最新活動</a></li>
+                            <li><a href="#menu">MENU</a></li>
+                            <li><a href="#branch">全台分店</a></li>
+                            <!--<li><a href="http://127.0.0.1:8000/polls/3/about/">關於</a></li>-->
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="row" id="hot">
+            <!--熱銷飲料-->
+            <br>
+            <img src="{% static 'polls/img/store4.png' %}" alt="英雄圖" width="100%">
+        </div>
+        <div class="row" id="new" style="background-color:antiquewhite">
+            <br><br><br><br><br><br><br><br><br>
+            <div class="container">
+                <h1 class="text-center"><strong>最新活動資訊</strong></h1>
+                <!--最新活動-->
+                <a href="http://www.diagon-alley.com.tw/images/old-news/ad_201701-zoom.jpg" target="_Blank"><img alt="1" src="http://www.diagon-alley.com.tw/images/old-news/ad_201701.jpg"></a>
+                <a href="http://www.diagon-alley.com.tw/images/old-news/ad_201702-zoom.jpg" target="_Blank"><img alt="2" src="http://www.diagon-alley.com.tw/images/old-news/ad_201702.jpg"></a>
+                <a href="http://www.diagon-alley.com.tw/images/old-news/ad_201703-zoom.jpg" target="_Blank"><img alt="3" src="http://www.diagon-alley.com.tw/images/old-news/ad_201703.jpg"></a>
+                <a href="http://www.diagon-alley.com.tw/images/old-news/ad_201704-zoom.jpg" target="_Blank"><img alt="4" src="http://www.diagon-alley.com.tw/images/old-news/ad_201704.jpg"></a>
+            </div>
+            <br><br><br><br><br><br><br><br><br>
+        </div>
+        <div class="container">
+            <div class="row" id="menu">
+                <!--MENU-->
+                <br>
+                <br>
+                <br>
+                <h1 class="text-center"><strong>MENU</strong></h1>
+                <img src="{% static 'polls/img/menu4.png' %}" alt="menu" width="100%">
+            </div>
+            <br><br>
+        </div>
+
+        <div class="row" id="branch" style="background-color:antiquewhite">
+            <br><br>
+            <h1 class="text-center"><strong>全台分店</strong></h1>
+            <div class="col-md-12" style="margin-bottom:50px;">
+                <div class="col-sm-6">
+                    <div class="location_1">
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/search?q=%E5%AE%9C%E8%98%AD%E7%B8%A3%E7%BE%85%E6%9D%B1%E9%8E%AE%E6%B0%91%E6%AC%8A%E8%B7%AF209%E8%99%9F&amp;oq=%E5%AE%9C%E8%98%AD%E7%B8%A3%E7%BE%85%E6%9D%B1%E9%8E%AE%E6%B0%91%E6%AC%8A%E8%B7%AF209%E8%99%9F&amp;aqs=chrome..69i57&amp;sourceid=chrome&amp;ie=UTF-8"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1701170943591.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>宜蘭羅東店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 宜蘭縣羅東鎮民權路209號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 03-9560911</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/10491%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%B1%B1%E5%8D%80%E8%BE%B2%E5%AE%89%E8%A1%9724%E8%99%9F/data=!4m2!3m1!1s0x3442a95ad4bfb88d:0xd17d123200dc4ab3?sa=X&amp;ved=0ahUKEwifxrPAkYPUAhWGjZQKHYuyBXMQ8gEIJDAA"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1705221700111.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>台北晴光店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 台北市中山區農安街24-5號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-25958361</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/105%E5%8F%B0%E5%8C%97%E5%B8%82%E6%9D%BE%E5%B1%B1%E5%8D%80%E5%85%AB%E5%BE%B7%E8%B7%AF%E4%B8%89%E6%AE%B5126%E8%99%9F/data=!4m2!3m1!1s0x3442abc1883ca9a9:0x5da6f187f98fbb09?sa=X&amp;ved=0ahUKEwi7_v_5kYPUAhURNpQKHdtADj0Q8gEIJDAA"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1705221702361.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>台北八德店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 台北市松山區八德路三段126號1樓</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-25792689</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/10491%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%B1%B1%E5%8D%80%E9%8C%A6%E5%B7%9E%E8%A1%97410%E8%99%9F/data=!4m2!3m1!1s0x3442abe39092288d:0x5e67d4f4c6cd3222?sa=X&amp;ved=0ahUKEwiQ2paI5sbTAhWEo5QKHcGUDIsQ8gEIJDAA"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1704281706551.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>台北錦州店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 台北市中山區錦州街410號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-25078166</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/106%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%BE%A9%E8%88%88%E5%8D%97%E8%B7%AF%E4%B8%80%E6%AE%B5107%E5%B7%B725%E8%99%9F/data=!4m2!3m1!1s0x3442abda5602646f:0x963ea4d9fd04e4b4?sa=X&amp;ved=0ahUKEwiirZS75sbTAhWETLwKHbVdCMUQ8gEIJDAA"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1704281708481.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>忠孝復興店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 台北市大安區復興南路一段107巷25號一樓</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-27755665</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/108%E5%8F%B0%E5%8C%97%E5%B8%82%E8%90%AC%E8%8F%AF%E5%8D%80%E6%AD%A6%E6%98%8C%E8%A1%97%E4%BA%8C%E6%AE%B5118%E8%99%9F/data=!4m2!3m1!1s0x3442a908c8bf9d99:0xf530632e1d903b?sa=X&amp;ved=0ahUKEwiji6LIlbXTAhULUbwKHcy-AToQ8gEIIjAA"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1704211650511.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>台北西門店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 台北市萬華區武昌街2段118號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-23880699</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/111%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A3%AB%E6%9E%97%E5%8D%80%E6%96%87%E6%9E%97%E8%B7%AF167%E8%99%9F/data=!4m2!3m1!1s0x3442aea540e8e6f3:0x67630ec05b8b2398?sa=X&amp;ved=0ahUKEwj-lI2ms47SAhVFupQKHapWB-QQ8gEIGTAA"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1702140913271.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>台北士林店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 台北市士林區文林路167號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-28811179</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/106%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%BE%A9%E8%88%88%E5%8D%97%E8%B7%AF%E4%B8%80%E6%AE%B5378%E8%99%9F/data=!4m2!3m1!1s0x3442abd38312b8f9:0x751a9952031d16fd?sa=X&amp;ved=0ahUKEwiH08jd-tfRAhXHNpQKHbVkAswQ8gEIGTAA"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1701231732271.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>台北復興南店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 台北市大安區復興南路一段378號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-27015067</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/search?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%85%A7%E6%B9%96%E5%8D%80%E5%85%A7%E6%B9%96%E8%B7%AF%E4%B8%80%E6%AE%B5405%E8%99%9F%E4%B9%8B%E4%B8%801%E6%A8%93&amp;oq=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%85%A7%E6%B9%96%E5%8D%80%E5%85%A7%E6%B9%96%E8%B7%AF%E4%B8%80%E6%AE%B5405%E8%99%9F%E4%B9%8B%E4%B8%801%E6%A8%93&amp;aqs=chrome..69i57&amp;sourceid=chrome&amp;ie=UTF-8"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1701170942241.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>台北內湖店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 台北市內湖區內湖路一段405號之一1樓</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-26276078</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/110%E5%8F%B0%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E8%8E%8A%E6%95%AC%E8%B7%AF390%E8%99%9F/data=!4m2!3m1!1s0x3442abb4a0150135:0x9c4e49911824b6a0?sa=X&amp;ved=0ahUKEwiJ-cLq9JjRAhWGmJQKHXC0BjMQ8gEIGTAA"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1612281555531.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>台北北醫店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 台北市信義區莊敬路390號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-27586633</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/100%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E6%AD%A3%E5%8D%80%E4%BF%A1%E9%99%BD%E8%A1%9713-1%E8%99%9F/@25.0447496,121.5141343,17z/data=!3m1!4b1!4m5!3m4!1s0x3442a9730fd3c015:0xb4c0cb1ece6b6a3e!8m2!3d25.0447496!4d121.516323?hl=zh-TW"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1612291525191.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>北車信陽店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 台北市中正區信陽街13-1號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-77300066</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/105%E5%8F%B0%E5%8C%97%E5%B8%82%E6%9D%BE%E5%B1%B1%E5%8D%80%E5%8D%97%E4%BA%AC%E6%9D%B1%E8%B7%AF%E4%BA%94%E6%AE%B5289%E8%99%9F/@25.0515499,121.5638168,17z/data=!3m1!4b1!4m5!3m4!1s0x3442ab96a46dc0c3:0xe9ca8a4d0e45d7d1!8m2!3d25.0515499!4d121.5660055?hl=zh-TW"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/image/news_1.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>台北南京東店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 台北市松山區南京東路五段289號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-27479191</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/100%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E6%AD%A3%E5%8D%80%E5%85%AB%E5%BE%B7%E8%B7%AF%E4%B8%80%E6%AE%B582%E5%B7%B79%E5%BC%8420%E8%99%9F/@25.0434717,121.5293466,17z/data=!3m1!4b1!4m5!3m4!1s0x3442a97ca1970dd1:0x1e2d6f29a04c7daa!8m2!3d25.0434717!4d121.5315353?hl=zh-TW"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1612291526261.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>台北光華店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 台北市八德路一段82巷9弄20-1號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-33433521</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/106%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%BB%B6%E5%90%89%E8%A1%97153-8%E8%99%9F/@25.0401463,121.5528097,17z/data=!3m1!4b1!4m5!3m4!1s0x3442abc611750cc9:0x85db587a418cad6!8m2!3d25.0401415!4d121.5549984?hl=zh-TW"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1612291527311.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>台北延吉店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 台北市大安區延吉街153-8號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-77300066</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/%E5%8F%B0%E5%8C%97%E5%B8%82%E7%BE%85%E6%96%AF%E7%A6%8F%E8%B7%AF%E4%B8%89%E6%AE%B5345%E8%99%9F/@25.0167191,121.5301959,17z/data=!3m1!4b1!4m5!3m4!1s0x3442a98beb3ac1bf:0xff36b7e88920b402!8m2!3d25.0167143!4d121.5323846?hl=zh-TW"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/image/news_1.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>台北公館店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 台北市中正區羅斯福路三段345號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-77300066</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/106%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%B8%AB%E5%A4%A7%E8%B7%AF124%E8%99%9F/@25.021775,121.5257873,17z/data=!3m1!4b1!4m5!3m4!1s0x3442a98facec681f:0xcb7ca99352e93edc!8m2!3d25.021775!4d121.527976?hl=zh-TW"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1612151701521.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>台北師大店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 台北市大安區師大路124號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-23661156</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/104%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%B1%B1%E5%8D%80%E5%8C%97%E5%AE%89%E8%B7%AF530-2%E8%99%9F/@25.079712,121.5443863,17z/data=!3m1!4b1!4m5!3m4!1s0x3442ac05b8c6e503:0x9a4ef936a2333f98!8m2!3d25.079712!4d121.546575?hl=zh-TW"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1612291522191.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>台北北安店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 台北市中山區北安路530之2號1樓</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-25331600</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/110%E5%8F%B0%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E6%B0%B8%E5%90%89%E8%B7%AF30%E5%B7%B7120%E8%99%9F/@25.042989,121.5664665,17z/data=!3m1!4b1!4m5!3m4!1s0x3442abbcf695172f:0xec513688f39b428e!8m2!3d25.042989!4d121.5686552?hl=zh-TW"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1612151702411.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>台北永吉店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 台北市信義區永吉路30巷120號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-77300066</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/105%E5%8F%B0%E5%8C%97%E5%B8%82%E6%9D%BE%E5%B1%B1%E5%8D%80%E5%85%AB%E5%BE%B7%E8%B7%AF%E5%9B%9B%E6%AE%B5773%E8%99%9F/@25.051094,121.5760189,17z/data=!3m1!4b1!4m5!3m4!1s0x3442ab9c43fec4a3:0x84f27efb8f63863a!8m2!3d25.051094!4d121.5782076?hl=zh-TW"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1612151659141.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>台北饒河店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 台北市松山區八德路四段773號1F</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-27481458</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/105%E5%8F%B0%E5%8C%97%E5%B8%82%E6%9D%BE%E5%B1%B1%E5%8D%80%E6%B0%91%E7%94%9F%E6%9D%B1%E8%B7%AF%E5%9B%9B%E6%AE%B566%E8%99%9F/@25.0578239,121.5499573,17z/data=!3m1!4b1!4m5!3m4!1s0x3442abeef035ccab:0x7a383a6de26a3c64!8m2!3d25.0578239!4d121.552146?hl=zh-TW"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1612151703131.png" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>台北民生店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 台北市中山區民生東路4段66號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-27166363</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="" target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/image/news_1.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>北投尊賢店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 台北市北投區尊賢街241巷1號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-28214417</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/220%E6%96%B0%E5%8C%97%E5%B8%82%E6%9D%BF%E6%A9%8B%E5%8D%80%E5%9B%9B%E5%B7%9D%E8%B7%AF%E4%BA%8C%E6%AE%B547%E5%B7%B73%E5%BC%847%E8%99%9F/@24.9948711,121.4522658,17z/data=!4m13!1m7!3m6!1s0x346802b0de8be39d:0x53c36960a7bc3cd3!2zMjIw5paw5YyX5biC5p2_5qmL5Y2A5Zub5bed6Lev5LqM5q61NDflt7cz5byEN-iZnw!3b1!8m2!3d24.9948711!4d121.4544545!3m4!1s0x346802b0de8be39d:0x53c36960a7b"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1704211654191.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>板橋亞東店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 新北市板橋區四川路2段47巷3弄7號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-89663310</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/220%E6%96%B0%E5%8C%97%E5%B8%82%E6%9D%BF%E6%A9%8B%E5%8D%80%E5%9B%9B%E7%B6%AD%E8%B7%AF113%E8%99%9F/data=!4m2!3m1!1s0x3442a8144be3adb3:0x5bf7b8fdb25fa2b4?sa=X&amp;ved=0ahUKEwiZzNnS2sDSAhWDnpQKHWVOBpoQ8gEIGTAA"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1704270906391.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>板橋四維店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 新北市板橋區四維路113號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-22556885</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/242%E6%96%B0%E5%8C%97%E5%B8%82%E6%96%B0%E8%8E%8A%E5%8D%80%E6%96%B0%E6%B3%B0%E8%B7%AF22%E8%99%9F/data=!4m2!3m1!1s0x3442a874ec940e0b:0xd42dd93c01fe43f?sa=X&amp;ved=0ahUK" target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1702231046571.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>新莊新泰店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 新北市新莊區新泰路22號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-89929775</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/235%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%92%8C%E5%8D%80%E4%B8%AD%E5%B1%B1%E8%B7%AF%E4%B8%89%E6%AE%B5119%E8%99%9F/data=!4m2!3m1!1s0x3442a8274c24a7fb:0xc70cc0f054b9fcaf?sa=X&amp;ved=0ahUKEwjp4Kvm8_zRAhVBu5QKHeaGB3QQ8gEIGTAA"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1702071010511.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>中和環球店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 新北市中和區中山路三段119號1F</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-22210689</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/231%E6%96%B0%E5%8C%97%E5%B8%82%E6%96%B0%E5%BA%97%E5%8D%80%E4%B8%AD%E6%AD%A3%E8%B7%AF151%E8%99%9F/data=!4m2!3m1!1s0x346801f469e665e9:0xb53b88daac237ebe?sa=X&amp;ved=0ahUKEwjOzJuA9ZjRAhXCtpQKHQA2ArsQ8gEIGTAA"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1612271315031.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>新店中正店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 新北市新店區中正路151號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-29189185</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/242%E6%96%B0%E5%8C%97%E5%B8%82%E6%96%B0%E8%8E%8A%E5%8D%80%E5%B9%B8%E7%A6%8F%E8%B7%AF47%E8%99%9F/@25.0493135,121.4556372,17z/data=!3m1!4b1!4m5!3m4!1s0x3442a862da93e38d:0xb2c9bc2a94cddc2!8m2!3d25.0493135!4d121.4578259?hl=zh-TW"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1612291530451.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>新莊幸福店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 新北市新莊區幸福路47號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-29946369</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/235%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%92%8C%E5%8D%80%E5%BB%BA%E4%B8%80%E8%B7%AF183%E8%99%9F/@24.998189,121.4861243,17z/data=!3m1!4b1!4m5!3m4!1s0x346802811dd1dc63:0xd5d2ac483d97726a!8m2!3d24.998189!4d121.488313?hl=zh-TW"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1612151703461.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>中和建一店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 新北市中和區建一路183號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 02-22226819</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/333桃園市龜山區中興路一段12號/@24.9936772,121.335492,17z/data=!3m1!4b1!4m5!3m4!1s0x34681e89f1d1927b:0x8dd97606a93d0e2!8m2!3d24.9936772!4d121.3376807" target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1705170950341.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>桃園龜山店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 桃園市龜山區中興路一段12號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 03-3293000</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/333%E6%A1%83%E5%9C%92%E5%B8%82%E9%BE%9C%E5%B1%B1%E5%8D%80%E5%BE%A9%E8%88%88%E5%8C%97%E8%B7%AF6%E5%B7%B713%E8%99%9F/data=!4m2!3m1!1s0x3442a73a552565e7:0x550a242859170e8e?sa=X&amp;ved=0ahUKEwiZvKC40Z7TAhXCjJQKHTuHAiwQ8gEIGTAA"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1704121750281.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>林口長庚店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 桃園市龜山區復興北路6巷13號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 03-3975801</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/320%E6%A1%83%E5%9C%92%E5%B8%82%E4%B8%AD%E5%A3%A2%E5%8D%80%E9%95%B7%E6%98%A5%E8%B7%AF120%E8%99%9F/data=!4m2!3m1!1s0x346821f6ce696ebb:0xf7a8f4b773b99ecc?sa=X&amp;ved=0ahUKEwio4si08o7TAhWDwbwKHZGyBPUQ8gEIGTAA"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1704061132141.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>內壢長春店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 桃園市中壢區長春路120號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 03-4555528</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/330%E6%A1%83%E5%9C%92%E5%B8%82%E6%A1%83%E5%9C%92%E5%8D%80%E5%BB%BA%E5%9C%8B%E8%B7%AF16%E8%99%9F/data=!4m2!3m1!1s0x34681ee506ae0b6b:0x70244de4df8836c1?sa=X&amp;ved=0ahUKEwjI0NP8yebSAhXLjJQKHd4gCioQ8gEIGTAA"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1703211044481.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>桃園建國店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 桃園市桃園區建國路16號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 03-3757871</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/334%E6%A1%83%E5%9C%92%E5%B8%82%E5%85%AB%E5%BE%B7%E5%8D%80%E4%BB%8B%E5%A3%BD%E8%B7%AF%E4%B8%80%E6%AE%B5909%E8%99%9F/data=!4m2!3m1!1s0x346818d3262b0b2f:0xaabdbf271542954b?sa=X&amp;ved=0ahUKEwjYwt28yubSAhWPQpQKHUIDAckQ8gEIGTAA"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1703211047031.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>桃園介壽店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 桃園市八德區介壽路一段909號 </li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 03-3666003</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/330%E6%A1%83%E5%9C%92%E5%B8%82%E6%A1%83%E5%9C%92%E5%8D%80%E4%B8%AD%E6%AD%A3%E8%B7%AF47%E8%99%9F/data=!4m2!3m1!1s0x34681efcbf148fc3:0x4a9e4f0b1aabe22b?sa=X&amp;ved=0ahUKEwjA2NzA8pjRAhWDQpQKHeCeBXsQ8gEIGTAA"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1612291549451.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>桃園ATT店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 桃園市桃園區中正路47號1樓（櫃號1F-16） </li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 03-2752099</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/338%E6%A1%83%E5%9C%92%E5%B8%82%E8%98%86%E7%AB%B9%E5%8D%80%E5%8D%97%E5%B4%81%E8%B7%AF133%E8%99%9F/@25.0464504,121.2924959,17z/data=!3m1!4b1!4m5!3m4!1s0x34681fd87ac4e7bb:0xfb47ad296fa5983a!8m2!3d25.0464504!4d121.2946846?hl=zh-TW"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1701050904341.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>桃園南崁店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 桃園市蘆竹區南崁路133號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 03-3118088</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/300%E6%96%B0%E7%AB%B9%E5%B8%82%E5%8C%97%E5%8D%80%E8%A5%BF%E5%A4%A7%E8%B7%AF439%E8%99%9F/data=!4m2!3m1!1s0x3468359558bd4bdf:0x65a3f9bd3e22377d?sa=X&amp;ved=0ahUKEwj_3Yew79fSAhUBrpQKHWm3AL4Q8gEIGTAA" target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1703151422241.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>新竹西大店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 新竹市北區西大路439號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 03-5260096</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/300%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80%E4%B8%AD%E5%A4%AE%E8%B7%AF182%E8%99%9F/data=!4m2!3m1!1s0x346835c4ed81a2e7:0xbdd97121e40e525?sa=X&amp;ved=0ahUKEwin8faE85jRAhXHkpQKHcy6CzIQ8gEIGTAA" target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1612291539571.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>新竹巨城店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 新竹市東區中央路182號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 03-5359620</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/300%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%85%89%E5%BE%A9%E8%B7%AF%E4%B8%80%E6%AE%B5109%E8%99%9F/@24.781192,121.0213673,17z/data=!3m1!4b1!4m5!3m4!1s0x34683630400d0f65:0x6b4edf839582153e!8m2!3d24.781192!4d121.023556?hl=zh-TW"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1612291542311.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>新竹光復店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 新竹市東區光復路一段109號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 03-5797198</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/304%E6%96%B0%E7%AB%B9%E7%B8%A3%E6%96%B0%E8%B1%90%E9%84%89%E6%96%B0%E8%88%88%E8%B7%AF259%E8%99%9F/@24.8704573,120.9949359,17z/data=!3m1!4b1!4m5!3m4!1s0x346831506fc53a55:0x7d8fa94d4361ec4b!8m2!3d24.8704573!4d120.9971246"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/image/news_1.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>新竹新豐店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 新竹縣新豐鄉山崎村新興路259號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 03-5571481</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/302%E6%96%B0%E7%AB%B9%E7%B8%A3%E7%AB%B9%E5%8C%97%E5%B8%82%E4%B8%89%E6%B0%91%E8%B7%AF274%E8%99%9F/@24.8339924,121.0083769,17z/data=!3m1!4b1!4m5!3m4!1s0x346836ead2b4dbc7:0x744b40ac53743971!8m2!3d24.8339875!4d121.0105656?hl=zh-TW"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1612291543181.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>竹北三民店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 新竹縣竹北市三民路274號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 03-5519198</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/302%E6%96%B0%E7%AB%B9%E7%B8%A3%E7%AB%B9%E5%8C%97%E5%B8%82%E8%87%AA%E5%BC%B7%E5%8D%97%E8%B7%AF93%E8%99%9F/@24.8181927,121.0246277,17z/data=!3m1!4b1!4m5!3m4!1s0x346836fb900a877b:0xc2c91a10631359b6!8m2!3d24.8181927!4d121.0268164?hl=zh-TW"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1612291544251.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>竹北自強南店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 新竹縣竹北市自強南路93號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 03-5500314</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/434%E5%8F%B0%E4%B8%AD%E5%B8%82%E9%BE%8D%E4%BA%95%E5%8D%80%E4%B8%AD%E5%A4%AE%E8%B7%AF%E4%B8%89%E6%AE%B510%E8%99%9F/data=!4m2!3m1!1s0x34696ab3ab18ae29:0x57e7788677be0149?sa=X&amp;ved=0ahUKEwjsmtDhi-DTAhVGp5QKHUSmCQ4Q8gEIJDAA"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1705081832101.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>台中龍井店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 台中市龍井區中央路3段10號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 04-26307778</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/420%E5%8F%B0%E4%B8%AD%E5%B8%82%E8%B1%90%E5%8E%9F%E5%8D%80%E4%B8%89%E6%B0%91%E8%B7%AF15%E8%99%9F/data=!4m2!3m1!1s0x34691a0e4786c4d7:0x9955845674c73b6a?sa=X&amp;ved=0ahUKEwjOgZym7tfSAhVFnZQKHaqHDI4Q8gEIGTAA"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1703151417281.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>豐原三民店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 台中市豐原區三民路15號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 04-25260011</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/404%E5%8F%B0%E4%B8%AD%E5%B8%82%E5%8C%97%E5%8D%80%E5%8D%9A%E9%A4%A8%E8%B7%AF98%E8%99%9F/@24.1556308,120.6641178,17z/data=!3m1!4b1!4m5!3m4!1s0x34693d77ff387989:0xea784a18c5beaae!8m2!3d24.1556259!4d120.6663065?hl=zh-TW"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1612291545371.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>台中館前店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 台中市北區博館路98號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 04-2328-1110</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/420%E5%8F%B0%E4%B8%AD%E5%B8%82%E8%B1%90%E5%8E%9F%E5%8D%80%E4%B8%AD%E6%AD%A3%E8%B7%AF167%E5%B7%B75-1%E8%99%9F/@24.2511518,120.7171423,17z/data=!3m1!4b1!4m5!3m4!1s0x34691a0f60dae2b7:0x1efa86466f5d5e9e!8m2!3d24.2511469!4d120.719331?hl=zh-TW"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1612291546071.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>豐原廟東店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 台中市豐原區中正路167巷5-1號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 04-2529-2055</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/505%E5%BD%B0%E5%8C%96%E7%B8%A3%E9%B9%BF%E6%B8%AF%E9%8E%AE%E5%BE%A9%E8%88%88%E8%B7%AF240%E8%99%9F/@24.0552532,120.4360282,17z/data=!3m1!4b1!4m5!3m4!1s0x34694607ce63e3a5:0xdbb731c5368ca778!8m2!3d24.0552532!4d120.4382169?hl=zh-TW"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1612291546561.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>鹿港復興店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 鹿港鎮復興路240號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 04-7771242</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/545%E5%8D%97%E6%8A%95%E7%B8%A3%E5%9F%94%E9%87%8C%E9%8E%AE%E4%B8%AD%E6%AD%A3%E8%B7%AF381%E8%99%9F/data=!4m2!3m1!1s0x3468d999191bed45:0x29771714a6527dd?sa=X&amp;ved=0ahUKEwjGj56husPTAhXHtpQKHX8mBq8Q8gEIJDAA"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1704270912541.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>埔里中正店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 南投縣埔里鎮中正路381號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 049-2994630</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/806%E9%AB%98%E9%9B%84%E5%B8%82%E5%89%8D%E9%8E%AE%E5%8D%80%E7%91%9E%E9%9A%86%E8%B7%AF484%E8%99%9F/data=!4m2!3m1!1s0x346e03597a2e1669:0xd46fab756369764b?sa=X&amp;ved=0ahUKEwj34qHR8qLTAhUCKpQKHed_Ch4Q8gEIIjAA"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1704141026221.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>高雄瑞隆店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 高雄市前鎮區瑞隆路484號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 07-7221235</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/search?q=%E9%AB%98%E9%9B%84%E5%B8%82%E5%B0%8F%E6%B8%AF%E5%8D%80%E6%BC%A2%E6%B0%91%E8%B7%AF281-1%E8%99%9F&amp;oq=%E9%AB%98%E9%9B%84%E5%B8%82%E5%B0%8F%E6%B8%AF%E5%8D%80%E6%BC%A2%E6%B0%91%E8%B7%AF281-1%E8%99%9F&amp;aqs=chrome..69i57&amp;sourceid=chrome&amp;ie=UTF-8"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1701091746421.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>高雄小港店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 高雄市小港區漢民路281-1號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 07-8021717</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/900%E5%B1%8F%E6%9D%B1%E7%B8%A3%E5%B1%8F%E6%9D%B1%E5%B8%82%E6%B0%91%E7%94%9F%E8%B7%AF327%E8%99%9F/@22.6705039,120.4882733,17z/data=!3m1!4b1!4m5!3m4!1s0x346e1784ffd95de1:0x230b291c6fe1ec8c!8m2!3d22.670499!4d120.490462?hl=zh-TW"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/image/news_1.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>屏東民生店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 屏東市民生路327號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 08-7330981</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/900%E5%B1%8F%E6%9D%B1%E7%B8%A3%E5%B1%8F%E6%9D%B1%E5%B8%82%E5%BB%A3%E6%9D%B1%E8%B7%AF624%E8%99%9F/@22.6842412,120.4954672,17z/data=!3m1!4b1!4m5!3m4!1s0x346e17bdb809e353:0x2bb51005f24ba967!8m2!3d22.6842412!4d120.4976559?hl=zh-TW"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1612151704351.png" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>屏東廣東店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 屏東市廣東路624號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 08-7361335</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="location_1">
+
+                        <div class="col-md-5">
+                            <div class="location_4">
+                                <a href="https://www.google.com.tw/maps/place/880%E6%BE%8E%E6%B9%96%E7%B8%A3%E9%A6%AC%E5%85%AC%E5%B8%82%E5%BB%BA%E5%9C%8B%E8%B7%AF11%E8%99%9F/@23.5663132,119.5638458,17z/data=!3m1!4b1!4m5!3m4!1s0x346c5af2e07d54b1:0x5f1f984613859ddd!8m2!3d23.5663132!4d119.5660345?hl=zh-TW"
+                                    target="_blank">
+                                    <div class="location_5">
+                                        <i></i>
+                                    </div>
+                                    <img src="http://www.yifangtea.com.tw/upload/locations/s_1612151704141.jpg" class="img-responsive" width="300px" height="300px">
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-7" style="padding:0;">
+                            <div class="location_2">
+                                <h3>澎湖建國店</h3>
+                                <div class="location_3"></div>
+                                <ul>
+                                    <i class="add"></i>
+                                    <li> 澎湖縣馬公市長安里建國路11號</li>
+                                </ul>
+                                <ul>
+                                    <i class="phone"></i>
+                                    <li> 06-9269702</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row bottom">
+        <a href="https://github.com/NTUST/106-team01" class="btn" target="_blank">team01 github</a>
+        <a href="https://github.com/NTUST" class="btn" target="_blank">NTUST github</a>
+        <!--頁尾連結-->
+    </div>
+    <footer>
+        <div class="container" id="contact">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>Team01</strong>
+                    </h4>
+                    <p>台灣科技大學
+                        <br>網頁設計</p>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="http://www.yifangtea.com.tw/" class="btn" target="_blank">一芳官網</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/NTUST/106-team01" target="blank">team01 github</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/NTUST" target="blank">NTUST github</a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Your Website 2017</p>
+                </div>
+            </div>
+        </div>
+        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+    </footer>
+    </div>
+
+    <!-- jQuery -->
+    <script src="{% static 'polls/js/jquery.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'polls/js/bootstrap.min.js' %}"></script>
+    <!--jQuery搜尋列JS套用-->
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js "></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
+
+</body>
+
+</html>

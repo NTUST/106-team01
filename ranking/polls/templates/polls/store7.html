@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>飲料霸-Mr.Wish</title>
+
+
+    <!-- Bootstrap Core CSS -->
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/stylish-portfolio.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/font-awesome/css/font-awesome.min.css' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="style">
+
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="http://127.0.0.1:8000/polls/" onclick=$( "#menu-close").click();>飲料霸首頁</a>
+            </li>
+            <li>
+                <a href="#about" onclick=$( "#menu-close").click();>關於店家</a>
+            </li>
+            <li>
+                <a href="#hot" onclick=$( "#menu-close").click();>熱銷飲料</a>
+            </li>
+
+            <li>
+                <a href="#menu" onclick=$( "#menu-close").click();>MENU</a>
+            </li>
+            <li>
+                <a href="#store" onclick=$( "#menu-close").click();>全台分店</a>
+            </li>
+            <li>
+                <a href="#activity" onclick=$( "#menu-close").click();>最新活動</a>
+            </li>
+            <li>
+                <a href="#contact" onclick=$( "#menu-close").click();>Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+
+    <header id="top" class="head">
+        <div class="container">
+
+            <img src="{% static 'polls/img/head.jpg' %}" alt="">
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2><strong>Mr.Wish</strong> </h2>
+                    <p class="lead">答案很簡單，因為〝希望〞在這裡， 我們沒有雄厚的背景，有的是異於常人的活力跟勇氣， 我們是一群不知天高地厚的小子，但是我們的創意源源不絕， 只想把我們一年多來的成果分享給更多人。 要開一家wish憑我們的團隊-輕而易舉， 只要有我們，再大的困難也都沒有什麼， 媽媽告訴我們，要有一顆善良的心及聰明的腦袋瓜， 我問媽媽-堅持鮮果美味是聰明嗎？ 媽媽笑了！ 歡迎您加入我們的行列， 一起將種子散播在城市的每個角落。
+                    </p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Services -->
+    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+
+
+    <!-- Callout -->
+    <div class="pro">
+        <div class="container">
+
+            <img src="{% static 'polls/img/pro.jpg' %}" alt="">
+        </div>
+    </div>
+
+    <!-- Portfolio -->
+    <section id="hot" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h2><strong>熱銷-推薦</strong></h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="http://www.mr-wish.com/product_detail.php?cID=8" target="_blank">
+                                    <img class="img-portfolio img-responsive" src="{% static 'polls/img/01-1.jpg' %}">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="https://www.facebook.com/Mr.WishTaiwan/photos/a.127938620554929.22835.125362630812528/882757108406406/?type=1&theater" target="_blank">
+                                    <img class="img-portfolio img-responsive" src="{% static 'polls/img/02-1.jpg' %}">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="https://www.facebook.com/Mr.WishTaiwan/photos/a.127938620554929.22835.125362630812528/703455346336584/" target="_blank">
+                                    <img class="img-portfolio img-responsive" src="{% static 'polls/img/03-1.jpg' %}">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="http://www.mr-wish.com/product_detail.php?cID=3" target="_blank">
+                                    <img class="img-portfolio img-responsive" src="{% static 'polls/img/04-1.jpg' %}">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                    <a href="http://www.mr-wish.com/home.php" target="_blank " class="btn btn-dark">View More Items</a>
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Call to Action -->
+    <aside class="call-to-action bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3 id="menu"><strong>MENU</strong></h3>
+                    <img src="{% static 'polls/img/menu2.jpg' %}" alt=""></img>
+
+                    <br>
+                    <br>
+                    <h3 id="store"><strong>STORES</strong></h3>
+                    <a href="http://www.mr-wish.com/shop.php" target="_blank " class="btn btn-dark">詳情請洽官網</a>
+                    <br>
+                    <img src="{% static 'polls/img/store2.jpg' %}" alt=""></img>
+                    <br>
+                    <br>
+                    <h3 id="activity"><strong>ACTIVITY</strong></h3>
+                    <p>因愛文芒果臨時性缺貨， Mr. Wish速遞10大精選推薦品， 讓你解渴滿足，解饞滿意！
+                    </p>
+                    <br>
+                    <img src="{% static 'polls/img/activity2.jpg' %}" alt=""></img>
+
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Map -->
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container" id="contact">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>Team01</strong>
+                    </h4>
+                    <p>台灣科技大學
+                        <br>網頁設計</p>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="https://github.com/NTUST/106-team01" target="blank">team01 github</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/NTUST" target="blank">NTUST github</a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Your Website 2017</p>
+                </div>
+            </div>
+        </div>
+        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="{% static 'polls/js/jquery.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'polls/js/bootstrap.min.js' %}"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+        // Closes the sidebar menu
+        $("#menu-close").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Opens the sidebar menu
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Scrolls to the selected menu item on the page
+        $(function() {
+            $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+        //#to-top button appears after scrolling
+        var fixed = false;
+        $(document).scroll(function() {
+            if ($(this).scrollTop() > 250) {
+                if (!fixed) {
+                    fixed = true;
+                    // $('#to-top').css({position:'fixed', display:'block'});
+                    $('#to-top').show("slow", function() {
+                        $('#to-top').css({
+                            position: 'fixed',
+                            display: 'block'
+                        });
+                    });
+                }
+            } else {
+                if (fixed) {
+                    fixed = false;
+                    $('#to-top').hide("slow", function() {
+                        $('#to-top').css({
+                            display: 'none'
+                        });
+                    });
+                }
+            }
+        });
+        // Disable Google Maps scrolling
+        // See http://stackoverflow.com/a/25904582/1607849
+        // Disable scroll zooming and bind back the click event
+        var onMapMouseleaveHandler = function(event) {
+            var that = $(this);
+            that.on('click', onMapClickHandler);
+            that.off('mouseleave', onMapMouseleaveHandler);
+            that.find('iframe').css("pointer-events", "none");
+        }
+        var onMapClickHandler = function(event) {
+                var that = $(this);
+                // Disable the click handler until the user leaves the map area
+                that.off('click', onMapClickHandler);
+                // Enable scrolling zoom
+                that.find('iframe').css("pointer-events", "auto");
+                // Handle the mouse leave event
+                that.on('mouseleave', onMapMouseleaveHandler);
+            }
+            // Enable map zooming with mouse scroll when the user clicks the map
+        $('.map').on('click', onMapClickHandler);
+    </script>
+
+</body>
+
+</html>

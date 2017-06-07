@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>飲料吧 - 投票頁</title>
+    <!-- Bootstrap -->
+    <!-- 最新編譯和最佳化的 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--jQuery搜尋列CSS套用-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+    <!-- 選擇性佈景主題 -->
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/style.css' %}" />
+    <!--<link rel="stylesheet" href="CSS/style.css" />-->
+</head>
+
+<body>
+    <h1>{{ question.question_text }}</h1>
+
+    <table class="table table-bordered;">
+        <tr>
+            <td>排名</td>
+            <td>名稱</td>
+            <td>投票數</td>
+        </tr>
+        {% for choice in question.choice_set.all %}
+        <tr>
+            <td>{{ choice.id }}</td>
+            <td>{{ choice.choice_text }}</td>
+            <td>{{ choice.votes }}</td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+    {% comment %}
+    <p class="text-right"><a href="{% url 'polls:detail' question.id %}" class="btn">投票區</a></p>{% endcomment %}
+    <!--<a href="{% url 'polls:index'%}">回首頁</a>-->
+</body>
+
+</html>

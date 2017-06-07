@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>飲料吧 - 首頁</title>
+    <!-- Bootstrap -->
+    <!-- 最新編譯和最佳化的 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--jQuery搜尋列CSS套用-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+    <!-- 選擇性佈景主題 -->
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/style.css' %}" />
+    <!--<link rel="stylesheet" href="CSS/style.css" />-->
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="col-md-12 ">
+            <nav class="navbar navbar-inverse navbar-fixed-top " role="navigation ">
+                <div class="container ">
+                    <div class="navbar-header ">
+                        <button type="button " class="navbar-toggle collapsed " data-toggle="collapse " data-target="#bs-example-navbar-collapse-2 ">
+                            <span class="sr-only ">Toggle navigation</span>
+                            <span class="icon-bar "></span>
+                            <span class="icon-bar "></span>
+                            <span class="icon-bar "></span>
+                        </button>
+                        <a class="navbar-brand" href="http://127.0.0.1:8000/polls/ " id="mybrand">飲料霸</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-2 ">
+                        <ul class="nav navbar-nav navbar-right ">
+                            <li><a href="#search">搜尋</a></li>
+                            <li><a href="http://127.0.0.1:8000/polls/about/ ">關於</a></li>
+                            <li><a href="http://127.0.0.1:8000/polls/3/results/">投票</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="col-md-12 ">
+            <br><br><br>
+        </div>
+        <div class="row ">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <!--圖片跑馬燈-->
+                <div class="carousel slide" id="carousel-109522">
+                    <ol class="carousel-indicators">
+                        <li class="active" data-slide-to="0" data-target="#carousel-109522">
+                        </li>
+                        <li data-slide-to="1" data-target="#carousel-109522">
+                        </li>
+                        <li data-slide-to="2" data-target="#carousel-109522">
+                        </li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img alt="Carousel Bootstrap First" src="{% static 'polls/img/store9.jpg' %}">
+                        </div>
+                        <div class="item">
+                            <img alt="Carousel Bootstrap Second" src="{% static 'polls/img/store6.png' %}">
+                        </div>
+                        <div class="item">
+                            <img alt="Carousel Bootstrap Third" src="{% static 'polls/img/store10.png' %}">
+                        </div>
+                    </div> <a class="left carousel-control" href="#carousel-109522" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-109522" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+            </div>
+            <div class="col-md-2 "></div>
+        </div>
+
+        <div class="row" id="search">
+            <br><br><br>
+            <div class="col-md-3">
+                <!--站內搜尋/飲料搭配-->
+                <br>
+                <div class="tabbable" id="tabs-483163 ">
+                    <ul class="nav nav-tabs ">
+                        <li>
+                            <a href="#panel-146744 " data-toggle="tab " id="search ">站內搜尋</a>
+                        </li>
+                        <li class="active ">
+                            <a href="#panel-700165 " data-toggle="tab ">飲料搭配</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content jumbotron ">
+                        <div class="tab-pane " id="panel-146744 ">
+                            <form>
+                                <div class="form-group ">
+                                    <input type="text " class="form-control " placeholder="站內搜尋 ">
+                                </div>
+
+                                <button type="submit " class="btn btn-default ">Search</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane active " id="panel-700165 ">
+                            <form>
+                                <button type="submit " class="btn btn-default ">珍珠++</button>
+                                <button type="submit " class="btn btn-default ">芋頭++</button>
+                                <button type="submit " class="btn btn-default ">金桔++</button>
+                                <button type="submit " class="btn btn-default ">檸檬++</button>
+                                <button type="submit " class="btn btn-default ">蘋果++</button>
+                                <button type="submit " class="btn btn-default ">芒果++</button>
+                                <button type="submit " class="btn btn-default ">百香果++</button>
+                                <button type="submit " class="btn btn-default ">國寶茶葉++</button>
+                                <img src="{% static 'polls/img/drink.png' %} " alt="飲料照片 " id="myimg">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 ">
+                <!--飲料店資訊-->
+                <div class="row ">
+                    <!--標題空間-->
+                    <div class="col-md-12 ">
+                        <br>
+                        <h3>飲料店</h3>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="row ">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5">
+                        <a href="http://127.0.0.1:8000/polls/3/store1/">
+                            <img alt="Image Preview " src="{% static 'polls/img/store1.png' %} " class="img-rounded " width="100%">
+                        </a>
+                        <div class="panel panel-default ">
+                            <div class="panel-heading text-center ">
+                                <a class="panel-title collapsed " data-toggle="collapse " data-parent="#panel-380874 " href="http://127.0.0.1:8000/polls/3/store1/">斜角巷</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="http://127.0.0.1:8000/polls/3/store2/">
+                            <img alt="Image Preview " src="{% static 'polls/img/store2.png' %} " class="img-rounded " width="100%">
+                        </a>
+                        <div class="panel panel-default ">
+                            <div class="panel-heading text-center ">
+                                <a class="panel-title collapsed " data-toggle="collapse " data-parent="#panel-852769 " href="http://127.0.0.1:8000/polls/3/store2/">丸作</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                <div class="row ">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5">
+                        <a href="http://127.0.0.1:8000/polls/3/store3/">
+                            <img alt="Image Preview " src="{% static 'polls/img/store3.png' %} " class="img-rounded " width="100%">
+                        </a>
+                        <div class="panel panel-default">
+                            <div class="panel-heading text-center ">
+                                <a class="panel-title " data-toggle="collapse " data-parent="#panel-548987 " href="http://127.0.0.1:8000/polls/3/store3/">迷客夏</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="http://127.0.0.1:8000/polls/3/store4/">
+                            <img alt="Image Preview " src="{% static 'polls/img/store4.png' %} " class="img-rounded " width="100%">
+                        </a>
+                        <div class="panel panel-default ">
+                            <div class="panel-heading text-center ">
+                                <a class="panel-title " data-toggle="collapse " data-parent="#panel-96281 " href="http://127.0.0.1:8000/polls/3/store4/">一芳</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                <div class="row ">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5">
+                        <a href="http://127.0.0.1:8000/polls/3/store5/">
+                            <img alt="Image Preview " src="{% static 'polls/img/store5.png' %} " class="img-rounded " width="100%">
+                        </a>
+                        <div class="panel panel-default ">
+                            <div class="panel-heading text-center ">
+                                <a class="panel-title " data-toggle="collapse " data-parent="#panel-545498 " href="http://127.0.0.1:8000/polls/3/store5/">芭樂芭</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="http://127.0.0.1:8000/polls/3/store6/">
+                            <img alt="Image Preview " src="{% static 'polls/img/store6.png' %} " class="img-rounded " width="100%">
+                        </a>
+                        <div class="panel panel-default ">
+                            <div class="panel-heading text-center ">
+                                <a class="panel-title " data-toggle="collapse " data-parent="#panel-808126 " href="http://127.0.0.1:8000/polls/3/store6/">出櫃</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                <div class="row ">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5">
+                        <a href="http://127.0.0.1:8000/polls/3/store7/">
+                            <img alt="Image Preview " src="{% static 'polls/img/store7.png' %} " class="img-rounded " width="100%">
+                        </a>
+                        <div class="panel panel-default ">
+                            <div class="panel-heading text-center ">
+                                <a class="panel-title " data-toggle="collapse " data-parent="#panel-857951 " href="http://127.0.0.1:8000/polls/3/store7/">Mr.Wish</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="http://127.0.0.1:8000/polls/3/store8/">
+                            <img alt="Image Preview " src="{% static 'polls/img/store8.png' %} " class="img-rounded " width="100%">
+                        </a>
+                        <div class="panel panel-default ">
+                            <div class="panel-heading text-center ">
+                                <a class="panel-title " data-toggle="collapse " data-parent="#panel-354886 " href="http://127.0.0.1:8000/polls/3/store8/">康青龍</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                <div class="row ">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5">
+                        <a href="http://127.0.0.1:8000/polls/3/store9/">
+                            <img alt="Image Preview " src="{% static 'polls/img/store9.png' %} " class="img-rounded " width="100%">
+                        </a>
+                        <div class="panel panel-default ">
+                            <div class="panel-heading text-center ">
+                                <a class="panel-title " data-toggle="collapse " data-parent="#panel-139273 " href="http://127.0.0.1:8000/polls/3/store9/">茶湯會</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="http://127.0.0.1:8000/polls/3/store10/">
+                            <img alt="Image Preview " src="{% static 'polls/img/store10.png' %} " class="img-rounded " width="100%">
+                        </a>
+                        <div class="panel panel-default ">
+                            <div class="panel-heading text-center ">
+                                <a class="panel-title " data-toggle="collapse " data-parent="#panel-103948 " href="http://127.0.0.1:8000/polls/3/store10/">圓石</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row ">
+            <div class="col-md-12 bottom ">
+                <a href="https://github.com/NTUST/106-team01 " class="btn ">team01 github</a>
+                <a href="https://github.com/NTUST " class="btn ">NTUST github</a>
+                <!--頁尾連結-->
+            </div>
+        </div>
+
+    </div>
+    <!--jQuery搜尋列JS套用-->
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js "></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js "></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
+
+</body>
+
+</html>

@@ -54,3 +54,7 @@ class Drink(models.Model):
     
     def __str__(self):
         return self.drink_name
+    
+    def __str__(self):
+        return self.id
+        
