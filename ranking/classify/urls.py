@@ -8,5 +8,6 @@ urlpatterns = [
     url(r'^hot/$', views.hot, name='hot'),
     url(r'^tea/$', views.tea, name='tea'),
     url(r'^chew/$', views.chew, name='chew'),
+    url(r'^price/$', views.avg_price, name='price'),
     #url(r'^(?P<question_id>[0-9]+)/ans/$', views.tea, name='tea'),
 ]

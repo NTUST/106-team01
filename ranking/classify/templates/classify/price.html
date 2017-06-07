@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--jQuery-->
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+
+
+    <body>
+        <div class="chart-container" style="position: relative; height:20vh; width:40vw">
+            <canvas id="myChart"></canvas>
+            <script>
+                var canvas = document.getElementById('myChart');
+                var data = {
+                    labels: ["{{store.0}}", "{{store.1}}"],
+                    datasets: [{
+                        label: "drink avg price",
+                        backgroundColor: "rgba(255,99,132,0.2)",
+                        borderColor: "rgba(255,99,132,1)",
+                        borderWidth: 4,
+                        hoverBackgroundColor: "rgba(255,99,132,0.4)",
+                        hoverBorderColor: "rgba(255,99,132,1)",
+                        data: ["{{a}}", "{{b}}", 0],
+                    }]
+                };
+                var option = {
+                    animation: {
+                        duration: 5000
+                    }
+
+                };
+
+                var myBarChart = Chart.Bar(canvas, {
+                    data: data,
+                    options: option
+                });
+            </script>
+        </div>
+
+    </body>
+
+</html>
