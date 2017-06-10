@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>飲料吧-人氣排行榜</title>
+    <!-- Bootstrap -->
+    <!-- 最新編譯和最佳化的 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--jQuery搜尋列CSS套用-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+    <!--jQuery-->
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <!-- 選擇性佈景主題 -->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/newstyle.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/bootstrap.min.css' %}" />
+
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar transparent navbar-fixed-top" role="navigation">
+            <nav class="navbar-inner">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-nav-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <ul class="nav navbar-nav">
+                            <li><a href="http://127.0.0.1:8000/polls/3/rankboard/">人氣排行</a></li>
+                            <li><a href="http://127.0.0.1:8000/polls/find/">找飲料　</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="col-lg-3"></div>
+                        <div>
+                            <a class="navbar-brand" href="http://127.0.0.1:8000/polls/">
+                                <img src="{% static 'polls/img/logo-s.png' %}" width="130%">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse" id="example-nav-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="http://127.0.0.1:8000/polls/brand/">品牌總覽</a></li>
+                            <li><a href="http://127.0.0.1:8000/polls/brand#middle">價格大比拚</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </nav>
+        <br><br>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div class="container">
+                    <br><br>
+                    <h3 class="text3-title">人氣排行</h3>
+                    <br>
+
+                    <!--排行圖-->
+
+
+                    <div class="chart-container center" id="chart" style=" height:60vh; width:50vw">
+                        <canvas id="myChart2"></canvas>
+                        <script>
+                            var canvas = document.getElementById('myChart2');
+                            var data = {
+                                labels: ["{{choices.0.0}}", "{{choices.1.0}}", "{{choices.2.0}}", "{{choices.3.0}}", "{{choices.4.0}}",
+                                    "{{choices.5.0}}", "{{choices.6.0}}", "{{choices.7.0}}", "{{choices.8.0}}", "{{choices.9.0}}",
+                                ],
+                                datasets: [{
+                                    label: "品牌得票數",
+                                    backgroundColor: "#F59D00",
+                                    borderColor: "rgba(1,1,1,1)",
+                                    borderWidth: 1,
+                                    hoverBackgroundColor: "rgba(245,157,0,0.5)",
+                                    hoverBorderColor: "rgba(1,1,1,1)",
+                                    data: ["{{choices.0.1}}", "{{choices.1.1}}", "{{choices.2.1}}", "{{choices.3.1}}", "{{choices.4.1}}",
+                                        "{{choices.5.1}}", "{{choices.6.1}}", "{{choices.7.1}}", "{{choices.8.1}}", "{{choices.9.1}}",
+                                    ],
+                                }]
+                            };
+
+                            var option = {
+                                animation: {
+                                    duration: 5000
+                                }
+                            };
+
+                            var myBarChart = new Chart(canvas, {
+                                type: 'horizontalBar',
+                                data: data,
+                                options: option,
+                            });
+                        </script>
+                    </div>
+                    <br><br>
+                    <h3 class="text3-title">喜歡的店還沒上榜嗎？快來投票！</h3>
+                </div>
+            </div>
+            <div class="col-sm-12 backgroundimg" id="vote">
+                <br><br>
+                <div class="row">
+                    <div class="col-sm-4">
+                    </div>
+                    <div class="col-sm-4">
+                        <a href="#">
+                            <iframe src="http://127.0.0.1:8000/polls/3/" width="100%" height="400px" style="border: 1px solid black;"></iframe>
+                        </a>
+                    </div>
+                    <div class="col-sm-4">
+                    </div>
+                </div>
+                <br><br>
+            </div>
+            <!--頁尾連結-->
+            <div class="col-sm-12 text-center" id="bottom">
+                <br><br><br><br>
+                <h4><strong>Team01</strong>
+                </h4>
+                <p>台灣科技大學
+                    <br>
+                    <p>網頁設計</p>
+                    <br>
+                    <ul class="list-inline ">
+                        <li>
+                            <a href="https://github.com/NTUST/106-team01 " target="blank ">team01 github</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/NTUST " target="blank ">NTUST github</a>
+                        </li>
+                    </ul>
+                    <hr class="small ">
+                    <p class="text-muted ">Copyright &copy; Your Website 2017</p> <br><br><br>
+            </div>
+        </div>
+        <script src="{% static 'polls/js/jquery.js' %} "></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="{% static 'polls/js/bootstrap.min.js' %} "></script>
+        <!--jQuery搜尋列JS套用-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

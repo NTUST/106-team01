@@ -2,143 +2,124 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>飲料霸 - 關於我們</title>
-
-    <!-- Bootstrap 自己新增的CSS-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> {% load static %}
-
-    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/style.css' %}" />
+    <!-- Bootstrap -->
+    <!-- 最新編譯和最佳化的 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--jQuery搜尋列CSS套用-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+    <!-- 選擇性佈景主題 -->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/newstyle.css' %}" />
     <!--<link rel="stylesheet" href="CSS/style.css" />-->
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="col-md-12">
-            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-                <div class="container ">
-                    <div class="navbar-header ">
-                        <button type="button " class="navbar-toggle collapsed " data-toggle="collapse " data-target="#bs-example-navbar-collapse-2 ">
-        <span class="sr-only ">Toggle navigation</span>
-        <span class="icon-bar "></span>
-        <span class="icon-bar "></span>
-        <span class="icon-bar "></span>
-      </button>
-                        <a class="navbar-brand" href="http://127.0.0.1:8000/polls/" id="mybrand">飲料霸</a>
+    <div class="container">
+        <nav class="navbar transparent navbar-fixed-top" role="navigation">
+            <nav class="navbar-inner">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-nav-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <ul class="nav navbar-nav">
+                            <li><a href="http://127.0.0.1:8000/polls/3/rankboard/">人氣排行</a></li>
+                            <li><a href="http://127.0.0.1:8000/polls/find/">找飲料　</a></li>
+                        </ul>
                     </div>
-
-                    <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-2 ">
+                    <div>
+                        <div class="col-lg-3"></div>
+                        <div>
+                            <a class="navbar-brand" href="http://127.0.0.1:8000/polls/">
+                                <img src="{% static 'polls/img/logo-s.png' %}" width="130%">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse" id="example-nav-collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#">搜尋</a></li>
-                            <li class="active"><a href="#">關於</a></li>
+                            <li><a href="http://127.0.0.1:8000/polls/brand/">品牌總覽</a></li>
+                            <li><a href="http://127.0.0.1:8000/polls/brand#middle">價格大比拚</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
-        </div>
-        <div class="col-md-12">
-            <br><br>
-        </div>
+        </nav>
+        <br><br><br><br><br>
 
-        <div class="col-md-3">
-            <br>
-            <div class="tabbable" id="tabs-483163">
-                <ul class="nav nav-tabs">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="text-center">品牌推薦</h1>
+                <div class="row" id="frame">
+                    <iframe id="frame" src="https://docs.google.com/forms/d/e/1FAIpQLSeHpQPYtFrM8zLfkXJddjUpJxSO0ZwKq5xUpb2v7HII1jg_Ug/viewform?embedded=true" width="760" height="600" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" style="background-color:orange">
+                <br><br>
+                <ul class="list-inline text-center">
                     <li>
-                        <a href="#panel-146744" data-toggle="tab" id="search">站內搜尋</a>
+                        <a href="https://facebook.com/hannah.chen.5688" target="_blank">
+                            <img src="https://instagram.ftpe5-1.fna.fbcdn.net/t51.2885-19/s320x320/15802340_1621387981500547_8964887045122031616_a.jpg" alt="成員大頭貼" class="memberimg">
+                        </a>
+                        <h2 class="membertext">陳怡涵</h2>
                     </li>
-                    <li class="active">
-                        <a href="#panel-700165" data-toggle="tab">飲料搭配</a>
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=100001411811825" target="_blank">
+                            <img src="https://instagram.ftpe5-1.fna.fbcdn.net/t51.2885-19/s320x320/14718288_1615637672065449_4442935718280429568_a.jpg" alt="成員大頭貼" class="memberimg">
+                        </a>
+                        <h2 class="membertext">游蕙</h2>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com/profile.php?id=100001555331373" target="_blank">
+                            <img src="https://scontent-tpe1-1.cdninstagram.com/t51.2885-19/s320x320/14591115_374326032929365_8964242589574234112_n.jpg" alt="成員大頭貼" class="memberimg">
+                        </a>
+                        <h2 class="membertext">劉映秀</h2>
                     </li>
                 </ul>
-                <div class="tab-content jumbotron">
-                    <div class="tab-pane" id="panel-146744">
-                        <form>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="站內搜尋">
-                            </div>
-
-                            <button type="submit" class="btn btn-default">Search</button>
-                        </form>
-                    </div>
-                    <div class="tab-pane active" id="panel-700165">
-                        <form>
-                            <button type="submit" class="btn btn-default">珍珠++</button>
-                            <button type="submit" class="btn btn-default">芋頭++</button>
-                            <button type="submit" class="btn btn-default">金桔++</button>
-                            <button type="submit" class="btn btn-default">檸檬++</button>
-                            <button type="submit" class="btn btn-default">蘋果++</button>
-                            <button type="submit" class="btn btn-default">芒果++</button>
-                            <button type="submit" class="btn btn-default">百香果++</button>
-                            <button type="submit" class="btn btn-default">國寶茶葉++</button>
-                            <img src="{% static 'polls/img/drink.png' %}" alt="飲料照片" id="myimg">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-9">
-            <h1 id="myh1">開發動機</h1>
-            <hr>
-            <div class="jumbotron">
-                <br></br>
-                <p>現在這個時代，不只科技在進步， 就連飲料也是，飲料店越開越多， 也不斷有新口味的飲料上市。而我們的目的，把台灣特色飲品發揚光大，為新飲料店品牌提供平台曝光，也對已經知名的飲料店做整理和分類，方便大眾瀏覽飲料資訊。</p>
-            </div>
-            <h1 id="myh1">成員介紹</h1>
-            <hr>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="thumbnail">
-                        <h2>陳怡涵</h2>
-                        <img src="https://instagram.ftpe5-1.fna.fbcdn.net/t51.2885-19/s320x320/15802340_1621387981500547_8964887045122031616_a.jpg" alt="成員大頭貼" class="align-center" id="memberimg">
-                        <div class="caption">
-                            <p>簡短介紹:</p>
-                            <p class="align-right"><a href="https://facebook.com/hannah.chen.5688" class="btn btn-primary" role="button" target="_blank">FB</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="thumbnail">
-                        <h2>游蕙</h2>
-                        <img src="https://instagram.ftpe5-1.fna.fbcdn.net/t51.2885-19/s320x320/14718288_1615637672065449_4442935718280429568_a.jpg" alt="成員大頭貼" class="align-center" id="memberimg">
-                        <div class="caption">
-                            <p>簡短介紹:</p>
-                            <p class="align-right"><a href="https://www.facebook.com/profile.php?id=100001411811825" class="btn btn-primary" role="button" target="_blank">FB</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="thumbnail">
-                        <h2>劉映秀</h2>
-                        <img class="show" src="https://scontent-tpe1-1.cdninstagram.com/t51.2885-19/s320x320/14591115_374326032929365_8964242589574234112_n.jpg" alt="成員大頭貼" class="align-center" id="memberimg">
-                        <div class="caption">
-                            <p>簡短介紹:</p>
-                            <p class="align-right"><a href="https://facebook.com/profile.php?id=100001555331373" class="btn btn-primary" role="button" target="_blank">FB</a></p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
 
-    </div>
-    <div class="row">
-        <div class="col-md-12 bottom">
-            <a href="https://github.com/NTUST/106-team01" class="btn" target="_blank">team01 github</a>
-            <a href="https://github.com/NTUST" class="btn" target="_blank">NTUST github</a>
-            <!--頁尾連結-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center" id="bottom">
+                <br><br><br><br>
+                <h4><strong>Team01</strong>
+                </h4>
+                <p>台灣科技大學
+                    <br>
+                    <p>網頁設計</p>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="https://github.com/NTUST/106-team01" target="blank">team01 github</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/NTUST" target="blank">NTUST github</a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Your Website 2017</p> <br><br><br>
+            </div>
         </div>
     </div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js "></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

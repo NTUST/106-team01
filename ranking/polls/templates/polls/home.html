@@ -37,7 +37,7 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="http://127.0.0.1:8000/polls/">首頁</a></li>
                             <li><a href="http://127.0.0.1:8000/polls/about/">關於我們</a></li>
-                            <li><a href="http://127.0.0.1:8000/polls/3/results/">人氣排行榜</a></li>
+                            <li><a href="http://127.0.0.1:8000/polls/3/rankboard/">人氣排行</a></li>
                         </ul>
                     </div>
                 </div>
@@ -47,24 +47,20 @@
         <div class="row">
             <div class="col-sm-12">
                 <img src="{% static 'polls/img/bk.png' %}" class="image">
-                <!--comment 不要刪-->
+                <!--comment:隱藏程式碼-->
                 <div class="up">
                     <h1>歡迎來到</h1>
                 </div>
-                {% comment %}
-                <div id="up">
-                    <img src="{% static 'polls/img/logo.png' %}">
-                </div>{% endcomment %}
             </div>
         </div>
 
         <div class="row">
             <div class="container">
                 <div class="col-sm-4" id="nomargin">
-                    <a href="#">
+                    <a href="http://127.0.0.1:8000/polls/3/rankboard/">
                         <img src="{% static 'polls/img/bk7.png' %}" alt="介紹圖" class="image">
                         <div class="text1-title">
-                            <h1 class="text-center"><strong>　　人氣排行　　</strong></h1>
+                            <h1 class="text-center"><strong>人氣排行　　</strong></h1>
                             <hr class="greenhr">
                         </div>
                         <div class="overlay">
@@ -79,10 +75,10 @@
                     </a>
                 </div>
                 <div class="col-sm-4" id="nomargin">
-                    <a href="#">
+                    <a href="http://127.0.0.1:8000/polls/3/rankboard#vote">
                         <img src="{% static 'polls/img/bk6.png' %}" alt="介紹圖" class="image">
                         <div class="text1-title">
-                            <h1 class="text-center"><strong>　　投票區　　</strong></h1>
+                            <h1 class="text-center"><strong>投票區　　</strong></h1>
                             <hr class="greenhr">
                         </div>
                         <div class="overlay">
@@ -95,7 +91,7 @@
                     </a>
                 </div>
                 <div class="col-sm-4" id="nomargin">
-                    <a href="#">
+                    <a href="http://127.0.0.1:8000/polls/find/">
                         <img src="{% static 'polls/img/bk7.png' %}" alt="介紹圖" class="image">
                         <div class="text1-title">
                             <h1 class="text-center"><strong>　懶人找飲料　</strong></h1>
@@ -116,7 +112,7 @@
         <div class="row">
             <div class="container">
                 <div class="col-sm-6" id="nomargin">
-                    <a href="#">
+                    <a href="http://127.0.0.1:8000/polls/brand#middle">
                         <img src="{% static 'polls/img/bk4.png' %}" class="image">
                         <div class="text2-title">
                             <h1 class="text-center"><strong>價格大比拚</strong></h1>
@@ -132,7 +128,7 @@
                     </a>
                 </div>
                 <div class="col-sm-6" id="nomargin">
-                    <a href="#">
+                    <a href="http://127.0.0.1:8000/polls/brand/">
                         <img src="{% static 'polls/img/bk4.png' %}" class="image">
                         <div class="text2-title">
                             <h1 class="text-center"><strong>品牌總覽</strong></h1>
