@@ -1,3 +1,4 @@
+# -*-coding:utf-8 -*-
 from django.db import models
 from multiselectfield import MultiSelectField
 
@@ -54,7 +55,3 @@ class Drink(models.Model):
     
     def __str__(self):
         return self.drink_name
-    
-    def __str__(self):
-        return self.id
-        
