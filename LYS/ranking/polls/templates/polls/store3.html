@@ -1,0 +1,1044 @@
+<!--迷客夏-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>飲料霸 - 迷客夏</title>
+    <!-- Bootstrap -->
+    <!-- 最新編譯和最佳化的 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--jQuery搜尋列CSS套用-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+    <!-- 連接自己做的CSS-->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/style.css' %}" />
+    <!--<link rel="stylesheet" href="CSS/style.css" />-->
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/stylish-portfolio.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/font-awesome/css/font-awesome.min.css' %}">
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="http://127.0.0.1:8000/polls/" onclick=$( "#menu-close").click();>飲料霸首頁</a>
+            </li>
+            <li>
+                <a href="#new" onclick=$( "#menu-close").click();>最新活動</a>
+            </li>
+
+            <li>
+                <a href="#menu" onclick=$( "#menu-close").click();>MENU</a>
+            </li>
+            <li>
+                <a href="#branch" onclick=$( "#menu-close").click();>全台分店</a>
+            </li>
+
+            <li>
+                <a href="#contact" onclick=$( "#menu-close").click();>Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <center>
+        <div class="row" id="hot">
+            <!--熱銷飲料-->
+
+            <img src="{% static 'polls/img/store3.png' %}" alt="英雄圖" width="90%">
+        </div>
+    </center>
+    <hr>
+    <div class="row" id="new" style="background-color:yellowgreen; margin:80px">
+        <div class="container">
+            <!--最新活動-->
+            <br><br>
+            <h1 class="text-center"><strong>【新品上市】麥郁柚香</strong></h1>
+            <br><br>
+            <div class="inner-content clearfix" style="margin-bottom: 0px;margin-left:180px">
+
+                <p>第二波上市飲品：麥郁柚香</p>
+                <div class="text_exposed_show" style="margin-bottom: 0px;">
+                    <p>上市日期：2017 年 5 月 16 日<br> 產品售價：嚐鮮價 50元／L杯</p>
+                    <p>濃郁的大麥香韻，伴隨著柚子醬的獨特果香，酸甜清爽，淡淡回甘！</p>
+                    <p>立刻前往指定門市，用行動力給予創意學生們一個大大的鼓勵吧！<br> 貼心小提醒，此項商品為指定門市販售，迷粉們千萬別撲了個空喔！
+                    </p>
+                    <p><span class="_5mfr _47e3"><img class="img" src="https://www.facebook.com/images/emoji.php/v8/f32/1/16/1f516.png" alt="" width="16" height="16"></span>指定販售門市資訊：<br> 雙北：興隆店、公館店、虎林店、北醫店、伊通店、永和店、永吉店、遼寧店、天母店、淡水店、土城店
+                        <br> 桃園：長庚店、中原大學店、廣福店、忠孝店
+                        <br> 新竹：福興店、光明店、民族店、竹科光復店、竹科店、關新店
+                        <br> 台中：進化店、廟東店、山西店、工學店
+                        <br> 嘉義：玉山店、八德店、民權店、新民店、朴子店
+                        <br> 台南：佳里店、金華店、東安店、麻豆店、和緯店、海佃店
+                        <br> 屏東：恆春店、東港店
+                    </p>
+                    <p>
+                        <a href="http://www.milkshoptea.com/wp-content/uploads/2017/05/麥郁柚香-small.jpg"><img class="alignnone size-full wp-image-4553" src="http://www.milkshoptea.com/wp-content/uploads/2017/05/麥郁柚香-small.jpg" alt="" width="800" height="1131" srcset="http://www.milkshoptea.com/wp-content/uploads/2017/05/麥郁柚香-small.jpg 800w, http://www.milkshoptea.com/wp-content/uploads/2017/05/麥郁柚香-small-212x300.jpg 212w, http://www.milkshoptea.com/wp-content/uploads/2017/05/麥郁柚香-small-768x1086.jpg 768w, http://www.milkshoptea.com/wp-content/uploads/2017/05/麥郁柚香-small-724x1024.jpg 724w"
+                                sizes="(max-width: 800px) 100vw, 800px"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row" id="menu">
+            <!--MENU-->
+            <br>
+            <br>
+            <br>
+            <h1 class="text-center"><strong>MENU</strong></h1>
+            <img src="{% static 'polls/img/menu3.png' %}" alt="menu" width="100%">
+        </div>
+        <br><br>
+    </div>
+    <hr>
+    <div class="row" id="branch" style="background-color:yellowgreen; margin:80px">
+        <br><br>
+        <section class="block container">
+            <div class="row" style="margin-left:40px">
+                <div class="meteor-posts span12" data-click-behavior="permalink">
+                    <h1 class="text-center"><strong>北部分店</strong></h1>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2017/05/25/%e6%96%b0%e5%8c%97-%e6%b1%90%e6%ad%a2%e5%ba%97/"><img alt="新北-汐止店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2017/05/S__64471218_700-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2017/05/25/%e6%96%b0%e5%8c%97-%e6%b1%90%e6%ad%a2%e5%ba%97/">新北-汐止店</a></h3>
+                        </div>
+
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2017/05/19/%e5%8f%b0%e5%8c%97-%e5%a4%a7%e5%ae%89%e5%ba%97/"><img alt="台北-大安店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2017/05/未命名-5-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2017/05/19/%e5%8f%b0%e5%8c%97-%e5%a4%a7%e5%ae%89%e5%ba%97/">台北-大安店</a></h3>
+                        </div>
+
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2017/04/27/%e6%a1%83%e5%9c%92-%e5%bb%a3%e7%a6%8f%e5%ba%97/"><img alt="桃園-廣福店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2017/04/廣福-2-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2017/04/27/%e6%a1%83%e5%9c%92-%e5%bb%a3%e7%a6%8f%e5%ba%97/">桃園-廣福店</a></h3>
+                        </div>
+
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2017/04/18/%e6%96%b0%e5%8c%97-%e5%9c%9f%e5%9f%8e%e5%ba%97/"><img alt="新北-土城店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2017/04/tocheng_4-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2017/04/18/%e6%96%b0%e5%8c%97-%e5%9c%9f%e5%9f%8e%e5%ba%97/">新北-土城店</a></h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- .row -->
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2017/04/12/%e6%a1%83%e5%9c%92-%e4%b8%ad%e6%ad%a3%e5%ba%97/"><img alt="桃園-中正店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2017/04/中正BIG-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2017/04/12/%e6%a1%83%e5%9c%92-%e4%b8%ad%e6%ad%a3%e5%ba%97/">桃園-中正店</a></h3>
+                    </div>
+
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2017/03/24/%e5%8f%b0%e5%8c%97-%e5%8d%97%e6%b8%af%e5%ba%97/"><img alt="台北-南港店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2017/03/南港店-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2017/03/24/%e5%8f%b0%e5%8c%97-%e5%8d%97%e6%b8%af%e5%ba%97/">台北-南港店</a></h3>
+                    </div>
+
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2017/03/24/%e6%a1%83%e5%9c%92-%e5%85%a7%e5%a3%a2%e5%bf%a0%e5%ad%9d%e5%ba%97/"><img alt="桃園-內壢忠孝店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2017/03/內壢忠孝店-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2017/03/24/%e6%a1%83%e5%9c%92-%e5%85%a7%e5%a3%a2%e5%bf%a0%e5%ad%9d%e5%ba%97/">桃園-內壢忠孝店</a></h3>
+                    </div>
+
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2017/01/20/%e5%8f%b0%e5%8c%97-%e6%96%b0%e5%ba%97%e5%ba%97/"><img alt="台北-新店店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2017/01/final-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2017/01/20/%e5%8f%b0%e5%8c%97-%e6%96%b0%e5%ba%97%e5%ba%97/">台北-新店店</a></h3>
+                    </div>
+                </div>
+                <!-- .row -->
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2017/01/13/%e6%a1%83%e5%9c%92-%e5%a4%a7%e6%9c%89%e5%ba%97/"><img alt="桃園-大有店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2017/01/3-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2017/01/13/%e6%a1%83%e5%9c%92-%e5%a4%a7%e6%9c%89%e5%ba%97/">桃園-大有店</a></h3>
+                    </div>
+
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2016/12/27/%e5%8f%b0%e5%8c%97-%e6%b7%a1%e6%b0%b4%e5%ba%97/"><img alt="台北-淡水店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/12/formel-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2016/12/27/%e5%8f%b0%e5%8c%97-%e6%b7%a1%e6%b0%b4%e5%ba%97/">台北-淡水店</a></h3>
+                    </div>
+
+                    <!-- .item -->
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2016/11/28/%e5%8f%b0%e5%8c%97-%e6%b0%b8%e5%92%8c%e5%ba%97/"><img alt="台北-永和店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/11/11-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2016/11/28/%e5%8f%b0%e5%8c%97-%e6%b0%b8%e5%92%8c%e5%ba%97/">台北-永和店</a></h3>
+                    </div>
+
+                    <!-- .item -->
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2016/09/29/%e5%8f%b0%e5%8c%97-%e5%8d%97%e9%99%bd%e5%ba%97/"><img alt="台北-南陽店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/09/4982185630784-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2016/09/29/%e5%8f%b0%e5%8c%97-%e5%8d%97%e9%99%bd%e5%ba%97/">台北-南陽店</a></h3>
+                    </div>
+                </div>
+                <!-- .row -->
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2016/09/09/%e5%8f%b0%e5%8c%97-%e5%a4%a9%e6%af%8d%e5%ba%97/"><img alt="台北-天母店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/09/天母店-440x334_c.jpg"></a>
+                        <div class="btns"><a class="overlay-link" href="http://www.milkshoptea.com/2016/09/09/%e5%8f%b0%e5%8c%97-%e5%a4%a9%e6%af%8d%e5%ba%97/"><span class="overlay"></span></a></div>
+                        <h3><a href="http://www.milkshoptea.com/2016/09/09/%e5%8f%b0%e5%8c%97-%e5%a4%a9%e6%af%8d%e5%ba%97/">台北-天母店</a></h3>
+                    </div>
+                    <!-- .item -->
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2016/08/04/%e5%8f%b0%e5%8c%97-%e6%9e%97%e5%8f%a3%e5%ba%97/"><img alt="台北-林口店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/08/IMG_0615-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2016/08/04/%e5%8f%b0%e5%8c%97-%e6%9e%97%e5%8f%a3%e5%ba%97/">台北-林口店</a></h3>
+                    </div>
+                    <!-- .item -->
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2016/07/07/%e5%8f%b0%e5%8c%97-%e4%b8%ad%e5%92%8c%e5%ba%97/"><img alt="台北-中和店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/07/4599912773173-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2016/07/07/%e5%8f%b0%e5%8c%97-%e4%b8%ad%e5%92%8c%e5%ba%97/">台北-中和店</a></h3>
+                    </div>
+                    <!-- .item -->
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2016/06/30/%e5%8f%b0%e5%8c%97-%e4%bc%8a%e9%80%9a%e5%ba%97/"><img alt="台北-伊通店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/06/1-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2016/06/30/%e5%8f%b0%e5%8c%97-%e4%bc%8a%e9%80%9a%e5%ba%97/">台北-伊通店</a></h3>
+                    </div>
+                    <!-- .item -->
+                </div>
+                <!-- .row -->
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2016/06/22/%e5%8f%b0%e5%8c%97-%e6%9d%b1%e6%b9%96%e5%ba%97/"><img alt="台北-東湖店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/06/correct-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2016/06/22/%e5%8f%b0%e5%8c%97-%e6%9d%b1%e6%b9%96%e5%ba%97/">台北-東湖店</a></h3>
+                    </div>
+                    <!-- .item -->
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2016/06/16/%e6%96%b0%e7%ab%b9-%e6%96%b0%e8%b1%90%e5%ba%97/"><img alt="新竹-新豐店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/06/新竹新豐大-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2016/06/16/%e6%96%b0%e7%ab%b9-%e6%96%b0%e8%b1%90%e5%ba%97/">新竹-新豐店</a></h3>
+                    </div>
+                    <!-- .item -->
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2016/06/01/%e5%8f%b0%e5%8c%97-%e8%99%8e%e6%9e%97%e5%ba%97/"><img alt="台北-虎林店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/06/N3-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2016/06/01/%e5%8f%b0%e5%8c%97-%e8%99%8e%e6%9e%97%e5%ba%97/">台北-虎林店</a></h3>
+                    </div>
+                    <!-- .item -->
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2016/05/30/%e6%a1%83%e5%9c%92-%e6%a5%8a%e6%a2%85%e5%ba%97/"><img alt="桃園-楊梅店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/05/未命名-1-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2016/05/30/%e6%a1%83%e5%9c%92-%e6%a5%8a%e6%a2%85%e5%ba%97/">桃園-楊梅店</a></h3>
+                    </div>
+                    <!-- .item -->
+                </div>
+                <!-- .row -->
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2016/05/18/%e6%96%b0%e7%ab%b9-%e9%a6%99%e5%b1%b1%e5%ba%97/"><img alt="新竹-香山店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/05/香山店2-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2016/05/18/%e6%96%b0%e7%ab%b9-%e9%a6%99%e5%b1%b1%e5%ba%97/">新竹-香山店</a></h3>
+                    </div>
+                    <!-- .item -->
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2016/04/27/%e5%8f%b0%e5%8c%97-%e6%96%b0%e8%8e%8a%e5%ba%97/"><img alt="台北-新莊店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/04/台北-新莊店-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2016/04/27/%e5%8f%b0%e5%8c%97-%e6%96%b0%e8%8e%8a%e5%ba%97/">台北-新莊店</a></h3>
+                    </div>
+                    <!-- .item -->
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2016/04/25/%e6%a1%83%e5%9c%92-%e5%8d%97%e5%b4%81%e5%ba%97/"><img alt="桃園-南崁店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/04/RR-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2016/04/25/%e6%a1%83%e5%9c%92-%e5%8d%97%e5%b4%81%e5%ba%97/">桃園-南崁店</a></h3>
+                    </div>
+                    <!-- .item -->
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2016/04/12/%e6%96%b0%e7%ab%b9-%e9%97%9c%e6%96%b0%e5%ba%97/"><img alt="新竹-關新店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/04/S__8077315-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2016/04/12/%e6%96%b0%e7%ab%b9-%e9%97%9c%e6%96%b0%e5%ba%97/">新竹-關新店</a></h3>
+                    </div>
+                    <!-- .item -->
+                </div>
+                <!-- .row -->
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2016/04/12/%e6%a1%83%e5%9c%92-%e9%95%b7%e5%ba%9a%e5%ba%97/"><img alt="桃園-長庚店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/04/林口長庚大-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2016/04/12/%e6%a1%83%e5%9c%92-%e9%95%b7%e5%ba%9a%e5%ba%97/">桃園-長庚店</a></h3>
+                    </div>
+                    <!-- .item -->
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2016/04/12/%e6%96%b0%e7%ab%b9-%e4%b8%ad%e6%ad%a3%e5%ba%97-2/"><img alt="新竹-中正店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/04/新竹中正-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2016/04/12/%e6%96%b0%e7%ab%b9-%e4%b8%ad%e6%ad%a3%e5%ba%97-2/">新竹-中正店</a></h3>
+                    </div>
+                    <!-- .item -->
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2016/04/12/%e6%96%b0%e7%ab%b9-%e4%b8%ad%e6%ad%a3%e5%ba%97/"><img alt="新竹-竹東店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/04/新竹竹東大-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2016/04/12/%e6%96%b0%e7%ab%b9-%e4%b8%ad%e6%ad%a3%e5%ba%97/">新竹-竹東店</a></h3>
+                    </div>
+                    <!-- .item -->
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2016/04/12/%e6%96%b0%e7%ab%b9-%e9%81%a0%e7%99%be%e5%ba%97/"><img alt="新竹-遠百店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/04/遠百大-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2016/04/12/%e6%96%b0%e7%ab%b9-%e9%81%a0%e7%99%be%e5%ba%97/">新竹-遠百店</a></h3>
+                    </div>
+                    <!-- .item -->
+                </div>
+                <!-- .row -->
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2016/01/22/%e8%8b%97%e6%a0%97-%e9%a0%ad%e4%bb%bd%e4%b8%ad%e6%ad%a3%e5%ba%97/"><img alt="苗栗-頭份中正店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/01/頭份中正大-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2016/01/22/%e8%8b%97%e6%a0%97-%e9%a0%ad%e4%bb%bd%e4%b8%ad%e6%ad%a3%e5%ba%97/">苗栗-頭份中正店</a></h3>
+                    </div>
+                    <!-- .item -->
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2015/12/28/%e6%a1%83%e5%9c%92-%e5%85%83%e5%8c%96%e5%ba%97/"><img alt="桃園-元化店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/12/S__3686411-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2015/12/28/%e6%a1%83%e5%9c%92-%e5%85%83%e5%8c%96%e5%ba%97/">桃園-元化店</a></h3>
+                    </div>
+                    <!-- .item -->
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2015/11/12/%e6%a1%83%e5%9c%92-%e6%9d%b1%e9%be%8d%e5%ba%97/"><img alt="桃園-東龍店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/11/messageImage_1446437028202-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2015/11/12/%e6%a1%83%e5%9c%92-%e6%9d%b1%e9%be%8d%e5%ba%97/">桃園-東龍店</a></h3>
+                    </div>
+                    <!-- .item -->
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2015/11/12/%e5%8f%b0%e5%8c%97-%e9%81%bc%e5%af%a7%e5%ba%97/"><img alt="台北-遼寧店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/11/249981-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2015/11/12/%e5%8f%b0%e5%8c%97-%e9%81%bc%e5%af%a7%e5%ba%97/">台北-遼寧店</a></h3>
+                    </div>
+                    <!-- .item -->
+                </div>
+                <!-- .row -->
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2015/08/10/%e5%8f%b0%e5%8c%97-%e5%8c%97%e9%86%ab%e5%ba%97/"><img alt="台北-北醫店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/08/台北北醫-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2015/08/10/%e5%8f%b0%e5%8c%97-%e5%8c%97%e9%86%ab%e5%ba%97/">台北-北醫店</a></h3>
+                    </div>
+                    <!-- .item -->
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2015/06/27/%e5%8f%b0%e5%8c%97-%e4%b8%89%e9%87%8d%e5%ba%97/"><img alt="台北-三重店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/06/64774_1136002739747013_8970093314121223151_n-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2015/06/27/%e5%8f%b0%e5%8c%97-%e4%b8%89%e9%87%8d%e5%ba%97/">台北-三重店</a></h3>
+                    </div>
+                    <!-- .item -->
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2015/06/22/%e5%8f%b0%e5%8c%97-%e5%85%a7%e6%b9%96%e5%ba%97-2/"><img alt="台北-板橋店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/06/11541051_10203243399044454_437178738_n-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2015/06/22/%e5%8f%b0%e5%8c%97-%e5%85%a7%e6%b9%96%e5%ba%97-2/">台北-板橋店</a></h3>
+                    </div>
+                    <!-- .item -->
+                    <div class="col-md-3">
+                        <a href="http://www.milkshoptea.com/2015/06/04/%e6%96%b0%e7%ab%b9-%e6%b9%b3%e9%9b%85%e5%ba%97/"><img alt="新竹-湳雅店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/06/新竹湳雅-440x334_c.jpg"></a>
+                        <h3><a href="http://www.milkshoptea.com/2015/06/04/%e6%96%b0%e7%ab%b9-%e6%b9%b3%e9%9b%85%e5%ba%97/">新竹-湳雅店</a></h3>
+                    </div>
+                    <!-- .row -->
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2015/05/28/%e6%96%b0%e7%ab%b9-%e6%b9%96%e5%8f%a3%e5%ba%97/"><img alt="新竹-湖口店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/05/湖口-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2015/05/28/%e6%96%b0%e7%ab%b9-%e6%b9%96%e5%8f%a3%e5%ba%97/">新竹-湖口店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2015/05/08/%e6%a1%83%e5%9c%92-%e4%b8%ad%e5%8e%9f%e5%a4%a7%e5%ad%b8%e5%ba%97/"><img alt="桃園-中原大學店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/05/中原大學大-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2015/05/08/%e6%a1%83%e5%9c%92-%e4%b8%ad%e5%8e%9f%e5%a4%a7%e5%ad%b8%e5%ba%97/">桃園-中原大學店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2015/04/17/%e6%a1%83%e5%9c%92-%e4%b8%ad%e5%a3%a2%e5%81%a5%e8%a1%8c%e5%ba%97/"><img alt="桃園-中壢健行店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/04/中壢建大-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2015/04/17/%e6%a1%83%e5%9c%92-%e4%b8%ad%e5%a3%a2%e5%81%a5%e8%a1%8c%e5%ba%97/">桃園-中壢健行店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2015/04/17/%e5%8f%b0%e5%8c%97-%e5%85%ac%e9%a4%a8%e5%ba%97/"><img alt="台北-公館店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/04/11080956_911225008928777_8637455174293044886_n-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2015/04/17/%e5%8f%b0%e5%8c%97-%e5%85%ac%e9%a4%a8%e5%ba%97/">台北-公館店</a></h3>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <!-- .row -->
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2015/03/25/%e5%8f%b0%e5%8c%97-%e6%a8%b9%e6%9e%97%e5%ba%97/"><img alt="台北-樹林店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/03/S__12484787-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2015/03/25/%e5%8f%b0%e5%8c%97-%e6%a8%b9%e6%9e%97%e5%ba%97/">台北-樹林店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2015/03/04/%e5%8f%b0%e5%8c%97-%e5%85%a7%e6%b9%96%e5%ba%97/"><img alt="台北-內湖店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/03/S__12116121-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2015/03/04/%e5%8f%b0%e5%8c%97-%e5%85%a7%e6%b9%96%e5%ba%97/">台北-內湖店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2015/02/25/%e6%a1%83%e5%9c%92-%e5%8d%97%e5%b9%b3%e5%ba%97/"><img alt="桃園-南平店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/02/桃園南平大-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2015/02/25/%e6%a1%83%e5%9c%92-%e5%8d%97%e5%b9%b3%e5%ba%97/">桃園-南平店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2015/02/04/%e6%96%b0%e7%ab%b9-%e7%ab%b9%e7%a7%91%e5%85%89%e5%be%a9%e5%ba%97/"><img alt="新竹-竹科光復店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/02/10981401_735599513201867_8400891241250844285_n-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2015/02/04/%e6%96%b0%e7%ab%b9-%e7%ab%b9%e7%a7%91%e5%85%89%e5%be%a9%e5%ba%97/">新竹-竹科光復店</a></h3>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <!-- .row -->
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/12/03/%e6%96%b0%e7%ab%b9-%e6%b0%91%e6%97%8f%e5%ba%97/"><img alt="新竹-民族店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/12/民族大-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/12/03/%e6%96%b0%e7%ab%b9-%e6%b0%91%e6%97%8f%e5%ba%97/">新竹-民族店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/11/14/%e8%8b%97%e6%a0%97-%e7%ab%b9%e5%8d%97%e5%85%89%e5%be%a9%e5%ba%97/"><img alt="苗栗-竹南店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/11/1-3-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/11/14/%e8%8b%97%e6%a0%97-%e7%ab%b9%e5%8d%97%e5%85%89%e5%be%a9%e5%ba%97/">苗栗-竹南店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/11/14/%e5%8f%b0%e5%8c%97-%e6%b0%b8%e5%90%89%e5%ba%97/"><img alt="台北-永吉店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/11/永吉-2-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/11/14/%e5%8f%b0%e5%8c%97-%e6%b0%b8%e5%90%89%e5%ba%97/">台北-永吉店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/10/08/%e6%96%b0%e7%ab%b9-%e9%a3%9f%e5%93%81%e5%ba%97/"><img alt="新竹-食品店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/10/新竹食品大-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/10/08/%e6%96%b0%e7%ab%b9-%e9%a3%9f%e5%93%81%e5%ba%97/">新竹-食品店</a></h3>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <!-- .row -->
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/06/19/%e8%8b%97%e6%a0%97-%e9%a0%ad%e4%bb%bd%e5%bb%ba%e5%9c%8b%e5%ba%97/"><img alt="苗栗-頭份建國店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/10/苗栗頭份建國-1-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/06/19/%e8%8b%97%e6%a0%97-%e9%a0%ad%e4%bb%bd%e5%bb%ba%e5%9c%8b%e5%ba%97/">苗栗-頭份建國店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/06/19/%e5%8f%b0%e5%8c%97-%e8%88%88%e9%9a%86%e5%ba%97/"><img alt="台北-興隆店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/06/4634156601277-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/06/19/%e5%8f%b0%e5%8c%97-%e8%88%88%e9%9a%86%e5%ba%97/">台北-興隆店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/06/19/%e6%96%b0%e7%ab%b9-%e6%b8%85%e5%a4%a7%e5%ba%97/"><img alt="新竹-清大店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/06/清大照片1-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/06/19/%e6%96%b0%e7%ab%b9-%e6%b8%85%e5%a4%a7%e5%ba%97/">新竹-清大店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/01/28/%e6%96%b0%e7%ab%b9-%e5%8c%97%e9%96%80%e5%ba%97/"><img alt="新竹-北門店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/09/-2-e1409543072277-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/01/28/%e6%96%b0%e7%ab%b9-%e5%8c%97%e9%96%80%e5%ba%97/">新竹-北門店</a></h3>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <!-- .row -->
+                    <div class="row last-child">
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/01/28/%e6%96%b0%e7%ab%b9-%e7%ab%b9%e7%a7%91%e5%ba%97/"><img alt="新竹-竹科店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/10/新竹竹科-1-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/01/28/%e6%96%b0%e7%ab%b9-%e7%ab%b9%e7%a7%91%e5%ba%97/">新竹-竹科店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/01/28/%e6%96%b0%e7%ab%b9-%e5%85%89%e6%98%8e%e5%ba%97/"><img alt="新竹-光明店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/01/1-6-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/01/28/%e6%96%b0%e7%ab%b9-%e5%85%89%e6%98%8e%e5%ba%97/">新竹-光明店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/01/28/%e6%96%b0%e7%ab%b9-%e7%a6%8f%e8%88%88%e5%ba%97/"><img alt="新竹-福興店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/01/sg-fs-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/01/28/%e6%96%b0%e7%ab%b9-%e7%a6%8f%e8%88%88%e5%ba%97/">新竹-福興店</a></h3>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <!-- .row -->
+                </div>
+                <!-- .meteor-posts -->
+            </div>
+            <!-- .row -->
+        </section>
+        <hr>
+        <section class="block container">
+            <div class="row">
+                <div class="meteor-posts span12" data-click-behavior="permalink">
+                    <h1 class="text-center"><strong>中部分店</strong></h1>
+                    <div class="row" style="margin-left:40px">
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2017/05/11/%e5%8d%97%e6%8a%95-%e5%9f%94%e9%87%8c%e5%ba%97/"><img alt="南投-埔里店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2017/05/埔里大-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2017/05/11/%e5%8d%97%e6%8a%95-%e5%9f%94%e9%87%8c%e5%ba%97/">南投-埔里店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2017/01/20/%e5%8f%b0%e4%b8%ad-%e6%bd%ad%e5%ad%90/"><img alt="台中-潭子店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2017/01/right1-1-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2017/01/20/%e5%8f%b0%e4%b8%ad-%e6%bd%ad%e5%ad%90/">台中-潭子店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2016/11/28/%e5%8f%b0%e4%b8%ad-%e5%a4%aa%e5%b9%b3%e5%ba%97/"><img alt="台中-太平店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/11/4935761-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2016/11/28/%e5%8f%b0%e4%b8%ad-%e5%a4%aa%e5%b9%b3%e5%ba%97/">台中-太平店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2016/11/02/%e5%8f%b0%e4%b8%ad-%e5%a4%a7%e9%9b%85%e5%ba%97/"><img alt="台中-大雅店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/11/2-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2016/11/02/%e5%8f%b0%e4%b8%ad-%e5%a4%a7%e9%9b%85%e5%ba%97/">台中-大雅店</a></h3>
+                        </div>
+                        <!-- .row -->
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="http://www.milkshoptea.com/2016/11/02/%e5%8f%b0%e4%b8%ad-%e5%90%91%e5%bf%83%e5%8d%97%e5%ba%97/"><img alt="台中-向心南店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/11/1-440x334_c.jpg"></a>
+                                <h3><a href="http://www.milkshoptea.com/2016/11/02/%e5%8f%b0%e4%b8%ad-%e5%90%91%e5%bf%83%e5%8d%97%e5%ba%97/">台中-向心南店</a></h3>
+                            </div>
+                            <!-- .item -->
+                            <div class="col-md-3">
+                                <a href="http://www.milkshoptea.com/2016/10/27/%e5%8f%b0%e4%b8%ad-%e6%b2%99%e9%b9%bf%e5%ba%97/"><img alt="台中-沙鹿店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/10/2-440x334_c.jpg"></a>
+                                <h3><a href="http://www.milkshoptea.com/2016/10/27/%e5%8f%b0%e4%b8%ad-%e6%b2%99%e9%b9%bf%e5%ba%97/">台中-沙鹿店</a></h3>
+                            </div>
+                            <!-- .item -->
+                            <div class="col-md-3">
+                                <a href="http://www.milkshoptea.com/2016/10/11/%e5%8f%b0%e4%b8%ad-%e6%b2%b3%e5%8d%97%e5%ba%97/"><img alt="台中-河南店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/10/5040313938103-440x334_c.jpg"></a>
+                                <h3><a href="http://www.milkshoptea.com/2016/10/11/%e5%8f%b0%e4%b8%ad-%e6%b2%b3%e5%8d%97%e5%ba%97/">台中-河南店</a></h3>
+                            </div>
+                            <!-- .item -->
+                            <div class="col-md-3">
+                                <a href="http://www.milkshoptea.com/2016/09/23/%e5%bd%b0%e5%8c%96-%e7%ab%99%e5%89%8d%e5%ba%97/"><img alt="彰化-站前店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/09/5015990184125-440x334_c.jpg"></a>
+                                <h3><a href="http://www.milkshoptea.com/2016/09/23/%e5%bd%b0%e5%8c%96-%e7%ab%99%e5%89%8d%e5%ba%97/">彰化-站前店</a></h3>
+                            </div>
+                            <!-- .item -->
+                        </div>
+                        <!-- .row -->
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="http://www.milkshoptea.com/2016/09/15/%e5%8f%b0%e4%b8%ad-%e5%b7%a5%e5%ad%b8%e5%ba%97/"><img alt="台中-工學店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/09/工學店-原-440x334_c.jpg"></a>
+                                <h3><a href="http://www.milkshoptea.com/2016/09/15/%e5%8f%b0%e4%b8%ad-%e5%b7%a5%e5%ad%b8%e5%ba%97/">台中-工學店</a></h3>
+                            </div>
+                            <!-- .item -->
+                            <div class="col-md-3">
+                                <a href="http://www.milkshoptea.com/2016/09/01/%e5%8f%b0%e4%b8%ad-%e8%87%aa%e7%94%b1%e5%ba%97/"><img alt="台中-自由店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/09/S__26058867-440x334_c.jpg"></a>
+                                <h3><a href="http://www.milkshoptea.com/2016/09/01/%e5%8f%b0%e4%b8%ad-%e8%87%aa%e7%94%b1%e5%ba%97/">台中-自由店</a></h3>
+                            </div>
+                            <!-- .item -->
+                            <div class="col-md-3">
+                                <a href="http://www.milkshoptea.com/2016/06/11/%e9%9b%b2%e6%9e%97-%e6%96%97%e5%85%ad%e5%ba%97/"><img alt="雲林-斗六店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/06/160264-440x334_c.jpg"></a>
+                                <h3><a href="http://www.milkshoptea.com/2016/06/11/%e9%9b%b2%e6%9e%97-%e6%96%97%e5%85%ad%e5%ba%97/">雲林-斗六店</a></h3>
+                            </div>
+                            <!-- .item -->
+                            <div class="col-md-3">
+                                <a href="http://www.milkshoptea.com/2016/05/18/%e9%9b%b2%e6%9e%97-%e8%99%8e%e5%b0%be%e5%ba%97/"><img alt="雲林-虎尾店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/05/虎尾店-440x334_c.jpg"></a>
+                                <h3><a href="http://www.milkshoptea.com/2016/05/18/%e9%9b%b2%e6%9e%97-%e8%99%8e%e5%b0%be%e5%ba%97/">雲林-虎尾店</a></h3>
+                            </div>
+                            <!-- .item -->
+                        </div>
+                        <!-- .row -->
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="http://www.milkshoptea.com/2016/04/26/%e5%bd%b0%e5%8c%96-%e6%ba%aa%e6%b9%96%e5%ba%97/"><img alt="彰化-溪湖店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/04/S__19030156-440x334_c.jpg"></a>
+                                <h3><a href="http://www.milkshoptea.com/2016/04/26/%e5%bd%b0%e5%8c%96-%e6%ba%aa%e6%b9%96%e5%ba%97/">彰化-溪湖店</a></h3>
+                            </div>
+                            <!-- .item -->
+                            <div class="col-md-3">
+                                <a href="http://www.milkshoptea.com/2016/04/08/%e5%8f%b0%e4%b8%ad-%e9%9c%a7%e5%b3%b0%e5%ba%97/"><img alt="台中-霧峰店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/04/S__40017923-440x334_c.jpg"></a>
+                                <h3><a href="http://www.milkshoptea.com/2016/04/08/%e5%8f%b0%e4%b8%ad-%e9%9c%a7%e5%b3%b0%e5%ba%97/">台中-霧峰店</a></h3>
+                            </div>
+                            <!-- .item -->
+                            <div class="col-md-3">
+                                <a href="http://www.milkshoptea.com/2016/02/01/%e5%8f%b0%e4%b8%ad-%e5%bb%9f%e6%9d%b1%e5%ba%97/"><img alt="台中-廟東店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/02/S__6717654_2-440x334_c.jpg"></a>
+                                <h3><a href="http://www.milkshoptea.com/2016/02/01/%e5%8f%b0%e4%b8%ad-%e5%bb%9f%e6%9d%b1%e5%ba%97/">台中-廟東店</a></h3>
+                            </div>
+                            <!-- .item -->
+                            <div class="col-md-3">
+                                <a href="http://www.milkshoptea.com/2015/12/04/%e5%8f%b0%e4%b8%ad-%e7%9b%8a%e6%b0%91%e5%ba%97/"><img alt="台中-益民店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/12/S__4784204-440x334_c.jpg"></a>
+                                <h3><a href="http://www.milkshoptea.com/2015/12/04/%e5%8f%b0%e4%b8%ad-%e7%9b%8a%e6%b0%91%e5%ba%97/">台中-益民店</a></h3>
+                            </div>
+                            <!-- .item -->
+                        </div>
+                        <!-- .row -->
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="http://www.milkshoptea.com/2015/08/18/%e5%bd%b0%e5%8c%96-%e6%b0%b8%e5%ae%89%e5%ba%97/"><img alt="彰化-永安店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/08/彰化永安-440x334_c.jpg"></a>
+                                <h3><a href="http://www.milkshoptea.com/2015/08/18/%e5%bd%b0%e5%8c%96-%e6%b0%b8%e5%ae%89%e5%ba%97/">彰化-永安店</a></h3>
+                            </div>
+                            <!-- .item -->
+                            <div class="col-md-3">
+                                <a href="http://www.milkshoptea.com/2015/08/10/%e5%8d%97%e6%8a%95-%e5%8d%97%e6%8a%95%e5%ba%97/"><img alt="南投-南投店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/08/南投大1-440x334_c.jpg"></a>
+                                <h3><a href="http://www.milkshoptea.com/2015/08/10/%e5%8d%97%e6%8a%95-%e5%8d%97%e6%8a%95%e5%ba%97/">南投-南投店</a></h3>
+                            </div>
+                            <!-- .item -->
+                            <div class="col-md-3">
+                                <a href="http://www.milkshoptea.com/2015/07/17/%e5%8f%b0%e4%b8%ad-%e4%b8%ad%e7%a7%91%e5%ba%97/"><img alt="台中-中科店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/07/1-440x334_c.jpg"></a>
+                                <h3><a href="http://www.milkshoptea.com/2015/07/17/%e5%8f%b0%e4%b8%ad-%e4%b8%ad%e7%a7%91%e5%ba%97/">台中-中科店</a></h3>
+                            </div>
+                            <!-- .item -->
+                            <div class="col-md-3">
+                                <a href="http://www.milkshoptea.com/2015/06/04/%e5%8f%b0%e4%b8%ad-%e5%8b%a4%e7%be%8e%e5%ba%97/"><img alt="台中-勤美店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/06/台中勤美-440x334_c.jpg"></a>
+                                <h3><a href="http://www.milkshoptea.com/2015/06/04/%e5%8f%b0%e4%b8%ad-%e5%8b%a4%e7%be%8e%e5%ba%97/">台中-勤美店</a></h3>
+                            </div>
+                            <!-- .item -->
+                        </div>
+                        <!-- .row -->
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="http://www.milkshoptea.com/2015/02/12/%e5%8f%b0%e4%b8%ad-%e5%a4%a7%e7%94%b2%e5%ba%97/"><img alt="台中-大甲店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/02/台中大甲-440x334_c.jpg"></a>
+                                <h3><a href="http://www.milkshoptea.com/2015/02/12/%e5%8f%b0%e4%b8%ad-%e5%a4%a7%e7%94%b2%e5%ba%97/">台中-大甲店</a></h3>
+                            </div>
+                            <!-- .item -->
+                            <div class="col-md-3">
+                                <a href="http://www.milkshoptea.com/2014/11/19/%e5%bd%b0%e5%8c%96-%e5%92%8c%e7%be%8e%e5%ba%97/"><img alt="彰化-和美店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/11/1-440x334_cl.jpg"></a>
+                                <h3><a href="http://www.milkshoptea.com/2014/11/19/%e5%bd%b0%e5%8c%96-%e5%92%8c%e7%be%8e%e5%ba%97/">彰化-和美店</a></h3>
+                            </div>
+                            <!-- .item -->
+                            <div class="col-md-3">
+                                <a href="http://www.milkshoptea.com/2014/08/19/%e5%bd%b0%e5%8c%96-%e6%97%ad%e5%85%89%e5%ba%97/"><img alt="彰化-旭光店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/08/彰化旭光-440x334_c.jpg"></a>
+                                <h3><a href="http://www.milkshoptea.com/2014/08/19/%e5%bd%b0%e5%8c%96-%e6%97%ad%e5%85%89%e5%ba%97/">彰化-旭光店</a></h3>
+                            </div>
+                            <!-- .item -->
+                            <div class="col-md-3">
+                                <a href="http://www.milkshoptea.com/2014/01/28/%e5%bd%b0%e5%8c%96-%e5%93%a1%e6%9e%97%e5%ba%97/"><img alt="彰化-員林店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/10/彰化員林-1-440x334_c.jpg"></a>
+                                <h3><a href="http://www.milkshoptea.com/2014/01/28/%e5%bd%b0%e5%8c%96-%e5%93%a1%e6%9e%97%e5%ba%97/">彰化-員林店</a></h3>
+                            </div>
+                            <!-- .item -->
+                        </div>
+                        <!-- .row -->
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="http://www.milkshoptea.com/2014/01/28/%e5%bd%b0%e5%8c%96-%e9%b9%bf%e6%b8%af%e5%ba%97/"><img alt="彰化-鹿港店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/08/-e1409016269604-440x334_c.jpg"></a>
+                                <h3><a href="http://www.milkshoptea.com/2014/01/28/%e5%bd%b0%e5%8c%96-%e9%b9%bf%e6%b8%af%e5%ba%97/">彰化-鹿港店</a></h3>
+                            </div>
+                            <!-- .item -->
+                            <div class="col-md-3">
+                                <a href="http://www.milkshoptea.com/2014/01/28/%e5%8f%b0%e4%b8%ad-%e9%80%b2%e5%8c%96%e5%ba%97/"><img alt="台中-進化店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/01/tc-gh-440x334_c.jpg"></a>
+                                <h3><a href="http://www.milkshoptea.com/2014/01/28/%e5%8f%b0%e4%b8%ad-%e9%80%b2%e5%8c%96%e5%ba%97/">台中-進化店</a></h3>
+                            </div>
+                            <!-- .item -->
+                            <div class="col-md-3">
+                                <a href="http://www.milkshoptea.com/2014/01/28/%e5%8f%b0%e4%b8%ad-%e5%a4%a7%e5%a2%a9%e5%ba%97/"><img alt="台中-大墩店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/01/tc-dd-440x334_c.jpg"></a>
+                                <h3><a href="http://www.milkshoptea.com/2014/01/28/%e5%8f%b0%e4%b8%ad-%e5%a4%a7%e5%a2%a9%e5%ba%97/">台中-大墩店</a></h3>
+                            </div>
+                            <!-- .item -->
+                            <div class="col-md-3">
+                                <a href="http://www.milkshoptea.com/2014/01/28/%e5%8f%b0%e4%b8%ad-%e6%98%8c%e5%b9%b3%e5%ba%97/"><img alt="台中-昌平店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/01/台中昌平-2-440x334_c.jpg"></a>
+                                <h3><a href="http://www.milkshoptea.com/2014/01/28/%e5%8f%b0%e4%b8%ad-%e6%98%8c%e5%b9%b3%e5%ba%97/">台中-昌平店</a></h3>
+                            </div>
+                            <!-- .item -->
+                        </div>
+                        <!-- .row -->
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="http://www.milkshoptea.com/2014/01/28/%e5%8f%b0%e4%b8%ad-%e5%b1%b1%e8%a5%bf%e5%ba%97/"><img alt="台中-山西店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/01/5679646090053-440x334_c.jpg"></a>
+                                <h3><a href="http://www.milkshoptea.com/2014/01/28/%e5%8f%b0%e4%b8%ad-%e5%b1%b1%e8%a5%bf%e5%ba%97/">台中-山西店</a></h3>
+                            </div>
+                            <!-- .item -->
+                        </div>
+                        <!-- .row -->
+                    </div>
+                    <!-- .meteor-posts -->
+                </div>
+                <!-- .row -->
+        </section>
+        <hr>
+        <section class="block container">
+            <div class="row" style="margin-left:40px">
+                <div class="meteor-posts span12 mobile-landscape-split" data-click-behavior="permalink">
+                    <h1 class="text-center"><strong>南部分店</strong></h1>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2017/05/15/%e9%ab%98%e9%9b%84-%e4%ba%94%e7%94%b2%e5%ba%97/"><img alt="高雄-五甲店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2017/05/五甲大-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2017/05/15/%e9%ab%98%e9%9b%84-%e4%ba%94%e7%94%b2%e5%ba%97/">高雄-五甲店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2017/04/12/%e9%ab%98%e9%9b%84-%e5%9c%9f%e5%ba%ab%e5%ba%97/"><img alt="高雄-土庫店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2017/04/toukubig-1-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2017/04/12/%e9%ab%98%e9%9b%84-%e5%9c%9f%e5%ba%ab%e5%ba%97/">高雄-土庫店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2017/01/26/%e5%98%89%e7%be%a9-%e6%9c%b4%e5%ad%90%e5%ba%97/"><img alt="嘉義-朴子店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2017/01/3-2-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2017/01/26/%e5%98%89%e7%be%a9-%e6%9c%b4%e5%ad%90%e5%ba%97/">嘉義-朴子店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2017/01/13/%e9%ab%98%e9%9b%84-%e4%b8%83%e8%b3%a2%e5%ba%97/"><img alt="高雄-七賢店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2017/01/3-1-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2017/01/13/%e9%ab%98%e9%9b%84-%e4%b8%83%e8%b3%a2%e5%ba%97/">高雄-七賢店</a></h3>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <!-- .row -->
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2016/11/30/%e5%8f%b0%e5%8d%97-%e4%bb%81%e5%be%b7%e5%ba%97/"><img alt="台南-仁德店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/11/12-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2016/11/30/%e5%8f%b0%e5%8d%97-%e4%bb%81%e5%be%b7%e5%ba%97/">台南-仁德店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2016/10/20/%e9%ab%98%e9%9b%84-%e5%af%8c%e6%b0%91/"><img alt="高雄-富民店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/10/5083549256663-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2016/10/20/%e9%ab%98%e9%9b%84-%e5%af%8c%e6%b0%91/">高雄-富民店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2016/10/14/%e5%b1%8f%e6%9d%b1-%e5%a4%aa%e5%b9%b3%e6%b4%8b%e5%ba%97/"><img alt="屏東-太平洋店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/10/5054508790286-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2016/10/14/%e5%b1%8f%e6%9d%b1-%e5%a4%aa%e5%b9%b3%e6%b4%8b%e5%ba%97/">屏東-太平洋店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2016/10/05/%e9%ab%98%e9%9b%84-%e9%a7%81%e4%ba%8c%e5%ba%97/"><img alt="高雄-駁二店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/10/1-1-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2016/10/05/%e9%ab%98%e9%9b%84-%e9%a7%81%e4%ba%8c%e5%ba%97/">高雄-駁二店</a></h3>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <!-- .row -->
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2016/09/30/%e5%8f%b0%e5%8d%97-%e5%ae%89%e5%b9%b3%e5%ba%97/"><img alt="台南-安平店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/01/33323-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2016/09/30/%e5%8f%b0%e5%8d%97-%e5%ae%89%e5%b9%b3%e5%ba%97/">台南-安平店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2016/07/14/%e9%ab%98%e9%9b%84-%e9%bc%8e%e4%b8%ad%e5%ba%97/"><img alt="高雄-鼎中店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/07/r-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2016/07/14/%e9%ab%98%e9%9b%84-%e9%bc%8e%e4%b8%ad%e5%ba%97/">高雄-鼎中店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2016/06/14/%e5%b1%8f%e6%9d%b1-%e6%9d%b1%e6%b8%af%e5%ba%97/"><img alt="屏東-東港店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/06/東港店-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2016/06/14/%e5%b1%8f%e6%9d%b1-%e6%9d%b1%e6%b8%af%e5%ba%97/">屏東-東港店</a></h3>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2016/06/06/%e5%8f%b0%e5%8d%97-%e5%92%8c%e7%b7%af%e5%ba%97/"><img alt="台南-和緯店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/06/87263-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2016/06/06/%e5%8f%b0%e5%8d%97-%e5%92%8c%e7%b7%af%e5%ba%97/">台南-和緯店</a></h3>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <!-- .row -->
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2016/05/30/%e5%8f%b0%e5%8d%97-%e6%b5%b7%e4%bd%83%e5%ba%97/"><img alt="台南-海佃店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/05/海佃RIGHT-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2016/05/30/%e5%8f%b0%e5%8d%97-%e6%b5%b7%e4%bd%83%e5%ba%97/">台南-海佃店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2016/04/07/%e5%8f%b0%e5%8d%97-%e8%b5%a4%e5%b4%81%e5%ba%97/"><img alt="台南-赤崁店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/04/12933143_1107979195920023_7250029258123496494_n-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2016/04/07/%e5%8f%b0%e5%8d%97-%e8%b5%a4%e5%b4%81%e5%ba%97/">台南-赤崁店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2016/01/26/%e9%ab%98%e9%9b%84-%e6%ad%a6%e5%bb%9f%e5%ba%97/"><img alt="高雄-武廟店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2016/01/IMG_0011-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2016/01/26/%e9%ab%98%e9%9b%84-%e6%ad%a6%e5%bb%9f%e5%ba%97/">高雄-武廟店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2015/12/28/%e5%8f%b0%e5%8d%97-%e6%96%b0%e5%8c%96%e5%ba%97/"><img alt="台南-新化店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/12/S__6848568-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2015/12/28/%e5%8f%b0%e5%8d%97-%e6%96%b0%e5%8c%96%e5%ba%97/">台南-新化店</a></h3>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <!-- .row -->
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2015/12/17/%e5%8f%b0%e5%8d%97-%e5%be%a9%e5%9c%8b%e5%ba%97/"><img alt="台南-復國店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/12/S__5341304-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2015/12/17/%e5%8f%b0%e5%8d%97-%e5%be%a9%e5%9c%8b%e5%ba%97/">台南-復國店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2015/12/07/%e5%b1%8f%e6%9d%b1-%e6%81%86%e6%98%a5%e5%ba%97/"><img alt="屏東-恆春店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/12/283611-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2015/12/07/%e5%b1%8f%e6%9d%b1-%e6%81%86%e6%98%a5%e5%ba%97/">屏東-恆春店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2015/11/23/%e5%8f%b0%e5%8d%97-%e5%ae%89%e4%b8%ad%e5%ba%97/"><img alt="台南-安中店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/11/269456-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2015/11/23/%e5%8f%b0%e5%8d%97-%e5%ae%89%e4%b8%ad%e5%ba%97/">台南-安中店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2015/10/23/%e9%ab%98%e9%9b%84-%e8%a6%ba%e6%b0%91%e5%ba%97/"><img alt="高雄-覺民店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/10/229312-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2015/10/23/%e9%ab%98%e9%9b%84-%e8%a6%ba%e6%b0%91%e5%ba%97/">高雄-覺民店</a></h3>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <!-- .row -->
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2015/09/29/%e9%ab%98%e9%9b%84-%e5%be%b7%e8%b3%a2%e5%ba%97/"><img alt="高雄-德賢店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/09/IMG_9338-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2015/09/29/%e9%ab%98%e9%9b%84-%e5%be%b7%e8%b3%a2%e5%ba%97/">高雄-德賢店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2015/09/29/%e9%ab%98%e9%9b%84-%e7%91%9e%e9%9a%86/"><img alt="高雄-瑞隆店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/09/IMG_9305-2-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2015/09/29/%e9%ab%98%e9%9b%84-%e7%91%9e%e9%9a%86/">高雄-瑞隆店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2015/08/03/%e9%ab%98%e9%9b%84-%e5%b7%a6%e7%87%9f%e5%ba%97/"><img alt="高雄-左營店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/08/高雄左營-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2015/08/03/%e9%ab%98%e9%9b%84-%e5%b7%a6%e7%87%9f%e5%ba%97/">高雄-左營店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2015/07/26/%e9%ab%98%e9%9b%84-%e6%ad%a3%e8%88%88%e5%ba%97/"><img alt="高雄-正興店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/07/高雄正興-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2015/07/26/%e9%ab%98%e9%9b%84-%e6%ad%a3%e8%88%88%e5%ba%97/">高雄-正興店</a></h3>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <!-- .row -->
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2015/07/19/%e5%8f%b0%e5%8d%97-%e5%b4%91%e5%b1%b1%e5%ba%97/"><img alt="台南-崑山店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/07/台南崑山-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2015/07/19/%e5%8f%b0%e5%8d%97-%e5%b4%91%e5%b1%b1%e5%ba%97/">台南-崑山店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2015/07/19/%e5%8f%b0%e5%8d%97-%e5%81%a5%e5%ba%b7%e5%ba%97/"><img alt="台南-健康店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/07/台南健康-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2015/07/19/%e5%8f%b0%e5%8d%97-%e5%81%a5%e5%ba%b7%e5%ba%97/">台南-健康店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2015/06/08/%e5%8f%b0%e5%8d%97-%e6%96%b0%e5%b8%82%e9%8a%98%e5%82%b3/"><img alt="台南-新市銘傳店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2015/06/台南新市銘傳-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2015/06/08/%e5%8f%b0%e5%8d%97-%e6%96%b0%e5%b8%82%e9%8a%98%e5%82%b3/">台南-新市銘傳店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/12/24/%e5%8f%b0%e5%8d%97-%e6%9d%b1%e8%b1%90%e5%ba%97/"><img alt="台南-東豐店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/12/台南東豐-3-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/12/24/%e5%8f%b0%e5%8d%97-%e6%9d%b1%e8%b1%90%e5%ba%97/">台南-東豐店</a></h3>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <!-- .row -->
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/12/04/%e5%8f%b0%e5%8d%97-%e4%b8%ad%e8%8f%af%e5%ba%97/"><img alt="台南-中華店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/12/台南中華-4-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/12/04/%e5%8f%b0%e5%8d%97-%e4%b8%ad%e8%8f%af%e5%ba%97/">台南-中華店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/11/14/433/"><img alt="台南-崇德店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/11/台南崇德-2-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/11/14/433/">台南-崇德店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/10/22/%e5%98%89%e7%be%a9-%e7%8e%89%e5%b1%b1%e5%ba%97/"><img alt="嘉義-玉山店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/10/嘉義玉山-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/10/22/%e5%98%89%e7%be%a9-%e7%8e%89%e5%b1%b1%e5%ba%97/">嘉義-玉山店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/10/08/%e5%8f%b0%e5%8d%97-%e6%96%b0%e7%87%9f%e5%ba%97/"><img alt="台南-新營店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/10/1-440x334_cr.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/10/08/%e5%8f%b0%e5%8d%97-%e6%96%b0%e7%87%9f%e5%ba%97/">台南-新營店</a></h3>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <!-- .row -->
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/09/01/%e9%ab%98%e9%9b%84-%e5%b0%8f%e6%b8%af%e5%ba%97/"><img alt="高雄-小港店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/09/-1-e1409543135978-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/09/01/%e9%ab%98%e9%9b%84-%e5%b0%8f%e6%b8%af%e5%ba%97/">高雄-小港店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/06/19/%e5%b1%8f%e6%9d%b1-%e5%a4%a7%e9%80%a3%e5%ba%97/"><img alt="屏東-大連店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/09/-e1409882812934-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/06/19/%e5%b1%8f%e6%9d%b1-%e5%a4%a7%e9%80%a3%e5%ba%97/">屏東-大連店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/06/19/%e5%8f%b0%e5%8d%97-%e6%96%87%e8%b3%a2%e5%ba%97/"><img alt="台南-文賢店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/09/-e1409882875127-440x334_c.jpeg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/06/19/%e5%8f%b0%e5%8d%97-%e6%96%87%e8%b3%a2%e5%ba%97/">台南-文賢店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/06/19/%e5%8f%b0%e5%8d%97-%e8%a5%bf%e5%8b%a2%e5%ba%97/"><img alt="台南-永康富強店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/06/台南西勢-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/06/19/%e5%8f%b0%e5%8d%97-%e8%a5%bf%e5%8b%a2%e5%ba%97/">台南-永康富強店</a></h3>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <!-- .row -->
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/06/19/%e5%8f%b0%e5%8d%97-%e5%b4%87%e6%98%8e%e5%ba%97/"><img alt="台南-崇明店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/08/-1-e1409016487111-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/06/19/%e5%8f%b0%e5%8d%97-%e5%b4%87%e6%98%8e%e5%ba%97/">台南-崇明店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/01/28/%e5%98%89%e7%be%a9-%e6%96%b0%e6%b0%91%e5%ba%97/"><img alt="嘉義-新民店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/01/嘉義新民-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/01/28/%e5%98%89%e7%be%a9-%e6%96%b0%e6%b0%91%e5%ba%97/">嘉義-新民店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/01/28/%e5%98%89%e7%be%a9-%e6%b0%91%e6%ac%8a%e5%ba%97/"><img alt="嘉義-民權店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/01/ci-mc-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/01/28/%e5%98%89%e7%be%a9-%e6%b0%91%e6%ac%8a%e5%ba%97/">嘉義-民權店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/01/28/%e5%98%89%e7%be%a9/"><img alt="嘉義-八德店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/01/ci-bd-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/01/28/%e5%98%89%e7%be%a9/">嘉義-八德店</a></h3>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <!-- .row -->
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/01/28/%e9%ab%98%e9%9b%84-%e5%b2%a1%e5%b1%b1%e5%ba%97/"><img alt="高雄-岡山店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/01/1-4-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/01/28/%e9%ab%98%e9%9b%84-%e5%b2%a1%e5%b1%b1%e5%ba%97/">高雄-岡山店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/01/28/%e9%ab%98%e9%9b%84-%e8%87%aa%e5%bc%b7%e5%ba%97/"><img alt="高雄-自強店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/09/-2-e1409882782865-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/01/28/%e9%ab%98%e9%9b%84-%e8%87%aa%e5%bc%b7%e5%ba%97/">高雄-自強店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/01/28/%e9%ab%98%e9%9b%84-%e9%b3%b3%e5%b1%b1%e5%ba%97/"><img alt="高雄-鳳山店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/08/-1-e1409016356317-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/01/28/%e9%ab%98%e9%9b%84-%e9%b3%b3%e5%b1%b1%e5%ba%97/">高雄-鳳山店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/01/28/%e9%ab%98%e9%9b%84-%e6%96%87%e5%8c%96%e5%ba%97/"><img alt="高雄-文化店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/01/ks-uh-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/01/28/%e9%ab%98%e9%9b%84-%e6%96%87%e5%8c%96%e5%ba%97/">高雄-文化店</a></h3>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <!-- .row -->
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/01/20/%e5%8f%b0%e5%8d%97-%e9%87%91%e8%8f%af%e5%ba%97/"><img alt="台南-金華店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/01/1-1-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/01/20/%e5%8f%b0%e5%8d%97-%e9%87%91%e8%8f%af%e5%ba%97/">台南-金華店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/01/20/%e5%8f%b0%e5%8d%97-%e5%af%8c%e8%be%b2%e5%ba%97/"><img alt="台南-富農店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/09/-e1409882842919-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/01/20/%e5%8f%b0%e5%8d%97-%e5%af%8c%e8%be%b2%e5%ba%97/">台南-富農店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/01/20/%e5%8f%b0%e5%8d%97-%e6%ad%b8%e4%bb%81%e5%ba%97/"><img alt="台南-歸仁店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/01/tn-gz-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/01/20/%e5%8f%b0%e5%8d%97-%e6%ad%b8%e4%bb%81%e5%ba%97/">台南-歸仁店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/01/20/%e5%8f%b0%e5%8d%97-%e5%b0%8f%e5%8c%97%e5%ba%97/"><img alt="台南-小北店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/01/小北1-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/01/20/%e5%8f%b0%e5%8d%97-%e5%b0%8f%e5%8c%97%e5%ba%97/">台南-小北店</a></h3>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <!-- .row -->
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/01/20/%e5%8f%b0%e5%8d%97-%e6%9d%b1%e5%ae%89%e5%ba%97/"><img alt="台南-東安店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/01/13446369_10210524450895763_1748687854_o-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/01/20/%e5%8f%b0%e5%8d%97-%e6%9d%b1%e5%ae%89%e5%ba%97/">台南-東安店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/01/20/%e5%8f%b0%e5%8d%97-%e5%a4%a7%e6%a9%8b%e5%ba%97/"><img alt="台南-大橋店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/08/-e1409016591693-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/01/20/%e5%8f%b0%e5%8d%97-%e5%a4%a7%e6%a9%8b%e5%ba%97/">台南-大橋店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/01/20/%e5%8f%b0%e5%8d%97-%e9%b9%bd%e8%a1%8c%e5%ba%97/"><img alt="台南-鹽行店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/01/tn-eh-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/01/20/%e5%8f%b0%e5%8d%97-%e9%b9%bd%e8%a1%8c%e5%ba%97/">台南-鹽行店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/01/20/%e5%8f%b0%e5%8d%97-%e5%96%84%e5%8c%96%e5%ba%97/"><img alt="台南-善化店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/01/nn善化-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/01/20/%e5%8f%b0%e5%8d%97-%e5%96%84%e5%8c%96%e5%ba%97/">台南-善化店</a></h3>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <!-- .row -->
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/01/20/%e5%8f%b0%e5%8d%97-%e9%ba%bb%e8%b1%86%e5%ba%97/"><img alt="台南-麻豆店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/01/麻豆店-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/01/20/%e5%8f%b0%e5%8d%97-%e9%ba%bb%e8%b1%86%e5%ba%97/">台南-麻豆店</a></h3>
+                        </div>
+                        <!-- .item -->
+                        <div class="col-md-3">
+                            <a href="http://www.milkshoptea.com/2014/01/20/125/"><img alt="台南-佳里店" width="220" height="167" src="http://www.milkshoptea.com/wp-content/uploads/2014/01/1-5-440x334_c.jpg"></a>
+                            <h3><a href="http://www.milkshoptea.com/2014/01/20/125/">台南-佳里店</a></h3>
+                        </div>
+                        <!-- .item -->
+                    </div>
+                    <!-- .row -->
+                </div>
+                <!-- .meteor-posts -->
+            </div>
+            <!-- .row -->
+        </section>
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <div class="container" id="contact">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>Team01</strong>
+                    </h4>
+                    <p>台灣科技大學
+                        <br>網頁設計</p>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="http://www.milkshoptea.com/price/" class="btn" target="_blank">迷客夏官網</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/NTUST/106-team01" target="blank">team01 github</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/NTUST" target="blank">NTUST github</a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Your Website 2017</p>
+                </div>
+            </div>
+        </div>
+        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+    </footer>
+    </div>
+    <!--jQuery搜尋列JS套用-->
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js "></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
+    <!-- jQuery -->
+    <script src="{% static 'polls/js/jquery.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'polls/js/bootstrap.min.js' %}"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+        // Closes the sidebar menu
+        $("#menu-close").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Opens the sidebar menu
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Scrolls to the selected menu item on the page
+        $(function() {
+            $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+        //#to-top button appears after scrolling
+        var fixed = false;
+        $(document).scroll(function() {
+            if ($(this).scrollTop() > 250) {
+                if (!fixed) {
+                    fixed = true;
+                    // $('#to-top').css({position:'fixed', display:'block'});
+                    $('#to-top').show("slow", function() {
+                        $('#to-top').css({
+                            position: 'fixed',
+                            display: 'block'
+                        });
+                    });
+                }
+            } else {
+                if (fixed) {
+                    fixed = false;
+                    $('#to-top').hide("slow", function() {
+                        $('#to-top').css({
+                            display: 'none'
+                        });
+                    });
+                }
+            }
+        });
+        // Disable Google Maps scrolling
+        // See http://stackoverflow.com/a/25904582/1607849
+        // Disable scroll zooming and bind back the click event
+        var onMapMouseleaveHandler = function(event) {
+            var that = $(this);
+            that.on('click', onMapClickHandler);
+            that.off('mouseleave', onMapMouseleaveHandler);
+            that.find('iframe').css("pointer-events", "none");
+        }
+        var onMapClickHandler = function(event) {
+                var that = $(this);
+                // Disable the click handler until the user leaves the map area
+                that.off('click', onMapClickHandler);
+                // Enable scrolling zoom
+                that.find('iframe').css("pointer-events", "auto");
+                // Handle the mouse leave event
+                that.on('mouseleave', onMapMouseleaveHandler);
+            }
+            // Enable map zooming with mouse scroll when the user clicks the map
+        $('.map').on('click', onMapClickHandler);
+    </script>
+
+</body>
+
+</html>

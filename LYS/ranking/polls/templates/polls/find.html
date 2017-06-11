@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>飲料霸 - 關於我們</title>
+    <!-- Bootstrap -->
+    <!-- 最新編譯和最佳化的 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--jQuery搜尋列CSS套用-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+    <!-- 選擇性佈景主題 -->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/newstyle.css' %}" />
+    <!--<link rel="stylesheet" href="CSS/style.css" />-->
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar transparent navbar-fixed-top" role="navigation">
+            <nav class="navbar-inner">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-nav-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <ul class="nav navbar-nav">
+                            <li><a href="http://127.0.0.1:8000/polls/drinkbarcolor/">人氣排行</a></li>
+                            <li><a href="http://127.0.0.1:8000/polls/find/">找飲料　</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="col-lg-3"></div>
+                        <div>
+                            <a class="navbar-brand" href="http://127.0.0.1:8000/polls/">
+                                <img src="{% static 'polls/img/logo-s.png' %}" width="130%">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse" id="example-nav-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="http://127.0.0.1:8000/polls/drinkbar2/">品牌總覽</a></li>
+                            <li><a href="http://127.0.0.1:8000/polls/drinkbar2/#price">價格大比拚</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </nav>
+        <br><br><br><br><br>
+
+        <div class="col-lg-12">
+            <div class="col-lg-4">
+                <button class="btn-link"><img src="{% static 'polls/img/c1.png' %}" alt="選項" class="image3"></button>
+                <div class="image3-text">
+                    <h1 class="text-center"><strong>找招牌</strong></h1>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <button class="btn-link"><img src="{% static 'polls/img/c2.png' %}" alt="選項" class="image3"></button>
+                <div class="image3-text">
+                    <h1 class="text-center"><strong>找茶</strong></h1>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <button class="btn-link"><img src="{% static 'polls/img/c3.png' %}" alt="選項" class="image3"></button>
+                <div class="image3-text">
+                    <h1 class="text-center"><strong>找抹茶</strong></h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <br><br>
+        </div>
+
+        <div class="col-lg-12">
+            <div class="col-lg-4">
+                <button class="btn-link"><img src="{% static 'polls/img/c4.png' %}" alt="選項" class="image3"></button>
+                <div class="image3-text">
+                    <h1 class="text-center"><strong>找果汁</strong></h1>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <button class="btn-link"><img src="{% static 'polls/img/c5.png' %}" alt="選項" class="image3"></button>
+                <div class="image3-text">
+                    <h1 class="text-center"><strong>找口感</strong></h1>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <button class="btn-link"><img src="{% static 'polls/img/c6.png' %}" alt="選項" class="image3"></button>
+                <div class="image3-text">
+                    <h1 class="text-center"><strong>找拿鐵</strong></h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <br><br>
+        </div>
+
+        <div class="col-sm-12" id="backgroundimg">
+            <br><br><br>
+            <div class="row">
+                <div class="col-sm-4">
+                </div>
+                <div class="col-sm-4">
+                    <br><br><br><br><br><br><br><br>
+                    <br><br><br><br><br><br><br><br>
+                </div>
+                <div class="col-sm-4">
+                </div>
+            </div>
+            <br><br>
+        </div>
+        <!--頁尾連結-->
+        <div class="col-sm-12 text-center" id="bottom">
+            <br><br><br><br>
+            <h4><strong>Team01</strong>
+            </h4>
+            <p>台灣科技大學
+                <br>
+                <p>網頁設計</p>
+                <br>
+                <ul class="list-inline ">
+                    <li>
+                        <a href="https://github.com/NTUST/106-team01 " target="blank ">team01 github</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/NTUST " target="blank ">NTUST github</a>
+                    </li>
+                </ul>
+                <hr class="small ">
+                <p class="text-muted ">Copyright &copy; Your Website 2017</p> <br><br><br>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js "></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
+</body>
+
+</html>

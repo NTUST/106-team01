@@ -1,0 +1,616 @@
+<!--丸作食茶-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>飲料霸 - 丸作食茶</title>
+    <!-- Bootstrap -->
+    <!-- 最新編譯和最佳化的 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--jQuery搜尋列CSS套用-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+    <!-- 連接自己做的CSS-->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/style.css' %}" />
+    <!--<link rel="stylesheet" href="CSS/style.css" />-->
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/stylish-portfolio.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/font-awesome/css/font-awesome.min.css' %}">
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="http://127.0.0.1:8000/polls/" onclick=$( "#menu-close").click();>飲料霸首頁</a>
+            </li>
+            <li>
+                <a href="#new" onclick=$( "#menu-close").click();>最新活動</a>
+            </li>
+
+            <li>
+                <a href="#menu" onclick=$( "#menu-close").click();>MENU</a>
+            </li>
+            <li>
+                <a href="#branch" onclick=$( "#menu-close").click();>全台分店</a>
+            </li>
+
+            <li>
+                <a href="#contact" onclick=$( "#menu-close").click();>Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <center>
+        <div class="row" id="hot">
+            <!--熱銷飲料-->
+
+            <img src="{% static 'polls/img/store2.png' %}" alt="英雄圖" width="90%">
+        </div>
+    </center>
+    <hr>
+
+    <div class="row" id="new" style="background-color:#f2f3f5; margin:80px">
+        <br><br><br><br><br><br><br><br><br>
+        <div class="container">
+            <h1 class="text-center"><strong>最新活動資訊</strong></h1>
+            <!--最新活動-->
+            <p class="text-center">目前沒有最新活動喔......</p>
+        </div>
+        <br><br><br><br><br><br><br><br><br>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row" id="menu">
+            <!--MENU-->
+            <br>
+            <br>
+            <br>
+            <h1 class="text-center"><strong>MENU</strong></h1>
+            <img src="{% static 'polls/img/menu2.jpg' %}" alt="menu" width="100%">
+        </div>
+        <br><br>
+    </div>
+    <hr>
+    <div class="row" id="branch" style="background-color:#f2f3f5; margin:80px">
+        <br><br>
+        <div class="container">
+            <h1 class="text-center"><strong>全台分店</strong></h1>
+            <table width="100%" cellspacing="0" cellpadding="2">
+                <tbody>
+                    <tr bgcolor="white" style="border-bottom:1px dotted grey">
+                        <td valign="top">
+                            <a class="darkOrange" href="http://www.fonfood.com/store/476349">台北東區店</a>
+                        </td>
+                        <td valign="top" nowrap="">02-27755005</td>
+
+                        <td>
+                            <b>台北市</b><b>忠孝東路四段181巷43號</b>
+
+                            <br>
+                            <a href="http://www.fonfood.com/捷運忠孝敦化站">捷運忠孝敦化站</a>
+                            <span class="darkGrey">300公尺</span>
+                        </td>
+                        <td nowrap="" width="1%" valign="top">
+                            <a href="http://www.fonfood.com/store/476349/map">map</a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#f4f4f4" style="border-bottom:1px dotted grey">
+                        <td valign="top">
+                            <a class="darkOrange" href="http://www.fonfood.com/store/509373">台北信義店</a>
+                        </td>
+                        <td valign="top" nowrap=""></td>
+
+                        <td>
+                            <b>台北市</b><b>信義區</b><b>莊敬路318號</b>
+
+                            <br>
+                            <a href="http://www.fonfood.com/捷運台北101世貿站">捷運台北101世貿站</a>
+                            <span class="darkGrey">500公尺</span>
+                        </td>
+                        <td nowrap="" width="1%" valign="top">
+                            <a href="http://www.fonfood.com/store/509373/map">map</a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="white" style="border-bottom:1px dotted grey">
+                        <td valign="top">
+                            <a class="darkOrange" href="http://www.fonfood.com/store/542120">台北內湖店</a>
+                        </td>
+                        <td valign="top" nowrap="">02-26591699</td>
+
+                        <td>
+                            <b>台北市</b><b>內湖區</b><b>內湖路1段737巷59號</b>
+
+                            <br>
+                            <a href="http://www.fonfood.com/捷運港墘站">捷運港墘站</a>
+                            <span class="darkGrey">500公尺</span>
+                        </td>
+                        <td nowrap="" width="1%" valign="top">
+                            <a href="http://www.fonfood.com/store/542120/map">map</a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#f4f4f4" style="border-bottom:1px dotted grey">
+                        <td valign="top">
+                            <a class="darkOrange" href="http://www.fonfood.com/store/531052">台北南京店</a>
+                        </td>
+                        <td valign="top" nowrap="">02-37652198</td>
+
+                        <td>
+                            <b>台北市</b><b>松山區</b><b>南京東路五段123巷1-8號</b>
+
+                            <br>
+                            <a href="http://www.fonfood.com/捷運南京三民站">捷運南京三民站</a>
+                            <span class="darkGrey">300公尺</span>
+                        </td>
+                        <td nowrap="" width="1%" valign="top">
+                            <a href="http://www.fonfood.com/store/531052/map">map</a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="white" style="border-bottom:1px dotted grey">
+                        <td valign="top">
+                            <a class="darkOrange" href="http://www.fonfood.com/store/122208">台北西門店</a>
+                        </td>
+                        <td valign="top" nowrap="">02-23119377</td>
+
+                        <td>
+                            <b>台北市</b><b>萬華區</b><b>康定路18號</b>
+
+                            <br>
+                            <a href="http://www.fonfood.com/捷運西門站">捷運西門站</a>
+                            <span class="darkGrey">700公尺</span>
+                        </td>
+                        <td nowrap="" width="1%" valign="top">
+                            <a href="http://www.fonfood.com/store/122208/map">map</a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#f4f4f4" style="border-bottom:1px dotted grey">
+                        <td valign="top">
+                            <a class="darkOrange" href="http://www.fonfood.com/store/215105">桃園中壢店</a>
+                        </td>
+                        <td valign="top" nowrap="">03-4252666</td>
+
+                        <td>
+                            <b>桃園市</b><b>中壢區</b><b>中央東路60號</b>
+
+                            <br>
+                            <a href="http://www.fonfood.com/中壢火車站">中壢火車站</a>
+                            <span class="darkGrey">300公尺</span>
+                        </td>
+                        <td nowrap="" width="1%" valign="top">
+                            <a href="http://www.fonfood.com/store/215105/map">map</a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="white" style="border-bottom:1px dotted grey">
+                        <td valign="top">
+                            <a class="darkOrange" href="http://www.fonfood.com/store/550176">新竹竹北店</a>
+                        </td>
+                        <td valign="top" nowrap="">03-5516691</td>
+
+                        <td>
+                            <b>新竹縣</b><b>竹北市</b><b>斗崙里博愛街220號</b>
+
+                            <br>
+                            <a href="http://www.fonfood.com/竹北火車站">竹北火車站</a>
+                            <span class="darkGrey">600公尺</span>
+                        </td>
+                        <td nowrap="" width="1%" valign="top">
+                            <a href="http://www.fonfood.com/store/550176/map">map</a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#f4f4f4" style="border-bottom:1px dotted grey">
+                        <td valign="top">
+                            <a class="darkOrange" href="http://www.fonfood.com/store/918575">新竹站前店</a>
+                        </td>
+                        <td valign="top" nowrap="">03-5282199</td>
+
+                        <td>
+                            <b>新竹市</b><b>林森路4號一樓</b>
+
+                            <br>
+                            <a href="http://www.fonfood.com/新竹火車站">新竹火車站</a>
+                            <span class="darkGrey">100公尺</span>
+                        </td>
+                        <td nowrap="" width="1%" valign="top">
+                            <a href="http://www.fonfood.com/store/918575/map">map</a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="white" style="border-bottom:1px dotted grey">
+                        <td valign="top">
+                            <a class="darkOrange" href="http://www.fonfood.com/store/917493">新竹科園店</a>
+                        </td>
+                        <td valign="top" nowrap="">03-5775205</td>
+
+                        <td>
+                            <b>新竹市</b><b>東區</b><b>光復路一段446號</b>
+
+                        </td>
+                        <td nowrap="" width="1%" valign="top">
+                            <a href="http://www.fonfood.com/store/917493/map">map</a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#f4f4f4" style="border-bottom:1px dotted grey">
+                        <td valign="top">
+                            <a class="darkOrange" href="http://www.fonfood.com/store/772487">台中漢口店</a>
+                        </td>
+                        <td valign="top" nowrap="">04-22370208</td>
+
+                        <td>
+                            <b>台中市</b><b>漢口路4段280號1樓</b>
+
+                        </td>
+                        <td nowrap="" width="1%" valign="top">
+                            <a href="http://www.fonfood.com/store/772487/map">map</a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="white" style="border-bottom:1px dotted grey">
+                        <td valign="top">
+                            <a class="darkOrange" href="http://www.fonfood.com/store/85726">台中一中店</a>
+                        </td>
+                        <td valign="top" nowrap="">04-22290636</td>
+
+                        <td>
+                            <b>台中市</b><b>北區</b><b>三民路三段136-1號</b>
+
+                        </td>
+                        <td nowrap="" width="1%" valign="top">
+                            <a href="http://www.fonfood.com/store/85726/map">map</a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#f4f4f4" style="border-bottom:1px dotted grey">
+                        <td valign="top">
+                            <a class="darkOrange" href="http://www.fonfood.com/store/435528">台中福星店</a>
+                        </td>
+                        <td valign="top" nowrap="">04-24525802</td>
+
+                        <td>
+                            <b>台中市</b><b>西屯區</b><b>福星路230號A區1樓</b>
+
+                        </td>
+                        <td nowrap="" width="1%" valign="top">
+                            <a href="http://www.fonfood.com/store/435528/map">map</a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="white" style="border-bottom:1px dotted grey">
+                        <td valign="top">
+                            <a class="darkOrange" href="http://www.fonfood.com/store/990358">台中青海店</a>
+                        </td>
+                        <td valign="top" nowrap="">04-24518951</td>
+
+                        <td>
+                            <b>台中市</b><b>西屯區</b><b>青海路二段246-15號</b>
+
+                        </td>
+                        <td nowrap="" width="1%" valign="top">
+                            <a href="http://www.fonfood.com/store/990358/map">map</a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#f4f4f4" style="border-bottom:1px dotted grey">
+                        <td valign="top">
+                            <a class="darkOrange" href="http://www.fonfood.com/store/867674">彰化中正店</a>
+                        </td>
+                        <td valign="top" nowrap="">04-7270202</td>
+
+                        <td>
+                            <b>彰化縣</b><b>彰化市</b><b>中正路一段557號</b>
+
+                            <br>
+                            <a href="http://www.fonfood.com/彰化火車站">彰化火車站</a>
+                            <span class="darkGrey">200公尺</span>
+                        </td>
+                        <td nowrap="" width="1%" valign="top">
+                            <a href="http://www.fonfood.com/store/867674/map">map</a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="white" style="border-bottom:1px dotted grey">
+                        <td valign="top">
+                            <a class="darkOrange" href="http://www.fonfood.com/store/771183">嘉義中山店</a>
+                        </td>
+                        <td valign="top" nowrap=""></td>
+
+                        <td>
+                            <b>嘉義市</b><b>東區</b><b>中央里中山路262號</b>
+
+                            <br>
+                            <a href="http://www.fonfood.com/北門火車站">北門火車站</a>
+                            <span class="darkGrey">900公尺</span>
+                        </td>
+                        <td nowrap="" width="1%" valign="top">
+                            <a href="http://www.fonfood.com/store/771183/map">map</a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#f4f4f4" style="border-bottom:1px dotted grey">
+                        <td valign="top">
+                            <a class="darkOrange" href="http://www.fonfood.com/store/170089">台南旗艦店</a>
+                        </td>
+                        <td valign="top" nowrap="">06-2215515</td>
+
+                        <td>
+                            <b>台南市</b><b>中西區</b><b>西門路一段707號</b>
+
+                        </td>
+                        <td nowrap="" width="1%" valign="top">
+                            <a href="http://www.fonfood.com/store/170089/map">map</a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="white" style="border-bottom:1px dotted grey">
+                        <td valign="top">
+                            <a class="darkOrange" href="http://www.fonfood.com/store/949673">台南安平店</a>
+                        </td>
+                        <td valign="top" nowrap="">06-3507700</td>
+
+                        <td>
+                            <b>台南市</b><b>安平區</b><b>安平路370號</b>
+
+                        </td>
+                        <td nowrap="" width="1%" valign="top">
+                            <a href="http://www.fonfood.com/store/949673/map">map</a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#f4f4f4" style="border-bottom:1px dotted grey">
+                        <td valign="top">
+                            <a class="darkOrange" href="http://www.fonfood.com/store/580191">台南新市店</a>
+                        </td>
+                        <td valign="top" nowrap="">06-5996866</td>
+
+                        <td>
+                            <b>台南市</b><b>新市區</b><b>中正路239號1樓</b>
+
+                        </td>
+                        <td nowrap="" width="1%" valign="top">
+                            <a href="http://www.fonfood.com/store/580191/map">map</a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="white" style="border-bottom:1px dotted grey">
+                        <td valign="top">
+                            <a class="darkOrange" href="http://www.fonfood.com/store/741544">台南凱旋店</a>
+                        </td>
+                        <td valign="top" nowrap="">06-2002281</td>
+
+                        <td>
+                            <b>台南市</b><b>東區</b><b>凱旋路30號</b>
+
+                        </td>
+                        <td nowrap="" width="1%" valign="top">
+                            <a href="http://www.fonfood.com/store/741544/map">map</a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#f4f4f4" style="border-bottom:1px dotted grey">
+                        <td valign="top">
+                            <a class="darkOrange" href="http://www.fonfood.com/store/250868">台南崇善店</a>
+                        </td>
+                        <td valign="top" nowrap="">06-2679668</td>
+
+                        <td>
+                            <b>台南市</b><b>東區</b><b>崇善路158號</b>
+
+                        </td>
+                        <td nowrap="" width="1%" valign="top">
+                            <a href="http://www.fonfood.com/store/250868/map">map</a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="white" style="border-bottom:1px dotted grey">
+                        <td valign="top">
+                            <a class="darkOrange" href="http://www.fonfood.com/store/516188">高雄澄清店</a>
+                        </td>
+                        <td valign="top" nowrap="">07-3908660</td>
+
+                        <td>
+                            <b>高雄市</b><b>三民區</b><b>澄清路519號</b>
+
+                        </td>
+                        <td nowrap="" width="1%" valign="top">
+                            <a href="http://www.fonfood.com/store/516188/map">map</a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#f4f4f4" style="border-bottom:1px dotted grey">
+                        <td valign="top">
+                            <a class="darkOrange" href="http://www.fonfood.com/store/570840">高雄岡山店</a>
+                        </td>
+                        <td valign="top" nowrap="">07-6217785</td>
+
+                        <td>
+                            <b>高雄市</b><b>岡山區</b><b>中山北路128號</b>
+
+                            <br>
+                            <a href="http://www.fonfood.com/岡山火車站">岡山火車站</a>
+                            <span class="darkGrey">400公尺</span>
+                        </td>
+                        <td nowrap="" width="1%" valign="top">
+                            <a href="http://www.fonfood.com/store/570840/map">map</a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="white" style="border-bottom:1px dotted grey">
+                        <td valign="top">
+                            <a class="darkOrange" href="http://www.fonfood.com/store/423857">高雄富民店</a>
+                        </td>
+                        <td valign="top" nowrap="">07-5589999</td>
+
+                        <td>
+                            <b>高雄市</b><b>左營區</b><b>富民路351號</b>
+
+                            <br>
+                            <a href="http://www.fonfood.com/捷運巨蛋站">捷運巨蛋站</a>
+                            <span class="darkGrey">200公尺</span>
+                        </td>
+                        <td nowrap="" width="1%" valign="top">
+                            <a href="http://www.fonfood.com/store/423857/map">map</a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#f4f4f4" style="border-bottom:1px dotted grey">
+                        <td valign="top">
+                            <a class="darkOrange" href="http://www.fonfood.com/store/823025">高雄楠梓店</a>
+                        </td>
+                        <td valign="top" nowrap="">07-3637870</td>
+
+                        <td>
+                            <b>高雄市</b><b>楠梓區</b><b>德民路352號</b>
+
+                            <br>
+                            <a href="http://www.fonfood.com/捷運楠梓加工區站">捷運楠梓加工區站</a>
+                            <span class="darkGrey">800公尺</span>
+                        </td>
+                        <td nowrap="" width="1%" valign="top">
+                            <a href="http://www.fonfood.com/store/823025/map">map</a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="white" style="border-bottom:1px dotted grey">
+                        <td valign="top">
+                            <a class="darkOrange" href="http://www.fonfood.com/store/478493">高雄林森店</a>
+                        </td>
+                        <td valign="top" nowrap="">07-3321500</td>
+
+                        <td>
+                            <b>高雄市</b><b>苓雅區</b><b>興中一路222號</b>
+
+                            <br>
+                            <a href="http://www.fonfood.com/捷運三多商圈站">捷運三多商圈站</a>
+                            <span class="darkGrey">500公尺</span>
+                        </td>
+                        <td nowrap="" width="1%" valign="top">
+                            <a href="http://www.fonfood.com/store/478493/map">map</a>
+                        </td>
+                    </tr>
+                    <tr bgcolor="#f4f4f4" style="border-bottom:1px dotted grey">
+                        <td valign="top">
+                            <a class="darkOrange" href="http://www.fonfood.com/store/417064">高雄成功店</a>
+                        </td>
+                        <td valign="top" nowrap="">07-2693656</td>
+
+                        <td>
+                            <b>高雄市</b><b>苓雅區</b><b>成功一路238號</b>
+
+                            <br>
+                            <a href="http://www.fonfood.com/捷運中央公園站">捷運中央公園站</a>
+                            <span class="darkGrey">900公尺</span>
+                        </td>
+                        <td nowrap="" width="1%" valign="top">
+                            <a href="http://www.fonfood.com/store/417064/map">map</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <div class="container" id="contact">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>Team01</strong>
+                    </h4>
+                    <p>台灣科技大學
+                        <br>網頁設計</p>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="http://www.bobatea.com.tw/" class="btn" target="_blank">丸作官網</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/NTUST/106-team01" target="blank">team01 github</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/NTUST" target="blank">NTUST github</a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Your Website 2017</p>
+                </div>
+            </div>
+        </div>
+        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+    </footer>
+    </div>
+
+    <!-- jQuery -->
+    <script src="{% static 'polls/js/jquery.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'polls/js/bootstrap.min.js' %}"></script>
+    <!--jQuery搜尋列JS套用-->
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js "></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
+    <!-- Custom Theme JavaScript -->
+    <script>
+        // Closes the sidebar menu
+        $("#menu-close").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Opens the sidebar menu
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Scrolls to the selected menu item on the page
+        $(function() {
+            $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+        //#to-top button appears after scrolling
+        var fixed = false;
+        $(document).scroll(function() {
+            if ($(this).scrollTop() > 250) {
+                if (!fixed) {
+                    fixed = true;
+                    // $('#to-top').css({position:'fixed', display:'block'});
+                    $('#to-top').show("slow", function() {
+                        $('#to-top').css({
+                            position: 'fixed',
+                            display: 'block'
+                        });
+                    });
+                }
+            } else {
+                if (fixed) {
+                    fixed = false;
+                    $('#to-top').hide("slow", function() {
+                        $('#to-top').css({
+                            display: 'none'
+                        });
+                    });
+                }
+            }
+        });
+        // Disable Google Maps scrolling
+        // See http://stackoverflow.com/a/25904582/1607849
+        // Disable scroll zooming and bind back the click event
+        var onMapMouseleaveHandler = function(event) {
+            var that = $(this);
+            that.on('click', onMapClickHandler);
+            that.off('mouseleave', onMapMouseleaveHandler);
+            that.find('iframe').css("pointer-events", "none");
+        }
+        var onMapClickHandler = function(event) {
+                var that = $(this);
+                // Disable the click handler until the user leaves the map area
+                that.off('click', onMapClickHandler);
+                // Enable scrolling zoom
+                that.find('iframe').css("pointer-events", "auto");
+                // Handle the mouse leave event
+                that.on('mouseleave', onMapMouseleaveHandler);
+            }
+            // Enable map zooming with mouse scroll when the user clicks the map
+        $('.map').on('click', onMapClickHandler);
+    </script>
+
+</body>
+
+</html>

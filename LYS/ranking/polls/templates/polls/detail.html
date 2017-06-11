@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>飲料吧 - 投票頁</title>
+    <!-- Bootstrap -->
+    <!-- 最新編譯和最佳化的 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--jQuery搜尋列CSS套用-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+    <!-- 選擇性佈景主題 -->
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/style.css' %}" />
+    <!--<link rel="stylesheet" href="CSS/style.css" />-->
+</head>
+
+<body style="background-color: orange">
+<h1 class="text-center">{{ question.question_text }}</h1>
+
+{% if error_message %}
+<p><strong>{{ error_message }}</strong></p>{% endif %}
+<ul>
+	<form action="{% url 'polls:vote' question.id %}" method="post">
+	    {% csrf_token %} {% for choice in question.choice_set.all %}
+	    <oi>
+		    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
+		    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label></oi><br /> {% endfor %}
+		    <input class="btn" type="submit" value="投票" />
+	</form>
+</ul>
+</body>
+
+</html>

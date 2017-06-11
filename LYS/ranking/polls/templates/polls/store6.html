@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>飲料霸-出櫃</title>
+
+    <!-- Bootstrap Core CSS -->
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/stylish-portfolio.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/font-awesome/css/font-awesome.min.css' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="http://127.0.0.1:8000/polls/" onclick=$( "#menu-close").click();>飲料霸首頁</a>
+            </li>
+            <li>
+                <a href="#about" onclick=$( "#menu-close").click();>關於店家</a>
+            </li>
+            <li>
+                <a href="#hot" onclick=$( "#menu-close").click();>熱銷飲料</a>
+            </li>
+
+            <li>
+                <a href="#menu" onclick=$( "#menu-close").click();>MENU</a>
+            </li>
+            <li>
+                <a href="#store" onclick=$( "#menu-close").click();>全台分店</a>
+            </li>
+            <li>
+                <a href="#activity" onclick=$( "#menu-close").click();>最新活動</a>
+            </li>
+            <li>
+                <a href="#contact" onclick=$( "#menu-close").click();>Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+
+    <header id="top" class="header" style="width:80%; margin-left:135px">
+        <div class="text-vertical-center">
+
+
+        </div>
+    </header>
+
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2><strong>出櫃 Open Your Door</strong> </h2>
+                    <p class="lead">出櫃 Open Your Door 冷飲專賣是一個有冰品、飲料、甜湯、飲料專賣店的飲料專賣店。</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Services -->
+    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+
+
+    <!-- Callout -->
+    <aside class="callout" style="width:80%; margin-left:135px">
+
+    </aside>
+
+    <!-- Portfolio -->
+    <section id="hot" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h2><strong>熱銷-推薦</strong></h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="https://www.facebook.com/543849319119941/photos/pb.543849319119941.-2207520000.1473503718./597535150418024/?type=3&theater" target="_blank">
+                                    <img class="img-portfolio img-responsive" src="{% static 'polls/img/01.jpg' %}">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="https://www.facebook.com/openyourdoor57/posts/225942214479001:0 " target="_blank">
+                                    <img class="img-portfolio img-responsive" src="{% static 'polls/img/02.jpg' %}">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="https://www.facebook.com/543849319119941/photos/a.546796798825193.1073741828.543849319119941/751452415026296/?type=3&theater" target="_blank">
+                                    <img class="img-portfolio img-responsive" src="{% static 'polls/img/03.jpg' %}">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="http://ele9420.pixnet.net/blog/post/44454370-%E9%A3%9F%EF%BC%8C%E5%8F%B0%E4%B8%AD-%E7%9B%8A%E6%B0%91%E5%95%86%E5%9C%88%E7%9A%84%E8%B6%85%E9%85%B7%E9%A3%B2%E6%96%99%E5%BA%97-%E9%BB%83%E9%87%91%E8%95%8E%E9%BA%A5%E7%B4%85" target="_blank">
+                                    <img class="img-portfolio img-responsive" src="{% static 'polls/img/04.jpg' %}">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                    <a href="https://www.facebook.com/permalink.php?story_fbid=574121679426038&id=543849319119941" target="_blank " class="btn btn-dark">View More Items</a>
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <hr>
+    <!-- Call to Action -->
+    <aside class="call-to-action bg-primary" style="margin:80px">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3 id="menu"><strong>MENU</strong></h3>
+                    <img src="{% static 'polls/img/menu.jpg' %}" alt=""></img>
+
+                    <br>
+                    <br>
+                    <h3 id="store"><strong>STORES</strong></h3>
+                    <img src="{% static 'polls/img/store.jpg' %}" alt=""></img>
+                    <br>
+                    <br>
+                    <h3 id="activity"><strong>ACTIVITY</strong></h3>
+                    <p><strong>到店打卡送飲料</strong></p>
+                    <img src="{% static 'polls/img/activity.jpg' %}" alt=""></img>
+
+                </div>
+            </div>
+        </div>
+    </aside>
+
+
+
+    <hr>
+    <!-- Footer -->
+    <footer>
+        <div class="container" id="contact">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>Team01</strong>
+                    </h4>
+                    <p>台灣科技大學
+                        <br>網頁設計</p>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="https://github.com/NTUST/106-team01" target="blank">team01 github</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/NTUST" target="blank">NTUST github</a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Your Website 2017</p>
+                </div>
+            </div>
+        </div>
+        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="{% static 'polls/js/jquery.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'polls/js/bootstrap.min.js' %}"></script>
+    <!-- Custom Theme JavaScript -->
+    <script>
+        // Closes the sidebar menu
+        $("#menu-close").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Opens the sidebar menu
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Scrolls to the selected menu item on the page
+        $(function() {
+            $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+        //#to-top button appears after scrolling
+        var fixed = false;
+        $(document).scroll(function() {
+            if ($(this).scrollTop() > 250) {
+                if (!fixed) {
+                    fixed = true;
+                    // $('#to-top').css({position:'fixed', display:'block'});
+                    $('#to-top').show("slow", function() {
+                        $('#to-top').css({
+                            position: 'fixed',
+                            display: 'block'
+                        });
+                    });
+                }
+            } else {
+                if (fixed) {
+                    fixed = false;
+                    $('#to-top').hide("slow", function() {
+                        $('#to-top').css({
+                            display: 'none'
+                        });
+                    });
+                }
+            }
+        });
+        // Disable Google Maps scrolling
+        // See http://stackoverflow.com/a/25904582/1607849
+        // Disable scroll zooming and bind back the click event
+        var onMapMouseleaveHandler = function(event) {
+            var that = $(this);
+            that.on('click', onMapClickHandler);
+            that.off('mouseleave', onMapMouseleaveHandler);
+            that.find('iframe').css("pointer-events", "none");
+        }
+        var onMapClickHandler = function(event) {
+                var that = $(this);
+                // Disable the click handler until the user leaves the map area
+                that.off('click', onMapClickHandler);
+                // Enable scrolling zoom
+                that.find('iframe').css("pointer-events", "auto");
+                // Handle the mouse leave event
+                that.on('mouseleave', onMapMouseleaveHandler);
+            }
+            // Enable map zooming with mouse scroll when the user clicks the map
+        $('.map').on('click', onMapClickHandler);
+    </script>
+
+</body>
+
+</html>
