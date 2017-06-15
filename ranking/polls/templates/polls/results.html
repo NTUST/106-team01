@@ -9,10 +9,8 @@
     <!-- Bootstrap -->
     <!-- 最新編譯和最佳化的 CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!--jQuery-->
-    <script src="jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <!--jQuery搜尋列CSS套用-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
     <!-- 選擇性佈景主題 -->
     {% load static %}
 
@@ -20,62 +18,29 @@
     <!--<link rel="stylesheet" href="CSS/style.css" />-->
 </head>
 
-<body>
+<body style="background-color: orange">
     <h1>{{ question.question_text }}</h1>
-    <div class="container">
-        <table class="table table-bordered;" width="400px;">
-            <tr>
-                <td>排名</td>
-                <td>名稱</td>
-                <td>投票數</td>
-            </tr>
-            {% for choice in question.choice_set.all %}
-            <tr>
-                <td>{{ choice.id }}</td>
-                <td>{{ choice.choice_text }}</td>
-                <td>{{ choice.votes }}</td>
-            </tr>
 
-            {% endfor %}
+    <table class="table table-bordered;">
+        <tr>
+            <td>排名</td>
+            <td>名稱</td>
+            <td>投票數</td>
+        </tr>
+        {% for choice in question %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ choice.choice_text }}</td>
+            <td>{{ choice.votes }}</td>
+        </tr>
 
-        </table>
-    </div>
+        {% endfor %}
 
-
-    <div class="chart-container" style="position: relative; height:40vh; width:40vw">
-        <canvas id="myChart"></canvas>
-        <script>
-            var canvas = document.getElementById('myChart');
-            var data = {
-                labels: ["{{store.0}}", "{{store.1}}", "{{store.2}}", "{{store.3}}", "{{store.4}}",
-                    "{{store.5}}", "{{store.6}}", "{{store.7}}", "{{store.8}}", "{{store.9}}",
-                ],
-                datasets: [{
-                    label: "drink avg price",
-                    backgroundColor: "rgba(255,99,132,1)",
-                    borderColor: "rgba(1,1,1,1)",
-                    borderWidth: 1,
-                    hoverBackgroundColor: "rgba(255,99,132,0.4)",
-                    hoverBorderColor: "rgba(1,1,1,1)",
-                    data: ["{{vote.0}}", "{{vote.1}}", "{{vote.2}}", "{{vote.3}}", "{{vote.4}}",
-                        "{{vote.5}}", "{{vote.6}}", "{{vote.7}}", "{{vote.8}}", "{{vote.9}}",
-                    ],
-                }]
-            };
-
-            var option = {
-                animation: {
-                    duration: 5000
-                }
-            };
-
-            var myBarChart = new Chart(canvas, {
-                type: 'horizontalBar',
-                data: data,
-                options: option,
-            });
-        </script>
-    </div>
+    </table>
+    <ul class="list-inline">
+        <li><a href="{% url 'polls:detail' q.id %} " class="btn ">投票區</a></li>
+        <li><a href="{% url 'polls:index'%} " class="btn ">回首頁</a></li>
+    </ul>
 </body>
 
 </html>

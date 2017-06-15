@@ -31,167 +31,119 @@
 </head>
 
 <body>
+    <div class="container">
+        <!-- Navigation -->
+        <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+        <nav id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+                <li class="sidebar-brand">
+                    <a href="http://127.0.0.1:8000/polls/" onclick=$( "#menu-close").click();>飲料霸首頁</a>
+                </li>
+                <li>
+                    <a href="#about" onclick=$( "#menu-close").click();>關於店家</a>
+                </li>
+                <li>
+                    <a href="#hot" onclick=$( "#menu-close").click();>熱銷飲料</a>
+                </li>
 
-    <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand">
-                <a href="http://127.0.0.1:8000/polls/" onclick=$( "#menu-close").click();>飲料霸首頁</a>
-            </li>
-            <li>
-                <a href="#about" onclick=$( "#menu-close").click();>關於店家</a>
-            </li>
-            <li>
-                <a href="#hot" onclick=$( "#menu-close").click();>熱銷飲料</a>
-            </li>
+                <li>
+                    <a href="#menu" onclick=$( "#menu-close").click();>MENU</a>
+                </li>
+                <li>
+                    <a href="#store" onclick=$( "#menu-close").click();>全台分店</a>
+                </li>
+                <li>
+                    <a href="#activity" onclick=$( "#menu-close").click();>最新活動</a>
+                </li>
+                <li>
+                    <a href="#contact" onclick=$( "#menu-close").click();>Contact</a>
+                </li>
+            </ul>
+        </nav>
 
-            <li>
-                <a href="#menu" onclick=$( "#menu-close").click();>MENU</a>
-            </li>
-            <li>
-                <a href="#store" onclick=$( "#menu-close").click();>全台分店</a>
-            </li>
-            <li>
-                <a href="#activity" onclick=$( "#menu-close").click();>最新活動</a>
-            </li>
-            <li>
-                <a href="#contact" onclick=$( "#menu-close").click();>Contact</a>
-            </li>
-        </ul>
-    </nav>
-
-    <!-- Header -->
-    <header id="top" class="header">
-        <div class="text-vertical-center">
-
-
-        </div>
-    </header>
-
-    <!-- About -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2><strong>出櫃 Open Your Door</strong> </h2>
-                    <p class="lead">出櫃 Open Your Door 冷飲專賣是一個有冰品、飲料、甜湯、飲料專賣店的飲料專賣店。</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-    <!-- Services -->
-    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-
-
-    <!-- Callout -->
-    <aside class="callout">
-
-    </aside>
-
-    <!-- Portfolio -->
-    <section id="hot" class="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2><strong>熱銷-推薦</strong></h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="https://www.facebook.com/543849319119941/photos/pb.543849319119941.-2207520000.1473503718./597535150418024/?type=3&theater" target="_blank">
-                                    <img class="img-portfolio img-responsive" src="{% static 'polls/img/01.jpg' %}">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="https://www.facebook.com/openyourdoor57/posts/225942214479001:0 " target="_blank">
-                                    <img class="img-portfolio img-responsive" src="{% static 'polls/img/02.jpg' %}">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="https://www.facebook.com/543849319119941/photos/a.546796798825193.1073741828.543849319119941/751452415026296/?type=3&theater" target="_blank">
-                                    <img class="img-portfolio img-responsive" src="{% static 'polls/img/03.jpg' %}">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="http://ele9420.pixnet.net/blog/post/44454370-%E9%A3%9F%EF%BC%8C%E5%8F%B0%E4%B8%AD-%E7%9B%8A%E6%B0%91%E5%95%86%E5%9C%88%E7%9A%84%E8%B6%85%E9%85%B7%E9%A3%B2%E6%96%99%E5%BA%97-%E9%BB%83%E9%87%91%E8%95%8E%E9%BA%A5%E7%B4%85" target="_blank">
-                                    <img class="img-portfolio img-responsive" src="{% static 'polls/img/04.jpg' %}">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.row (nested) -->
-                    <a href="https://www.facebook.com/permalink.php?story_fbid=574121679426038&id=543849319119941" target="_blank " class="btn btn-dark">View More Items</a>
-                </div>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-    <!-- Call to Action -->
-    <aside class="call-to-action bg-primary">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h3 id="menu"><strong>MENU</strong></h3>
-                    <img src="{% static 'polls/img/menu.jpg' %}" alt=""></img>
-
-                    <br>
-                    <br>
-                    <h3 id="store"><strong>STORES</strong></h3>
-                    <img src="{% static 'polls/img/store.jpg' %}" alt=""></img>
-                    <br>
-                    <br>
-                    <h3 id="activity"><strong>ACTIVITY</strong></h3>
-                    <p><strong>到店打卡送飲料</strong></p>
-                    <img src="{% static 'polls/img/activity.jpg' %}" alt=""></img>
-
-                </div>
+        <div class="row" id="top">
+            <!-- About -->
+            <img src="{% static 'polls/img/bg.jpg' %}" alt="英雄圖" width="100%">
+            <div class="col-lg-12 text-center">
+                <h2><strong>出櫃 Open Your Door</strong> </h2>
+                <p class="lead">出櫃 Open Your Door 冷飲專賣是一個有冰品、飲料、甜湯、飲料專賣店的飲料專賣店。</p>
             </div>
         </div>
-    </aside>
 
-    <!-- Map -->
-
-
-    <!-- Footer -->
-    <footer>
-        <div class="container" id="contact">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>Team01</strong>
-                    </h4>
-                    <p>台灣科技大學
-                        <br>網頁設計</p>
-                    <br>
-                    <ul class="list-inline">
-                        <li>
-                            <a href="https://github.com/NTUST/106-team01" target="blank">team01 github</a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/NTUST" target="blank">NTUST github</a>
-                        </li>
-                    </ul>
-                    <hr class="small">
-                    <p class="text-muted">Copyright &copy; Your Website 2017</p>
-                </div>
+        <div class="row">
+            <!-- Callout -->
+            <div class="callout">
             </div>
         </div>
-        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
-    </footer>
 
+        <!-- Portfolio -->
+        <div class="row text-center" id="hot" style="background-color:coral">
+            <h2><strong>熱銷-推薦</strong></h2>
+            <div class="col-md-6">
+                <a href="https://www.facebook.com/543849319119941/photos/pb.543849319119941.-2207520000.1473503718./597535150418024/?type=3&theater" target="_blank">
+                    <img class="img-portfolio img-responsive" src="{% static 'polls/img/01.jpg' %}">
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a href="https://www.facebook.com/openyourdoor57/posts/225942214479001:0 " target="_blank">
+                    <img class="img-portfolio img-responsive" src="{% static 'polls/img/02.jpg' %}">
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a href="https://www.facebook.com/543849319119941/photos/a.546796798825193.1073741828.543849319119941/751452415026296/?type=3&theater" target="_blank">
+                    <img class="img-portfolio img-responsive" src="{% static 'polls/img/03.jpg' %}">
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a href="http://ele9420.pixnet.net/blog/post/44454370-%E9%A3%9F%EF%BC%8C%E5%8F%B0%E4%B8%AD-%E7%9B%8A%E6%B0%91%E5%95%86%E5%9C%88%E7%9A%84%E8%B6%85%E9%85%B7%E9%A3%B2%E6%96%99%E5%BA%97-%E9%BB%83%E9%87%91%E8%95%8E%E9%BA%A5%E7%B4%85" target="_blank">
+                    <img class="img-portfolio img-responsive" src="{% static 'polls/img/04.jpg' %}">
+                </a>
+            </div>
+            <!-- /.row (nested) -->
+            <a href="https://www.facebook.com/permalink.php?story_fbid=574121679426038&id=543849319119941" target="_blank " class="btn btn-dark">View More Items</a>
+            <br><br><br>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="row text-center" style="background-color:#337AB7;">
+            <h1 id="menu"><strong>MENU</strong></h1>
+            <img src="{% static 'polls/img/menu6.png' %}" alt=""></img>
+            <br>
+            <br>
+            <h1 id="store"><strong>STORES</strong></h1>
+            <img src="{% static 'polls/img/store.jpg' %}" alt=""></img>
+            <br>
+            <br>
+            <h1 id="activity"><strong>ACTIVITY</strong></h1>
+            <p><strong>到店打卡送飲料</strong></p>
+            <img src="{% static 'polls/img/activity.jpg' %}" alt=""></img>
+            <br><br><br><br>
+        </div>
+
+        <!--頁尾連結-->
+        <div class="row" id="contact">
+            <div class="col-sm-12 text-center" style="background-color: #EFEFEF;padding: 0px;margin: 0px;">
+                <br><br><br><br>
+                <h4><strong>Team01</strong></h4>
+                <p>台灣科技大學</p>
+                <br>
+                <p>網頁設計</p>
+                <br>
+                <ul class="list-inline ">
+                    <li>
+                        <a href="https://github.com/NTUST/106-team01 " target="blank ">team01 github</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/NTUST " target="blank ">NTUST github</a>
+                    </li>
+                </ul>
+                <hr class="small ">
+                <p class="text-muted ">Copyright &copy; Your Website 2017</p> <br><br><br>
+            </div>
+            <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+        </div>
+    </div>
     <!-- jQuery -->
     <script src="{% static 'polls/js/jquery.js' %}"></script>
 

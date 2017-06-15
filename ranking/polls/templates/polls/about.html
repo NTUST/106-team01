@@ -19,55 +19,63 @@
 
 <body>
     <div class="container">
-        <nav class="navbar transparent navbar-fixed-top" role="navigation">
-            <nav class="navbar-inner">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-nav-collapse">
+        <div class="row">
+            <nav class="navbar transparent navbar-fixed-top" role="navigation">
+                <nav class="navbar-inner">
+                    <div class="container">
+                        <div class="col-lg-12">
+                            <div class="col-sm-5"></div>
+
+                            <div class="col-sm-2">
+                                <p class="text-center">
+                                    <a class="navbar-brand" href="http://127.0.0.1:8000/polls/">
+                                        <img src="{% static 'polls/img/logo.png' %}" width="110%">
+                                    </a>
+                                </p>
+                            </div>
+
+                            <div class="col-sm-5">
+
+                            </div>
+
+                        </div>
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-nav-collapse">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <ul class="nav navbar-nav">
-                            <li><a href="http://127.0.0.1:8000/polls/3/rankboard/">人氣排行</a></li>
-                            <li><a href="http://127.0.0.1:8000/polls/find/">找飲料　</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <div class="col-lg-3"></div>
-                        <div>
-                            <a class="navbar-brand" href="http://127.0.0.1:8000/polls/">
-                                <img src="{% static 'polls/img/logo-s.png' %}" width="130%">
-                            </a>
+                            <ul class="nav navbar-nav">
+                                <li><a href="http://127.0.0.1:8000/polls">首頁</a></li>
+                                <li><a href="http://127.0.0.1:8000/polls/about">關於我們</a></li>
+                                <li><a href="http://127.0.0.1:8000/polls/3/rankboard/">人氣排行</a></li>
+                            </ul>
+                        </div>
+                        <div class="collapse navbar-collapse" id="example-nav-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="http://127.0.0.1:8000/polls/find/">找飲料</a></li>
+                                <li><a href="http://127.0.0.1:8000/polls/brand/">品牌總覽</a></li>
+                                <li><a href="http://127.0.0.1:8000/polls/brand/#middle">價格大比拚</a></li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="collapse navbar-collapse" id="example-nav-collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="http://127.0.0.1:8000/polls/brand/">品牌總覽</a></li>
-                            <li><a href="http://127.0.0.1:8000/polls/brand#middle">價格大比拚</a></li>
-                        </ul>
-                    </div>
-                </div>
+                </nav>
             </nav>
-        </nav>
-        <br><br><br><br><br>
-
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <h1 class="text-center">品牌推薦</h1>
-                <div class="row" id="frame">
-                    <iframe id="frame" src="https://docs.google.com/forms/d/e/1FAIpQLSeHpQPYtFrM8zLfkXJddjUpJxSO0ZwKq5xUpb2v7HII1jg_Ug/viewform?embedded=true" width="760" height="600" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
-                </div>
-            </div>
-
         </div>
-    </div>
+
+        <div class="row">
+            <br><br>
+        </div>
 
 
-    <div class="container">
+        <div class="row text-center">
+            <br><br>
+            <h2 class="text3-title">品牌推薦</h2>
+            <br>
+            <iframe id="frame" src="https://docs.google.com/forms/d/e/1FAIpQLSeHpQPYtFrM8zLfkXJddjUpJxSO0ZwKq5xUpb2v7HII1jg_Ug/viewform?embedded=true" width="760" height="600" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+        </div>
+
         <div class="row">
             <div class="col-md-12" style="background-color:orange">
                 <br><br>
@@ -93,10 +101,9 @@
                 </ul>
             </div>
         </div>
-    </div>
 
 
-    <div class="container">
+
         <div class="row">
             <div class="col-sm-12 text-center" id="bottom">
                 <br><br><br><br>
@@ -117,13 +124,18 @@
                     <hr class="small">
                     <p class="text-muted">Copyright &copy; Your Website 2017</p> <br><br><br>
             </div>
+
         </div>
     </div>
+
+
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js "></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
+
 </body>
 
 </html>

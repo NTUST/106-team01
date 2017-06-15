@@ -22,166 +22,153 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="col-md-12">
-            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="http://127.0.0.1:8000/polls/" id="mybrand">飲料霸</a>
-                    </div>
+    <div class="container">
+        <!-- Navigation -->
+        <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+        <nav id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+                <li class="sidebar-brand">
+                    <a href="http://127.0.0.1:8000/polls/" onclick=$( "#menu-close").click();>飲料霸首頁</a>
+                </li>
+                <li>
+                    <a href="#new" onclick=$( "#menu-close").click();>最新活動</a>
+                </li>
 
-                    <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-2 ">
-                        <ul class="nav navbar-nav navbar-right">
-                            <!--<li><a href="#search">搜尋</a></li>-->
-                            <!--<li><a href="#hot">熱銷飲料</a></li>-->
-                            <li><a href="#new">最新活動</a></li>
-                            <li><a href="#menu">MENU</a></li>
-                            <li><a href="#branch">全台分店</a></li>
-                            <!--<li><a href="http://127.0.0.1:8000/polls/3/about/">關於</a></li>-->
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
+                <li>
+                    <a href="#menu" onclick=$( "#menu-close").click();>MENU</a>
+                </li>
+                <li>
+                    <a href="#branch" onclick=$( "#menu-close").click();>全台分店</a>
+                </li>
+
+                <li>
+                    <a href="#contact" onclick=$( "#menu-close").click();>Contact</a>
+                </li>
+            </ul>
+        </nav>
         <div class="row" id="hot">
             <!--熱銷飲料-->
-            <br>
             <img src="{% static 'polls/img/store1.png' %}" alt="英雄圖" width="100%">
         </div>
-        <div class="row" id="new" style="background-color:antiquewhite">
-            <br><br><br><br><br><br><br><br><br>
-            <div class="container">
-                <h1 class="text-center"><strong>最新活動資訊</strong></h1>
-                <!--最新活動-->
-                <a href="http://www.diagon-alley.com.tw/images/old-news/ad_201701-zoom.jpg" target="_Blank"><img alt="1" src="http://www.diagon-alley.com.tw/images/old-news/ad_201701.jpg"></a>
-                <a href="http://www.diagon-alley.com.tw/images/old-news/ad_201702-zoom.jpg" target="_Blank"><img alt="2" src="http://www.diagon-alley.com.tw/images/old-news/ad_201702.jpg"></a>
-                <a href="http://www.diagon-alley.com.tw/images/old-news/ad_201703-zoom.jpg" target="_Blank"><img alt="3" src="http://www.diagon-alley.com.tw/images/old-news/ad_201703.jpg"></a>
-                <a href="http://www.diagon-alley.com.tw/images/old-news/ad_201704-zoom.jpg" target="_Blank"><img alt="4" src="http://www.diagon-alley.com.tw/images/old-news/ad_201704.jpg"></a>
-            </div>
-            <br><br><br><br><br><br><br><br><br>
+        <div class="row text-center" id="new" style="background-color:antiquewhite;">
+            <h1><strong>最新活動資訊</strong></h1>
+            <!--最新活動-->
+            <a href="http://www.diagon-alley.com.tw/images/old-news/ad_201701-zoom.jpg" target="_Blank"><img alt="1" src="http://www.diagon-alley.com.tw/images/old-news/ad_201701.jpg"></a>
+            <a href="http://www.diagon-alley.com.tw/images/old-news/ad_201702-zoom.jpg" target="_Blank"><img alt="2" src="http://www.diagon-alley.com.tw/images/old-news/ad_201702.jpg"></a>
+            <a href="http://www.diagon-alley.com.tw/images/old-news/ad_201703-zoom.jpg" target="_Blank"><img alt="3" src="http://www.diagon-alley.com.tw/images/old-news/ad_201703.jpg"></a>
+            <a href="http://www.diagon-alley.com.tw/images/old-news/ad_201704-zoom.jpg" target="_Blank"><img alt="4" src="http://www.diagon-alley.com.tw/images/old-news/ad_201704.jpg"></a>
+            <br><br><br>
         </div>
-        <div class="container">
-            <div class="row" id="menu">
-                <!--MENU-->
-                <br>
-                <br>
-                <br>
-                <h1 class="text-center"><strong>MENU</strong></h1>
-                <img src="{% static 'polls/img/menu1.png' %}" alt="menu" width="100%">
-            </div>
-            <br><br>
+        <div class="row" id="menu">
+            <!--MENU-->
+            <h1 class="text-center"><strong>MENU</strong></h1>
+            <img src="{% static 'polls/img/menu1.png' %}" alt="menu" width="100%">
         </div>
-
-        <div class="row" id="branch" style="background-color:antiquewhite">
-            <br><br>
+        <br>
+        <div class="row" id="branch" style="background-color:antiquewhite;">
             <!--===================[北部分店]===================-->
-            <div class="container">
-                <h1 class="text-center"><strong>北部分店</strong></h1>
-                <div class="col-md-3">
-                    <!--延吉-->
-                    <h1>台北延吉店</h1>
-                    <p>台北市大安區延吉街153-3號</p>
-                    <p>TEL: (02) 2772-2732</p>
-                    <p>OPEN: 週一 - 週日 10:30 - 22:00</p>
-                    <p><a href="https://www.facebook.com/DiagonAlleyYanji/" target="_blank">店家粉絲專頁</a></p>
-                </div>
-                <div class="col-md-3">
-                    <!--復興南-->
-                    <h1>台北復興南店</h1>
-                    <p>台北市復興南路二段206號</p>
-                    <p>TEL: (02)2701-3277</p>
-                    <p>OPEN: 週一 - 週日 10:00 - 22:00</p>
-                    <p><a href="https://www.facebook.com/bddrinking" target="_blank">店家粉絲專頁</a></p>
-                </div>
-                <div class="col-md-3">
-                    <!--文德-->
-                    <h1>台北文德店</h1>
-                    <p>台北市內湖區文德路14號</p>
-                    <p>TEL: (02)2656-2977</p>
-                    <p>OPEN: 週一 - 週日 10:00 - 22:00</p>
-                    <p><a href="https://www.facebook.com/%E6%96%9C%E8%A7%92%E5%B7%B7-%E6%96%87%E5%BE%B7%E5%BA%97-571062459734897/" target="_blank">店家粉絲專頁</a></p>
-                </div>
-                <div class="col-md-3">
-                    <!--民生-->
-                    <h1>板橋民生店</h1>
-                    <p>新北市板橋區民生路3段23號</p>
-                    <p>TEL: (02)2252-1909</p>
-                    <p>OPEN: 週一 - 週日 10:00 - 22:00</p>
-                    <p><a href="https://www.facebook.com/%E6%96%9C%E8%A7%92%E5%B7%B7-%E6%9D%BF%E6%A9%8B%E6%B0%91%E7%94%9F%E5%BA%97-1630885217239892/" target="_blank">店家粉絲專頁</a></p>
-                </div>
-
-                <div class="col-md-3">
-                    <!--中正-->
-                    <h1>桃園中正店</h1>
-                    <p>桃園市桃園區中正路520號</p>
-                    <p>TEL: (03)335-0665</p>
-                    <p>OPEN: 週一 - 週日 10:00 - 22:00</p>
-                    <p><a href="https://www.facebook.com/diagonalleytaoyuan" target="_blank">店家粉絲專頁</a></p>
-                </div>
-                <div class="col-md-3">
-                    <!--桃鶯-->
-                    <h1>桃園桃鶯店</h1>
-                    <p>桃園市桃園區桃鶯路301號</p>
-                    <p>TEL: (03)377-9037</p>
-                    <p>OPEN: 週一 - 週日 10:00 - 22:00</p>
-                    <p><a href="https://www.facebook.com/%E6%96%9C%E8%A7%92%E5%B7%B7-%E6%A1%83%E9%B6%AF%E5%BA%97-140927736391507/" target="_blank">店家粉絲專頁</a></p>
-                </div>
-                <div class="col-md-3">
-                    <!--八德-->
-                    <h1>桃園八德店</h1>
-                    <p>桃園市八德區廣福路18-1號</p>
-                    <p>TEL: (03)366-0095</p>
-                    <p>OPEN: 週一 - 週日 10:00 - 22:00</p>
-                </div>
-                <div class="col-md-3">
-                    <!--新生-->
-                    <h1>中壢新生店</h1>
-                    <p>桃園市中壢區新生路32號</p>
-                    <p>TEL: (03)425-6685</p>
-                    <p>OPEN: 週一 - 週日 10:30-0:00</p>
-                    <p><a href="https://www.facebook.com/diagonalleytea/" target="_blank">店家粉絲專頁</a></p>
-                </div>
-
-                <div class="col-md-3">
-                    <!--新豐-->
-                    <h1>新竹新豐店</h1>
-                    <p>新竹縣新豐鄉建興路一段88號</p>
-                    <p>TEL: (03)557-1606</p>
-                    <p>OPEN: 週一 - 週日 9:30 - 21:30</p>
-                    <p><a href="https://www.facebook.com/%E6%96%9C%E8%A7%92%E5%B7%B7-%E6%96%B0%E8%B1%90%E5%BA%97-1127596980620104" target="_blank">店家粉絲專頁</a></p>
-                </div>
-                <div class="col-md-3">
-                    <!--巨城-->
-                    <h1>新竹巨城店</h1>
-                    <p>新竹市東區中央路184號</p>
-                    <p>TEL: (03)532-1193</p>
-                    <p>OPEN: 週日 - 週四 10:30 - 22:00</p>
-                    <p> 週五 - 週六 10:30 - 22:30</p>
-                    <p><a href="https://www.facebook.com/diagon.alley.i.bigcity/" target="_blank">店家粉絲專頁</a></p>
-                </div>
-                <div class="col-md-3">
-                    <!--光復-->
-                    <h1>新竹光復店</h1>
-                    <p>新竹市光復路一段362-19號1樓</p>
-                    <p>TEL: (03)577-2722</p>
-                    <p>OPEN: 週一 - 週日 10:30 - 21:30</p>
-                    <p><a href="https://www.facebook.com/DiagonAlleyHsinchu" target="_blank">店家粉絲專頁</a></p>
-                </div>
-                <div class="col-md-3">
-                    <!--竹北-->
-                    <h1>新竹竹北店</h1>
-                    <p>竹北市三民路270之1號</p>
-                    <p>TEL: (03)552-7501</p>
-                    <p>OPEN: 週一 - 週日 10:00 - 23:00</p>
-                    <p><a href="https://www.facebook.com/DiagonAlleyChupei" target="_blank">店家粉絲專頁</a></p>
-                </div>
+            <h1 class="text-center"><strong>北部分店</strong></h1>
+            <div class="col-md-3">
+                <!--延吉-->
+                <h1>台北延吉店</h1>
+                <p>台北市大安區延吉街153-3號</p>
+                <p>TEL: (02) 2772-2732</p>
+                <p>OPEN: 週一 - 週日 10:30 - 22:00</p>
+                <p><a href="https://www.facebook.com/DiagonAlleyYanji/" target="_blank">店家粉絲專頁</a></p>
             </div>
+            <div class="col-md-3">
+                <!--復興南-->
+                <h1>台北復興南店</h1>
+                <p>台北市復興南路二段206號</p>
+                <p>TEL: (02)2701-3277</p>
+                <p>OPEN: 週一 - 週日 10:00 - 22:00</p>
+                <p><a href="https://www.facebook.com/bddrinking" target="_blank">店家粉絲專頁</a></p>
+            </div>
+            <div class="col-md-3">
+                <!--文德-->
+                <h1>台北文德店</h1>
+                <p>台北市內湖區文德路14號</p>
+                <p>TEL: (02)2656-2977</p>
+                <p>OPEN: 週一 - 週日 10:00 - 22:00</p>
+                <p><a href="https://www.facebook.com/%E6%96%9C%E8%A7%92%E5%B7%B7-%E6%96%87%E5%BE%B7%E5%BA%97-571062459734897/" target="_blank">店家粉絲專頁</a></p>
+            </div>
+            <div class="col-md-3">
+                <!--民生-->
+                <h1>板橋民生店</h1>
+                <p>新北市板橋區民生路3段23號</p>
+                <p>TEL: (02)2252-1909</p>
+                <p>OPEN: 週一 - 週日 10:00 - 22:00</p>
+                <p><a href="https://www.facebook.com/%E6%96%9C%E8%A7%92%E5%B7%B7-%E6%9D%BF%E6%A9%8B%E6%B0%91%E7%94%9F%E5%BA%97-1630885217239892/" target="_blank">店家粉絲專頁</a></p>
+            </div>
+
+            <div class="col-md-3">
+                <!--中正-->
+                <h1>桃園中正店</h1>
+                <p>桃園市桃園區中正路520號</p>
+                <p>TEL: (03)335-0665</p>
+                <p>OPEN: 週一 - 週日 10:00 - 22:00</p>
+                <p><a href="https://www.facebook.com/diagonalleytaoyuan" target="_blank">店家粉絲專頁</a></p>
+            </div>
+            <div class="col-md-3">
+                <!--桃鶯-->
+                <h1>桃園桃鶯店</h1>
+                <p>桃園市桃園區桃鶯路301號</p>
+                <p>TEL: (03)377-9037</p>
+                <p>OPEN: 週一 - 週日 10:00 - 22:00</p>
+                <p><a href="https://www.facebook.com/%E6%96%9C%E8%A7%92%E5%B7%B7-%E6%A1%83%E9%B6%AF%E5%BA%97-140927736391507/" target="_blank">店家粉絲專頁</a></p>
+            </div>
+            <div class="col-md-3">
+                <!--八德-->
+                <h1>桃園八德店</h1>
+                <p>桃園市八德區廣福路18-1號</p>
+                <p>TEL: (03)366-0095</p>
+                <p>OPEN: 週一 - 週日 10:00 - 22:00</p>
+            </div>
+            <div class="col-md-3">
+                <!--新生-->
+                <h1>中壢新生店</h1>
+                <p>桃園市中壢區新生路32號</p>
+                <p>TEL: (03)425-6685</p>
+                <p>OPEN: 週一 - 週日 10:30-0:00</p>
+                <p><a href="https://www.facebook.com/diagonalleytea/" target="_blank">店家粉絲專頁</a></p>
+            </div>
+
+            <div class="col-md-3">
+                <!--新豐-->
+                <h1>新竹新豐店</h1>
+                <p>新竹縣新豐鄉建興路一段88號</p>
+                <p>TEL: (03)557-1606</p>
+                <p>OPEN: 週一 - 週日 9:30 - 21:30</p>
+                <p><a href="https://www.facebook.com/%E6%96%9C%E8%A7%92%E5%B7%B7-%E6%96%B0%E8%B1%90%E5%BA%97-1127596980620104" target="_blank">店家粉絲專頁</a></p>
+            </div>
+            <div class="col-md-3">
+                <!--巨城-->
+                <h1>新竹巨城店</h1>
+                <p>新竹市東區中央路184號</p>
+                <p>TEL: (03)532-1193</p>
+                <p>OPEN: 週日 - 週四 10:30 - 22:00</p>
+                <p> 週五 - 週六 10:30 - 22:30</p>
+                <p><a href="https://www.facebook.com/diagon.alley.i.bigcity/" target="_blank">店家粉絲專頁</a></p>
+            </div>
+            <div class="col-md-3">
+                <!--光復-->
+                <h1>新竹光復店</h1>
+                <p>新竹市光復路一段362-19號1樓</p>
+                <p>TEL: (03)577-2722</p>
+                <p>OPEN: 週一 - 週日 10:30 - 21:30</p>
+                <p><a href="https://www.facebook.com/DiagonAlleyHsinchu" target="_blank">店家粉絲專頁</a></p>
+            </div>
+            <div class="col-md-3">
+                <!--竹北-->
+                <h1>新竹竹北店</h1>
+                <p>竹北市三民路270之1號</p>
+                <p>TEL: (03)552-7501</p>
+                <p>OPEN: 週一 - 週日 10:00 - 23:00</p>
+                <p><a href="https://www.facebook.com/DiagonAlleyChupei" target="_blank">店家粉絲專頁</a></p>
+            </div>
+
+            <hr>
             <!--===================[中部]===================-->
             <div class="container">
                 <h1 class="text-center"><strong>中部分店</strong></h1>
@@ -244,7 +231,7 @@
                 <div class="col-md-3">
                 </div>
             </div>
-
+            <hr>
             <!--===================[南部]===================-->
             <div class="container">
                 <h1 class="text-center"><strong>南部分店</strong></h1>
@@ -270,33 +257,28 @@
                 </div>
             </div>
         </div>
-        <footer>
-            <div class="container" id="contact">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1 text-center">
-                        <h4><strong>Team01</strong>
-                        </h4>
-                        <p>台灣科技大學
-                            <br>網頁設計</p>
-                        <br>
-                        <ul class="list-inline">
-                            <li>
-                                <a href="http://www.diagon-alley.com.tw/" class="btn" target="_blank">斜角巷官網</a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/NTUST/106-team01" target="blank">team01 github</a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/NTUST" target="blank">NTUST github</a>
-                            </li>
-                        </ul>
-                        <hr class="small">
-                        <p class="text-muted">Copyright &copy; Your Website 2017</p>
-                    </div>
-                </div>
+        <!--頁尾連結-->
+        <div class="row" id="contact">
+            <div class="col-sm-12 text-center" style="background-color: #EFEFEF;padding: 0px;margin: 0px;">
+                <br><br><br><br>
+                <h4><strong>Team01</strong></h4>
+                <p>台灣科技大學</p>
+                <br>
+                <p>網頁設計</p>
+                <br>
+                <ul class="list-inline ">
+                    <li>
+                        <a href="https://github.com/NTUST/106-team01 " target="blank ">team01 github</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/NTUST " target="blank ">NTUST github</a>
+                    </li>
+                </ul>
+                <hr class="small ">
+                <p class="text-muted ">Copyright &copy; Your Website 2017</p> <br><br><br>
             </div>
             <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
-        </footer>
+        </div>
     </div>
     <!-- jQuery -->
     <script src="{% static 'polls/js/jquery.js' %}"></script>
@@ -308,6 +290,81 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js "></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+        // Closes the sidebar menu
+        $("#menu-close").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Opens the sidebar menu
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Scrolls to the selected menu item on the page
+        $(function() {
+            $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+        //#to-top button appears after scrolling
+        var fixed = false;
+        $(document).scroll(function() {
+            if ($(this).scrollTop() > 250) {
+                if (!fixed) {
+                    fixed = true;
+                    // $('#to-top').css({position:'fixed', display:'block'});
+                    $('#to-top').show("slow", function() {
+                        $('#to-top').css({
+                            position: 'fixed',
+                            display: 'block'
+                        });
+                    });
+                }
+            } else {
+                if (fixed) {
+                    fixed = false;
+                    $('#to-top').hide("slow", function() {
+                        $('#to-top').css({
+                            display: 'none'
+                        });
+                    });
+                }
+            }
+        });
+        // Disable Google Maps scrolling
+        // See http://stackoverflow.com/a/25904582/1607849
+        // Disable scroll zooming and bind back the click event
+        var onMapMouseleaveHandler = function(event) {
+            var that = $(this);
+            that.on('click', onMapClickHandler);
+            that.off('mouseleave', onMapMouseleaveHandler);
+            that.find('iframe').css("pointer-events", "none");
+        }
+        var onMapClickHandler = function(event) {
+                var that = $(this);
+                // Disable the click handler until the user leaves the map area
+                that.off('click', onMapClickHandler);
+                // Enable scrolling zoom
+                that.find('iframe').css("pointer-events", "auto");
+                // Handle the mouse leave event
+                that.on('mouseleave', onMapMouseleaveHandler);
+            }
+            // Enable map zooming with mouse scroll when the user clicks the map
+        $('.map').on('click', onMapClickHandler);
+    </script>
+
 
 </body>
 

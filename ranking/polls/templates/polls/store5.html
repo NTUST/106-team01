@@ -23,500 +23,490 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="col-md-12">
-            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="http://127.0.0.1:8000/polls/" id="mybrand">飲料霸</a>
-                    </div>
+    <div class="container">
+        <!-- Navigation -->
+        <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+        <nav id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+                <li class="sidebar-brand">
+                    <a href="http://127.0.0.1:8000/polls/" onclick=$( "#menu-close").click();>飲料霸首頁</a>
+                </li>
+                <li>
+                    <a href="#new" onclick=$( "#menu-close").click();>最新活動</a>
+                </li>
 
-                    <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-2 ">
-                        <ul class="nav navbar-nav navbar-right">
-                            <!--<li><a href="#search">搜尋</a></li>-->
-                            <!--<li><a href="#hot">熱銷飲料</a></li>-->
-                            <li><a href="#new">最新活動</a></li>
-                            <li><a href="#menu">MENU</a></li>
-                            <li><a href="#branch">全台分店</a></li>
-                            <!--<li><a href="http://127.0.0.1:8000/polls/3/about/">關於</a></li>-->
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
+                <li>
+                    <a href="#menu" onclick=$( "#menu-close").click();>MENU</a>
+                </li>
+                <li>
+                    <a href="#branch" onclick=$( "#menu-close").click();>全台分店</a>
+                </li>
+
+                <li>
+                    <a href="#contact" onclick=$( "#menu-close").click();>Contact</a>
+                </li>
+            </ul>
+        </nav>
+
         <div class="row" id="hot">
             <!--熱銷飲料-->
-            <br>
             <img src="{% static 'polls/img/store5.png' %}" alt="英雄圖" width="100%">
         </div>
-        <div class="row" id="new" style="background-color:antiquewhite">
-            <br><br><br><br><br><br><br><br><br>
-            <div class="container">
-                <h1 class="text-center"><strong>最新活動資訊</strong></h1>
-                <!--最新活動-->
-                <a href="http://www.diagon-alley.com.tw/images/old-news/ad_201701-zoom.jpg" target="_Blank"><img alt="1" src="http://www.diagon-alley.com.tw/images/old-news/ad_201701.jpg"></a>
-                <a href="http://www.diagon-alley.com.tw/images/old-news/ad_201702-zoom.jpg" target="_Blank"><img alt="2" src="http://www.diagon-alley.com.tw/images/old-news/ad_201702.jpg"></a>
-                <a href="http://www.diagon-alley.com.tw/images/old-news/ad_201703-zoom.jpg" target="_Blank"><img alt="3" src="http://www.diagon-alley.com.tw/images/old-news/ad_201703.jpg"></a>
-                <a href="http://www.diagon-alley.com.tw/images/old-news/ad_201704-zoom.jpg" target="_Blank"><img alt="4" src="http://www.diagon-alley.com.tw/images/old-news/ad_201704.jpg"></a>
-            </div>
-            <br><br><br><br><br><br><br><br><br>
-        </div>
-        <div class="container">
-            <div class="row" id="menu">
-                <!--MENU-->
-                <br>
-                <br>
-                <br>
-                <h1 class="text-center"><strong>MENU</strong></h1>
-                <img src="{% static 'polls/img/menu5.png' %}" alt="menu" width="100%">
-            </div>
-            <br><br>
+
+        <div class="row text-center" id="new" style="background-color:antiquewhite;">
+            <h1><strong>最新活動資訊</strong></h1>
+            <!--最新活動-->
+            <a href="http://www.diagon-alley.com.tw/images/old-news/ad_201701-zoom.jpg" target="_Blank"><img alt="1" src="http://www.diagon-alley.com.tw/images/old-news/ad_201701.jpg"></a>
+            <a href="http://www.diagon-alley.com.tw/images/old-news/ad_201702-zoom.jpg" target="_Blank"><img alt="2" src="http://www.diagon-alley.com.tw/images/old-news/ad_201702.jpg"></a>
+            <a href="http://www.diagon-alley.com.tw/images/old-news/ad_201703-zoom.jpg" target="_Blank"><img alt="3" src="http://www.diagon-alley.com.tw/images/old-news/ad_201703.jpg"></a>
+            <a href="http://www.diagon-alley.com.tw/images/old-news/ad_201704-zoom.jpg" target="_Blank"><img alt="4" src="http://www.diagon-alley.com.tw/images/old-news/ad_201704.jpg"></a>
+            <br><br><br>
         </div>
 
-        <div class="row" id="branch" style="background-color:antiquewhite">
-            <br><br>
-            <h1 class="text-center"><strong>北部分店</strong></h1>
-            <div class="row">
-                <div class="col-sm-3">
-                    <h4>桃園總店</h4>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>電&emsp;&emsp;話 </th>
-                                <td>03-4563558</td>
-                            </tr>
-                            <tr>
-                                <th>地&emsp;&emsp;址 </th>
-                                <td>桃園縣中壢市大仁三街2號</td>
-                            </tr>
-                            <tr>
-                                <th>營業時間</th>
-                                <td>11:00-22:00</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-sm-3">
-                    <h4>台北士林店</h4>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>電&emsp;&emsp;話 </th>
-                                <td>02 2882 8620</td>
-                            </tr>
-                            <tr>
-                                <th>地&emsp;&emsp;址 </th>
-                                <td>台北市士林區基河路108號</td>
-                            </tr>
-                            <tr>
-                                <th>營業時間</th>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-sm-3">
-                    <h4>台北西門店</h4>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>電&emsp;&emsp;話 </th>
-                                <td>02 2381 3001</td>
-                            </tr>
-                            <tr>
-                                <th>地&emsp;&emsp;址 </th>
-                                <td>台北市西寧南路50巷9號(峨嵋停車場路口對面)</td>
-                            </tr>
-                            <tr>
-                                <th>營業時間</th>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-sm-3">
-                    <h4>板橋府中店</h4>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>電&emsp;&emsp;話 </th>
-                                <td>02 2961 6988</td>
-                            </tr>
-                            <tr>
-                                <th>地&emsp;&emsp;址 </th>
-                                <td>新北市板橋區重慶路13巷1號</td>
-                            </tr>
-                            <tr>
-                                <th>營業時間</th>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-sm-3">
-                    <h4>新竹竹北店</h4>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>電&emsp;&emsp;話 </th>
-                                <td>0903909093</td>
-                            </tr>
-                            <tr>
-                                <th>地&emsp;&emsp;址 </th>
-                                <td>竹北市三民路395號</td>
-                            </tr>
-                            <tr>
-                                <th>營業時間</th>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-sm-3">
-                    <h4>桃園南崁店</h4>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>電&emsp;&emsp;話 </th>
-                                <td>03-3527868</td>
-                            </tr>
-                            <tr>
-                                <th>地&emsp;&emsp;址 </th>
-                                <td>桃園縣蘆竹鄉南崁路290號</td>
-                            </tr>
-                            <tr>
-                                <th>營業時間</th>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-sm-3">
-                    <h4>桃園藝文特區</h4>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>電&emsp;&emsp;話 </th>
-                                <td>03-3259086</td>
-                            </tr>
-                            <tr>
-                                <th>地&emsp;&emsp;址 </th>
-                                <td>桃園市桃園區南平路400號</td>
-                            </tr>
-                            <tr>
-                                <th>營業時間</th>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-sm-3">
-                    <h4>桃園站前店</h4>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>電&emsp;&emsp;話 </th>
-                                <td>03 3375868</td>
-                            </tr>
-                            <tr>
-                                <th>地&emsp;&emsp;址 </th>
-                                <td>330 Taoyüan 桃園市桃園區中正路40號</td>
-                            </tr>
-                            <tr>
-                                <th>營業時間</th>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-sm-3">
-                    <h4>台北土城店</h4>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>電&emsp;&emsp;話 </th>
-                                <td>0222647588</td>
-                            </tr>
-                            <tr>
-                                <th>地&emsp;&emsp;址 </th>
-                                <td>新北市土城區裕民路87號</td>
-                            </tr>
-                            <tr>
-                                <th>營業時間</th>
-                                <td>10:00~22:00</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-sm-3">
-                    <h4>台北淡水店</h4>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>電&emsp;&emsp;話 </th>
-                                <td>0226217036</td>
-                            </tr>
-                            <tr>
-                                <th>地&emsp;&emsp;址 </th>
-                                <td>新北市淡水區英專路77號1樓</td>
-                            </tr>
-                            <tr>
-                                <th>營業時間</th>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-sm-3">
-                    <h4>桃園八德店</h4>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>電&emsp;&emsp;話 </th>
-                                <td>03-3665231</td>
-                            </tr>
-                            <tr>
-                                <th>地&emsp;&emsp;址 </th>
-                                <td>桃園市八德區廣福路111號</td>
-                            </tr>
-                            <tr>
-                                <th>營業時間</th>
-                                <td>12:00~21:00</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-sm-3">
-                    <h4>中和永安店</h4>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>電&emsp;&emsp;話 </th>
-                                <td>02-29253898</td>
-                            </tr>
-                            <tr>
-                                <th>地&emsp;&emsp;址 </th>
-                                <td>新北市中和區中和路400巷13號</td>
-                            </tr>
-                            <tr>
-                                <th>營業時間</th>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-sm-3">
-                    <h4>台北新莊店</h4>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>電&emsp;&emsp;話 </th>
-                                <td>0229968599</td>
-                            </tr>
-                            <tr>
-                                <th>地&emsp;&emsp;址 </th>
-                                <td>新北市新莊區幸福路43號</td>
-                            </tr>
-                            <tr>
-                                <th>營業時間</th>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-sm-3">
-                    <h4>台北東區店</h4>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>電&emsp;&emsp;話 </th>
-                                <td>0227761680</td>
-                            </tr>
-                            <tr>
-                                <th>地&emsp;&emsp;址 </th>
-                                <td>台北市大安路一段22號</td>
-                            </tr>
-                            <tr>
-                                <th>營業時間</th>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-sm-3">
-                    <h4>樹林後站店</h4>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>電&emsp;&emsp;話 </th>
-                                <td>02-2687-0608</td>
-                            </tr>
-                            <tr>
-                                <th>地&emsp;&emsp;址 </th>
-                                <td>新北市樹林區後站街6巷1號</td>
-                            </tr>
-                            <tr>
-                                <th>營業時間</th>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-sm-3">
-                    <h4>永和樂華店</h4>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>電&emsp;&emsp;話 </th>
-                                <td>0286608166</td>
-                            </tr>
-                            <tr>
-                                <th>地&emsp;&emsp;址 </th>
-                                <td>新北市永和區保平路31號</td>
-                            </tr>
-                            <tr>
-                                <th>營業時間</th>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-sm-3">
-                    <h4>台北中山晴光旗艦店</h4>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>電&emsp;&emsp;話 </th>
-                                <td>0225987898</td>
-                            </tr>
-                            <tr>
-                                <th>地&emsp;&emsp;址 </th>
-                                <td>台北市中山區雙城街15-5號</td>
-                            </tr>
-                            <tr>
-                                <th>營業時間</th>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-sm-3">
-                    <h4>板橋中山店</h4>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>電&emsp;&emsp;話 </th>
-                                <td>02 29615558</td>
-                            </tr>
-                            <tr>
-                                <th>地&emsp;&emsp;址 </th>
-                                <td>新北市板橋區中山路二段195號</td>
-                            </tr>
-                            <tr>
-                                <th>營業時間</th>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <h1 class="text-center"><strong>中部分店</strong></h1>
-            <div class="row">
-                <div class="col-sm-3">
-                    <h4>台中逢甲店</h4>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>電&emsp;&emsp;話 </th>
-                                <td>0424526621</td>
-                            </tr>
-                            <tr>
-                                <th>地&emsp;&emsp;址 </th>
-                                <td>台中市西屯區福星路230號</td>
-                            </tr>
-                            <tr>
-                                <th>營業時間</th>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-sm-3">
-                    <h4>台中一中店</h4>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>電&emsp;&emsp;話 </th>
-                                <td>04-2223-1318</td>
-                            </tr>
-                            <tr>
-                                <th>地&emsp;&emsp;址 </th>
-                                <td>台中市北區育才南街23號</td>
-                            </tr>
-                            <tr>
-                                <th>營業時間</th>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <h1 class="text-center"><strong>南部分店</strong></h1>
-            <div class="row">
-                <div class="col-sm-3">
-                    <h4>台南成大店</h4>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>電&emsp;&emsp;話 </th>
-                                <td>06-2372-868</td>
-                            </tr>
-                            <tr>
-                                <th>地&emsp;&emsp;址 </th>
-                                <td>台南市東區育樂街24號</td>
-                            </tr>
-                            <tr>
-                                <th>營業時間</th>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+        <div class="row" id="menu">
+            <!--MENU-->
+            <h1 class="text-center"><strong>MENU</strong></h1>
+            <img src="{% static 'polls/img/menu5.png' %}" alt="menu" width="100%">
         </div>
-        <footer>
-            <div class="container" id="contact">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1 text-center">
-                        <h4><strong>Team01</strong>
-                        </h4>
-                        <p>台灣科技大學
-                            <br>網頁設計</p>
-                        <br>
-                        <ul class="list-inline">
-                            <li>
-                                <a href="http://www.guava-juice.com/" class="btn" target="_blank">芭樂芭官網</a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/NTUST/106-team01" target="blank">team01 github</a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/NTUST" target="blank">NTUST github</a>
-                            </li>
-                        </ul>
-                        <hr class="small">
-                        <p class="text-muted">Copyright &copy; Your Website 2017</p>
-                    </div>
-                </div>
+
+        <div class="row text-center" id="branch" style="background-color:antiquewhite;">
+            <h1><strong>北部分店</strong></h1>
+            <div class="col-sm-3">
+                <h4>桃園總店</h4>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>電&emsp;&emsp;話 </th>
+                            <td>03-4563558</td>
+                        </tr>
+                        <tr>
+                            <th>地&emsp;&emsp;址 </th>
+                            <td>桃園縣中壢市大仁三街2號</td>
+                        </tr>
+                        <tr>
+                            <th>營業時間</th>
+                            <td>11:00-22:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-3">
+                <h4>台北士林店</h4>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>電&emsp;&emsp;話 </th>
+                            <td>02 2882 8620</td>
+                        </tr>
+                        <tr>
+                            <th>地&emsp;&emsp;址 </th>
+                            <td>台北市士林區基河路108號</td>
+                        </tr>
+                        <tr>
+                            <th>營業時間</th>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-3">
+                <h4>台北西門店</h4>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>電&emsp;&emsp;話 </th>
+                            <td>02 2381 3001</td>
+                        </tr>
+                        <tr>
+                            <th>地&emsp;&emsp;址 </th>
+                            <td>台北市西寧南路50巷9號</td>
+                        </tr>
+                        <tr>
+                            <th>營業時間</th>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-3">
+                <h4>板橋府中店</h4>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>電&emsp;&emsp;話 </th>
+                            <td>02 2961 6988</td>
+                        </tr>
+                        <tr>
+                            <th>地&emsp;&emsp;址 </th>
+                            <td>新北市板橋區重慶路13巷1號</td>
+                        </tr>
+                        <tr>
+                            <th>營業時間</th>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-3">
+                <h4>新竹竹北店</h4>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>電&emsp;&emsp;話 </th>
+                            <td>0903909093</td>
+                        </tr>
+                        <tr>
+                            <th>地&emsp;&emsp;址 </th>
+                            <td>竹北市三民路395號</td>
+                        </tr>
+                        <tr>
+                            <th>營業時間</th>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-3">
+                <h4>桃園南崁店</h4>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>電&emsp;&emsp;話 </th>
+                            <td>03-3527868</td>
+                        </tr>
+                        <tr>
+                            <th>地&emsp;&emsp;址 </th>
+                            <td>桃園縣蘆竹鄉南崁路290號</td>
+                        </tr>
+                        <tr>
+                            <th>營業時間</th>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-3">
+                <h4>桃園藝文特區</h4>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>電&emsp;&emsp;話 </th>
+                            <td>03-3259086</td>
+                        </tr>
+                        <tr>
+                            <th>地&emsp;&emsp;址 </th>
+                            <td>桃園市桃園區南平路400號</td>
+                        </tr>
+                        <tr>
+                            <th>營業時間</th>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-3">
+                <h4>桃園站前店</h4>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>電&emsp;&emsp;話 </th>
+                            <td>03 3375868</td>
+                        </tr>
+                        <tr>
+                            <th>地&emsp;&emsp;址 </th>
+                            <td>桃園市桃園區中正路40號</td>
+                        </tr>
+                        <tr>
+                            <th>營業時間</th>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-3">
+                <h4>台北土城店</h4>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>電&emsp;&emsp;話 </th>
+                            <td>0222647588</td>
+                        </tr>
+                        <tr>
+                            <th>地&emsp;&emsp;址 </th>
+                            <td>新北市土城區裕民路87號</td>
+                        </tr>
+                        <tr>
+                            <th>營業時間</th>
+                            <td>10:00~22:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-3">
+                <h4>台北淡水店</h4>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>電&emsp;&emsp;話 </th>
+                            <td>0226217036</td>
+                        </tr>
+                        <tr>
+                            <th>地&emsp;&emsp;址 </th>
+                            <td>新北市淡水區英專路77號1樓</td>
+                        </tr>
+                        <tr>
+                            <th>營業時間</th>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-3">
+                <h4>桃園八德店</h4>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>電&emsp;&emsp;話 </th>
+                            <td>03-3665231</td>
+                        </tr>
+                        <tr>
+                            <th>地&emsp;&emsp;址 </th>
+                            <td>桃園市八德區廣福路111號</td>
+                        </tr>
+                        <tr>
+                            <th>營業時間</th>
+                            <td>12:00~21:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-3">
+                <h4>中和永安店</h4>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>電&emsp;&emsp;話 </th>
+                            <td>02-29253898</td>
+                        </tr>
+                        <tr>
+                            <th>地&emsp;&emsp;址 </th>
+                            <td>新北市中和區中和路400巷13號</td>
+                        </tr>
+                        <tr>
+                            <th>營業時間</th>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-3">
+                <h4>台北新莊店</h4>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>電&emsp;&emsp;話 </th>
+                            <td>0229968599</td>
+                        </tr>
+                        <tr>
+                            <th>地&emsp;&emsp;址 </th>
+                            <td>新北市新莊區幸福路43號</td>
+                        </tr>
+                        <tr>
+                            <th>營業時間</th>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-3">
+                <h4>台北東區店</h4>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>電&emsp;&emsp;話 </th>
+                            <td>0227761680</td>
+                        </tr>
+                        <tr>
+                            <th>地&emsp;&emsp;址 </th>
+                            <td>台北市大安路一段22號</td>
+                        </tr>
+                        <tr>
+                            <th>營業時間</th>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-3">
+                <h4>樹林後站店</h4>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>電&emsp;&emsp;話 </th>
+                            <td>02-2687-0608</td>
+                        </tr>
+                        <tr>
+                            <th>地&emsp;&emsp;址 </th>
+                            <td>新北市樹林區後站街6巷1號</td>
+                        </tr>
+                        <tr>
+                            <th>營業時間</th>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-3">
+                <h4>永和樂華店</h4>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>電&emsp;&emsp;話 </th>
+                            <td>0286608166</td>
+                        </tr>
+                        <tr>
+                            <th>地&emsp;&emsp;址 </th>
+                            <td>新北市永和區保平路31號</td>
+                        </tr>
+                        <tr>
+                            <th>營業時間</th>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-3">
+                <h4>台北中山晴光旗艦店</h4>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>電&emsp;&emsp;話 </th>
+                            <td>0225987898</td>
+                        </tr>
+                        <tr>
+                            <th>地&emsp;&emsp;址 </th>
+                            <td>台北市中山區雙城街15-5號</td>
+                        </tr>
+                        <tr>
+                            <th>營業時間</th>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-3">
+                <h4>板橋中山店</h4>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>電&emsp;&emsp;話 </th>
+                            <td>02 29615558</td>
+                        </tr>
+                        <tr>
+                            <th>地&emsp;&emsp;址 </th>
+                            <td>新北市板橋區中山路二段195號</td>
+                        </tr>
+                        <tr>
+                            <th>營業時間</th>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-3">
+                <br><br><br><br><br><br>
+            </div>
+            <div class="col-sm-3">
+                <br><br><br><br><br><br>
+            </div>
+            <hr>
+            <h1><strong>中部分店</strong></h1>
+            <div class="col-sm-3">
+                <h4>台中逢甲店</h4>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>電&emsp;&emsp;話 </th>
+                            <td>0424526621</td>
+                        </tr>
+                        <tr>
+                            <th>地&emsp;&emsp;址 </th>
+                            <td>台中市西屯區福星路230號</td>
+                        </tr>
+                        <tr>
+                            <th>營業時間</th>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-3">
+                <h4>台中一中店</h4>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>電&emsp;&emsp;話 </th>
+                            <td>04-2223-1318</td>
+                        </tr>
+                        <tr>
+                            <th>地&emsp;&emsp;址 </th>
+                            <td>台中市北區育才南街23號</td>
+                        </tr>
+                        <tr>
+                            <th>營業時間</th>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br><br><br><br>
+            <hr>
+            <h1><strong>南部分店</strong></h1>
+            <div class="col-sm-3">
+                <h4>台南成大店</h4>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>電&emsp;&emsp;話 </th>
+                            <td>06-2372-868</td>
+                        </tr>
+                        <tr>
+                            <th>地&emsp;&emsp;址 </th>
+                            <td>台南市東區育樂街24號</td>
+                        </tr>
+                        <tr>
+                            <th>營業時間</th>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br><br><br><br><br><br>
+        </div>
+
+        <!--頁尾連結-->
+        <div class="row" id="contact">
+            <div class="col-sm-12 text-center" style="background-color: #EFEFEF;padding: 0px;margin: 0px;">
+                <br><br><br><br>
+                <h4><strong>Team01</strong></h4>
+                <p>台灣科技大學</p>
+                <br>
+                <p>網頁設計</p>
+                <br>
+                <ul class="list-inline ">
+                    <li>
+                        <a href="https://github.com/NTUST/106-team01 " target="blank ">team01 github</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/NTUST " target="blank ">NTUST github</a>
+                    </li>
+                </ul>
+                <hr class="small ">
+                <p class="text-muted ">Copyright &copy; Your Website 2017</p> <br><br><br>
             </div>
             <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
-        </footer>
+        </div>
     </div>
 
     <!-- jQuery -->
@@ -529,6 +519,79 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js "></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
+    <!-- Custom Theme JavaScript -->
+    <script>
+        // Closes the sidebar menu
+        $("#menu-close").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Opens the sidebar menu
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Scrolls to the selected menu item on the page
+        $(function() {
+            $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+        //#to-top button appears after scrolling
+        var fixed = false;
+        $(document).scroll(function() {
+            if ($(this).scrollTop() > 250) {
+                if (!fixed) {
+                    fixed = true;
+                    // $('#to-top').css({position:'fixed', display:'block'});
+                    $('#to-top').show("slow", function() {
+                        $('#to-top').css({
+                            position: 'fixed',
+                            display: 'block'
+                        });
+                    });
+                }
+            } else {
+                if (fixed) {
+                    fixed = false;
+                    $('#to-top').hide("slow", function() {
+                        $('#to-top').css({
+                            display: 'none'
+                        });
+                    });
+                }
+            }
+        });
+        // Disable Google Maps scrolling
+        // See http://stackoverflow.com/a/25904582/1607849
+        // Disable scroll zooming and bind back the click event
+        var onMapMouseleaveHandler = function(event) {
+            var that = $(this);
+            that.on('click', onMapClickHandler);
+            that.off('mouseleave', onMapMouseleaveHandler);
+            that.find('iframe').css("pointer-events", "none");
+        }
+        var onMapClickHandler = function(event) {
+                var that = $(this);
+                // Disable the click handler until the user leaves the map area
+                that.off('click', onMapClickHandler);
+                // Enable scrolling zoom
+                that.find('iframe').css("pointer-events", "auto");
+                // Handle the mouse leave event
+                that.on('mouseleave', onMapMouseleaveHandler);
+            }
+            // Enable map zooming with mouse scroll when the user clicks the map
+        $('.map').on('click', onMapClickHandler);
+    </script>
 
 </body>
 

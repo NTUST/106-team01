@@ -19,37 +19,63 @@
 
 <body>
     <div class="container">
-        <nav class="navbar transparent navbar-fixed-top" role="navigation">
-            <nav class="navbar-inner">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-nav-collapse">
+        <div class="row">
+            <nav class="navbar transparent navbar-fixed-top" role="navigation">
+                <nav class="navbar-inner">
+                    <div class="container">
+                        <div class="col-lg-12">
+                            <div class="col-sm-5"></div>
+
+                            <div class="col-sm-2">
+
+                                <p class="text-center">
+                                    <a class="navbar-brand" href="http://127.0.0.1:8000/polls/">
+                                        <img src="{% static 'polls/img/logo.png' %}" width="115%">
+                                    </a>
+                                </p>
+                            </div>
+
+                            <div class="col-sm-5">
+
+                            </div>
+
+                        </div>
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-nav-collapse">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="http://127.0.0.1:8000/polls/">
-                            <img src="{% static 'polls/img/logo-s.png' %}">
-                        </a>
+                            <ul class="nav navbar-nav">
+                                <li><a href="http://127.0.0.1:8000/polls">首頁</a></li>
+                                <li><a href="http://127.0.0.1:8000/polls/about">關於我們</a></li>
+                                <li><a href="http://127.0.0.1:8000/polls/3/rankboard/">人氣排行</a></li>
+                            </ul>
+                        </div>
+                        <div class="collapse navbar-collapse" id="example-nav-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="http://127.0.0.1:8000/polls/find/">找飲料</a></li>
+                                <li><a href="http://127.0.0.1:8000/polls/brand/">品牌總覽</a></li>
+                                <li><a href="http://127.0.0.1:8000/polls/brand/#middle">價格大比拚</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="collapse navbar-collapse" id="example-nav-collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="http://127.0.0.1:8000/polls/">首頁</a></li>
-                            <li><a href="http://127.0.0.1:8000/polls/about/">關於我們</a></li>
-                            <li><a href="http://127.0.0.1:8000/polls/3/rankboard/">人氣排行</a></li>
-                        </ul>
-                    </div>
-                </div>
+                </nav>
             </nav>
-        </nav>
+        </div>
 
         <div class="row">
             <div class="col-sm-12">
-                <img src="{% static 'polls/img/bk.png' %}" class="image">
+                <img src="{% static 'polls/img/bk_main.png' %}" class="image">
                 <!--comment:隱藏程式碼-->
-                <div class="up">
-                    <h1>歡迎來到</h1>
+                <div class="up col-sm-8">
+                    <h1><strong>歡迎來到飲料霸</strong></h1>
+
+                    <h3>現在這個時代，不只科技在進步， 就連飲料也是，<br> 飲料店越開越多， 也不斷有新口味的飲料上市。<br> 而我們的目的，把台灣特色飲品發揚光大，<br> 為新飲料店品牌提供平台曝光， <br>也對已經知名的飲料店做整理和分類， <br>方便大眾瀏覽飲料資訊。<br>
+                    </h3>
+                </div>
+                <div class=" col-sm-4">
                 </div>
             </div>
         </div>
@@ -60,7 +86,7 @@
                     <a href="http://127.0.0.1:8000/polls/3/rankboard/">
                         <img src="{% static 'polls/img/bk10.png' %}" alt="介紹圖" class="image">
                         <div class="text1-title">
-                            <h1 class="text-center"><strong>人氣排行　　</strong></h1>
+                            <h1 class="text-center"><strong>人氣排行</strong></h1>
                             <hr class="greenhr">
                         </div>
                         <div class="overlay">
@@ -78,7 +104,7 @@
                     <a href="http://127.0.0.1:8000/polls/3/rankboard#vote">
                         <img src="{% static 'polls/img/bk3.png' %}" alt="介紹圖" class="image">
                         <div class="text1-title">
-                            <h1 class="text-center"><strong>投票區　　</strong></h1>
+                            <h1 class="text-center"><strong>投票區</strong></h1>
                             <hr class="greenhr">
                         </div>
                         <div class="overlay">
@@ -94,7 +120,7 @@
                     <a href="http://127.0.0.1:8000/polls/find/">
                         <img src="{% static 'polls/img/bk7.png' %}" alt="介紹圖" class="image">
                         <div class="text1-title">
-                            <h1 class="text-center"><strong>懶人找飲料　</strong></h1>
+                            <h1 class="text-center"><strong>懶人找飲料</strong></h1>
                             <hr class="greenhr">
                         </div>
                         <div class="overlay">
@@ -114,8 +140,8 @@
                 <div class="col-sm-6" id="nomargin">
                     <a href="http://127.0.0.1:8000/polls/brand#middle">
                         <img src="{% static 'polls/img/bk9.png' %}" class="image">
-                        <div class="text2-title">
-                            <h1 class="text-center"><strong>價格大比拚</strong></h1>
+                        <div class="text4-title">
+                            <p class="text-center"><strong>價格大比拚</strong></p>
                             <!--<hr class="greenhr">-->
                         </div>
                         <!--<div class="overlay">
@@ -130,8 +156,8 @@
                 <div class="col-sm-6" id="nomargin">
                     <a href="http://127.0.0.1:8000/polls/brand/">
                         <img src="{% static 'polls/img/bk4.png' %}" class="image">
-                        <div class="text2-title">
-                            <h1 class="text-center"><strong>品牌總覽</strong></h1>
+                        <div class="text4-title">
+                            <p class="text-center"><strong>品牌總覽</strong></p>
                             <!--<hr class="greenhr">-->
                         </div>
                         <!--<div class="overlay">
@@ -146,33 +172,35 @@
             </div>
         </div>
 
-        <div class="row">
+        <!--<div class="row">
             <div class="container">
                 <br><br><br><br><br>
                 <h1>手搖杯相關文章</h1>
                 <br><br><br><br><br>
             </div>
-        </div>
+        </div>-->
 
         <!--頁尾連結-->
-        <div class="col-sm-12 text-center" id="bottom">
-            <br><br><br><br>
-            <h4><strong>Team01</strong>
-            </h4>
-            <p>台灣科技大學
-                <br>
-                <p>網頁設計</p>
-                <br>
-                <ul class="list-inline">
-                    <li>
-                        <a href="https://github.com/NTUST/106-team01" target="blank">team01 github</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/NTUST" target="blank">NTUST github</a>
-                    </li>
-                </ul>
-                <hr class="small">
-                <p class="text-muted">Copyright &copy; Your Website 2017</p> <br><br><br>
+        <div class="row">
+            <div class="col-sm-12 text-center" id="bottom">
+                <br><br><br><br>
+                <h4><strong>Team01</strong>
+                </h4>
+                <p>台灣科技大學
+                    <br>
+                    <p>網頁設計</p>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="https://github.com/NTUST/106-team01" target="blank">team01 github</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/NTUST" target="blank">NTUST github</a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Your Website 2017</p> <br><br><br>
+            </div>
         </div>
     </div>
     <script src="{% static 'polls/js/jquery.js' %}"></script>
