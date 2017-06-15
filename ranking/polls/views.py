@@ -8,8 +8,10 @@ from .models import Choice, Question, Drink, Store
 from multiselectfield import MultiSelectField
 from django.db.models import Avg
 from operator import itemgetter
+import random
 
-# Create your views here.
+
+
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
     context = {'latest_question_list': latest_question_list}
@@ -20,24 +22,10 @@ def detail(request, question_id):
     return render(request, 'polls/detail.html', {'question': question})
 
 def results(request, question_id):
-    question = get_object_or_404(Question, pk=question_id)
-    store = question.choice_set.all()
-    choice =  Choice.objects.filter(question_id=3)
-    vote = []
-    for i in choice:
-        vote.append(i.votes)
-
-    ch = ()
-    for choice in question.choice_set.all():
-        ch.append(choice.votes)
-
-    con ={
-        'choices': ch,
-        'question': question,
-        'store':store,
-        'vote':vote,
-    }
-    return render(request, 'polls/results.html', con)
+    # question = get_object_or_404(Question, pk=question_id)
+    q = Question.objects.get(id=question_id)
+    question = q.choice_set.all().order_by('-votes')
+    return render(request, 'polls/results.html', {'question': question, 'q':q})
 
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
@@ -87,13 +75,22 @@ def find(request):
             juice += ((drink.drink_name,drink.store.store_name),)
         elif CATE_CHOICES[10] in drink.category or CATE_CHOICES[11] in drink.category:
             milk_latte += ((drink.drink_name,drink.store.store_name),) 
+
+    teas = list(tea)
+    chews = list(chew)
+    juices = list(juice)
+    lattes = list(milk_latte)
+    random.shuffle(teas)
+    random.shuffle(chews)
+    random.shuffle(juices)
+    random.shuffle(lattes)
     context = {
         'hot' : hot,
-        'tea' : tea,
+        'tea' : teas,
         'matcha': matcha,
-        'chew': chew,
-        'juice': juice,
-        'milk_latte': milk_latte,
+        'chew': chews,
+        'juice': juices,
+        'milk_latte': lattes,
         'all_drinks': all_drinks,
         'cate': CATE_CHOICES
     }
@@ -106,12 +103,24 @@ def brand(request):
     
     a = Drink.objects.filter(store__store_name = '十杯').aggregate(average_price=Avg('price'))
     b = Drink.objects.filter(store__store_name = '珍煮丹').aggregate(average_price=Avg('price'))
+    c = Drink.objects.filter(store__store_name = '陳三鼎').aggregate(average_price=Avg('price'))
+    d = Drink.objects.filter(store__store_name = 'SOMA').aggregate(average_price=Avg('price'))
+    e = Drink.objects.filter(store__store_name = '九品川').aggregate(average_price=Avg('price'))
+    f = Drink.objects.filter(store__store_name = 'Bobii Frutii').aggregate(average_price=Avg('price'))
+    g = Drink.objects.filter(store__store_name = '波囍').aggregate(average_price=Avg('price'))
+    h = Drink.objects.filter(store__store_name = '花甜果室').aggregate(average_price=Avg('price'))
  
     con = {
         'store' : stores,
         'price': price,
         'a': round(a['average_price']),
-        'b': b['average_price'],
+        'b': round(b['average_price']),
+        'c': round(c['average_price']),
+        'd': round(d['average_price']),
+        'e': round(e['average_price']),
+        'f': round(f['average_price']),
+        'g': round(g['average_price']),
+        'h': round(h['average_price']),
     }
     
     return render(request, 'polls/brandbrowse.html',con)
@@ -130,87 +139,42 @@ def rankboard(request, question_id):
         ch += ((choice.choice_text,choice.votes),)
 
     ch = sorted(ch, key=lambda tup: tup[1],reverse=True)
-
+    chs =list(ch)
     con ={
-        'choices': ch,
+        'choices': chs,
         'question': question,
         'store':store,
         'vote':vote,
     }
     return render(request, 'polls/rankboard.html', con)
 
-def information(request, question_id):
-    question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'polls/information.html', {'question': question})
 
-def store1(request, question_id):
-    question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'polls/store1.html', {'question': question})
+def store1(request):
+    return render(request, 'polls/store1.html')
 
-def store2(request, question_id):
-    question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'polls/store2.html', {'question': question})
+def store2(request):
+    return render(request, 'polls/store2.html')
 
-def store3(request, question_id):
-    question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'polls/store3.html', {'question': question})
+def store3(request):
+    return render(request, 'polls/store3.html')
 
-def store4(request, question_id):
-    question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'polls/store4.html', {'question': question})
+def store4(request):
+    return render(request, 'polls/store4.html')
 
-def store5(request, question_id):
-    question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'polls/store5.html', {'question': question})
+def store5(request):
+    return render(request, 'polls/store5.html')
 
-def store6(request, question_id):
-    question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'polls/store6.html', {'question': question})
+def store6(request):
+    return render(request, 'polls/store6.html')
 
-def store7(request, question_id):
-    question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'polls/store7.html', {'question': question})
+def store7(request):
+    return render(request, 'polls/store7.html')
 
-def store8(request, question_id):
-    question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'polls/store8.html', {'question': question})
+def store8(request):
+    return render(request, 'polls/store8.html')
 
-def store9(request, question_id):
-    question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'polls/store9.html', {'question': question})
+def store9(request):
+    return render(request, 'polls/store9.html')
 
-def store10(request, question_id):
-    question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'polls/store10.html', {'question': question})
-
-def tea(request):
-    all_drinks = Drink.objects.all()
-    cate=[
-        '招牌','茶類','奶茶類','果茶類','特調茶類','抹茶類','嚼勁口感類','果汁類','水果類','奶,果昔類','鮮奶類','拿鐵類'  
-    ] 
-    tea = ()
-    store = ()
-    for drink in all_drinks:
-        if cate[6] in drink.category:
-            tea += ((drink.drink_name,drink.store.store_name),)
-    
-    con = {
-        'tea' : tea,
-    }
-
-    return render(request, 'polls/tea.html',con)
-    
-def multi(request):
-    CATE_CHOICES=[
-        '招牌','茶類','奶茶類','果茶類','特調茶類','抹茶類','嚼勁口感類','果汁類','水果類','奶,果昔類','鮮奶類','拿鐵類'  
-    ]    
-
-    all_drinks = Drink.objects.all()
-    context = {
-        'all_drinks': all_drinks,
-        'cate': CATE_CHOICES
-    }
-    return render(request, 'polls/multiselect.html', context)
-
-
-
+def store10(request):
+    return render(request, 'polls/store10.html')
