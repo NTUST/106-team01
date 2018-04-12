@@ -1,2 +1,5 @@
 .vscode
 venv
+db.sqlite3
+mysite/local_settings.py
+mysite/__pycache__
